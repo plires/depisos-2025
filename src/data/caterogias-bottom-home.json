@@ -1,0 +1,25 @@
+{
+  "categoriesBottom": [
+    {
+      "id": 1,
+      "img_src": "home-vinyl-panel.webp",
+      "title": "Vinyl <br />Panel",
+      "text_btn": "+ info",
+      "link_btn": "/productos/vinyl-panel"
+    },
+    {
+      "id": 2,
+      "img_src": "home-cielorrasos.webp",
+      "title": "Cielorraso",
+      "text_btn": "+ info",
+      "link_btn": "/productos/cielorraso"
+    },
+    {
+      "id": 3,
+      "img_src": "home-pisos.webp",
+      "title": "Pisos <br />a prueba <br /> de agua",
+      "text_btn": "+ info",
+      "link_btn": "/productos/pisos-melaminicos"
+    }
+  ]
+}

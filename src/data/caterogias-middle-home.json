@@ -1,0 +1,11 @@
+{
+  "categoriesMiddle": [
+    {
+      "id": 1,
+      "img_src": "home-flat-panel.webp",
+      "title": "Flat Panel",
+      "text_btn": "+ info",
+      "link_btn": "/productos/flat-panel"
+    }
+  ]
+}

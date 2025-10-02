@@ -1,0 +1,32 @@
+{
+  "categoriesTop": [
+    {
+      "id": 1,
+      "img_src": "home-wall-panel.webp",
+      "title": "Wall Panel <br />WPC",
+      "text_btn": "+ info",
+      "link_btn": "/productos/wall-panel"
+    },
+    {
+      "id": 2,
+      "img_src": "home-deck-dual.webp",
+      "title": "Deck Dual <br />WPC",
+      "text_btn": "+ info",
+      "link_btn": "/productos/deck-daul"
+    },
+    {
+      "id": 3,
+      "img_src": "home-perfiles.webp",
+      "title": "Perfiles <br />WPC",
+      "text_btn": "+ info",
+      "link_btn": "/productos/perfiles"
+    },
+    {
+      "id": 4,
+      "img_src": "home-siding.webp",
+      "title": "Siding <br />WPC",
+      "text_btn": "+ info",
+      "link_btn": "/productos/siding"
+    }
+  ]
+}

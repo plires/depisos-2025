@@ -1,0 +1,42 @@
+.section_not_found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.section_not_found p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.btnNotFound {
+  background: var(--secondary-color) !important;
+  color: white !important;
+}
+
+.btnNotFound:hover {
+  background: var(--primary-color) !important;
+}
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}

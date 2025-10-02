@@ -1,0 +1,151 @@
+header {
+  width: 100%;
+  background: white;
+  height: 80px;
+  border-bottom: solid 1px rgb(230, 230, 230);
+  z-index: 3;
+}
+
+header .logo {
+  width: 100px;
+}
+
+header .contentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .hamburguer {
+  color: var(--primary-color);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+header .hamburguer:hover {
+  opacity: 0.6;
+}
+
+header.fixed {
+  position: fixed !important;
+  width: 100%;
+  height: 60px;
+}
+
+header.fixed .logo {
+  width: 40px;
+}
+
+header.fixed nav {
+  top: 60px;
+}
+
+header nav {
+  position: absolute;
+  top: 80px;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+header nav.open {
+  left: 0;
+}
+
+header nav .btnProducts:active {
+  border: solid 1px white !important;
+}
+
+header nav .btn,
+header nav .btn a {
+  color: var(--primary-color) !important;
+  font-size: 1.25rem !important;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+header nav .szh-menu__item a {
+  color: var(--primary-color) !important;
+}
+
+header nav button a.active,
+header nav a.active {
+  color: var(--third-color) !important;
+}
+
+header nav button:hover,
+header nav button:hover svg,
+header nav button:hover a {
+  color: var(--third-color) !important;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  header .hamburguer {
+    display: none;
+  }
+
+  header nav {
+    position: relative;
+    top: initial;
+    left: initial;
+    width: 100%;
+    height: auto;
+    background: white;
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+
+  header nav .btn,
+  header nav .btn a {
+    font-size: 1rem !important;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    text-transform: uppercase;
+  }
+
+  header nav .szh-menu__item a,
+  header nav .szh-menu__item--submenu {
+    font-size: 1rem !important;
+    text-transform: uppercase;
+  }
+
+  header.fixed nav .btn,
+  header.fixed nav .btn a,
+  header.fixed nav .szh-menu__item a,
+  header.fixed nav .szh-menu__item--submenu {
+    font-size: 0.85rem !important;
+  }
+
+  header.fixed nav {
+    top: initial;
+  }
+
+  header nav .btn:last-child {
+    padding-right: 0 !important;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+  header .logo {
+    width: 150px;
+  }
+}

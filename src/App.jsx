@@ -1,0 +1,33 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from '@/components/commons/Header.jsx'
+import Footer from '@/components/commons/Footer.jsx'
+import Home from '@/pages/Home.jsx'
+import Test from '@/pages/Test.jsx'
+import NotFound from '@/pages/NotFound.jsx'
+import { AppProvider } from '@/context/app'
+import ScrollToTop from '@/utils/scrollToTop'
+import { ToastContainer } from 'react-toastify'
+
+import '@/assets/css/app.css'
+
+function App() {
+  return (
+    <>
+      <AppProvider>
+        <Router>
+          <ScrollToTop />
+          <ToastContainer />
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/test' element={<Test />} />
+            <Route path='*' element={<NotFound />} />
+          </Routes>
+          <Footer />
+        </Router>
+      </AppProvider>
+    </>
+  )
+}
+
+export default App

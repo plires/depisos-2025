@@ -1,0 +1,147 @@
+.home .categories,
+.home .sustentable,
+.home .especializacion,
+.home .instagram {
+  margin-bottom: 30px;
+}
+
+/* Section Sustentable */
+.home .sustentable {
+  text-align: center;
+  background-image: url('./../assets/img/home-sustentable.webp');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.home .sustentable a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  color: var(--primary-color);
+  padding: 2rem 1rem;
+}
+
+.home .sustentable:has(a:hover) {
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.home .sustentable h2 {
+  color: white;
+  text-shadow:
+    2px 8px 6px rgba(0, 0, 0, 0.6),
+    0px -5px 35px rgba(255, 255, 255, 0.6);
+  font-size: 2.75rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.home .sustentable h2 br {
+  display: none;
+}
+/* Section Sustentable end */
+
+/* Section Especializacion */
+.home .especializacion h2 {
+  margin-bottom: 1.5rem;
+}
+/* Section Especializacion end */
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  /* Section Sustentable */
+  .home .sustentable .contentCategories {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .home .sustentable a {
+    padding: 2rem 0rem;
+  }
+  /* Section Sustentable end */
+}
+
+@media (min-width: 992px) {
+  .home .sustentable,
+  .home .especializacion,
+  .home .instagram {
+    margin-bottom: 60px;
+  }
+
+  /* Section Categories */
+  .home .categories {
+    margin-top: 1rem;
+  }
+  /* Section Categories end */
+
+  /* Section Sustentable */
+  .home .sustentable a {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .home .sustentable h2 {
+    margin-bottom: 0;
+  }
+
+  .home .sustentable h2 br {
+    display: inline-block;
+  }
+  /* Section Sustentable end */
+}
+
+@media (min-width: 1200px) {
+  /* Section Sustentable */
+  .home .sustentable a {
+    padding: 2rem 1rem;
+  }
+
+  .home .sustentable .contentCategories {
+    justify-content: flex-end;
+  }
+
+  .home .sustentable h2 {
+    font-size: 3.5rem;
+  }
+  /* Section Sustentable end */
+
+  /* Section Especializacion */
+  .home .especializacion h2 {
+    margin-bottom: 2.5rem;
+  }
+  /* Section Especializacion end */
+}
+
+@media (min-width: 1400px) {
+  /* Section Sustentable */
+  .home .sustentable h2 {
+    font-size: 4rem;
+  }
+
+  .home .sustentable a {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  /* Section Sustentable end */
+}
+
+@media (min-width: 1600px) {
+  /* Section Especializacion */
+  .home .especializacion h2 {
+    margin-bottom: 3.5rem;
+  }
+  /* Section Especializacion end */
+}
+
+@media (min-width: 1800px) {
+}
