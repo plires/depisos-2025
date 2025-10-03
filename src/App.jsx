@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from '@/components/commons/Header.jsx'
 import Footer from '@/components/commons/Footer.jsx'
 import Home from '@/pages/Home.jsx'
+import Profesionales from '@/pages/Profesionales.jsx'
 import Test from '@/pages/Test.jsx'
 import NotFound from '@/pages/NotFound.jsx'
 import { AppProvider } from '@/context/app'
@@ -20,6 +21,7 @@ function App() {
           <Header />
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/profesionales' element={<Profesionales />} />
             <Route path='/test' element={<Test />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
