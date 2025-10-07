@@ -11,6 +11,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@img-comparison-slider/react": "^8.0.2",
     "@szhsin/react-menu": "^4.4.0",
     "bootstrap": "^5.3.6",
     "framer-motion": "^12.10.4",
