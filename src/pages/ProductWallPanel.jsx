@@ -1,5 +1,6 @@
 import HeaderProduct from '@/components/commons/HeaderProduct.jsx'
 import ColorsProduct from '@/components/commons/ColorsProduct.jsx'
+import GalleryProduct from '@/components/commons/GalleryProduct.jsx'
 
 import product from '@/data/wall-panel.json'
 
@@ -21,6 +22,7 @@ const ProductWallPanel = () => {
             <ColorsProduct product={product['colores']} />
           </div>
         </div>
+        <GalleryProduct product={product['gallery']} />
       </section>
     </main>
   )
