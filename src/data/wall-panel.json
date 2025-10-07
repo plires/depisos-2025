@@ -81,5 +81,17 @@
       "col": "col-md-6",
       "extra_class": "wallPanel"
     }
+  ],
+  "comparacion": [
+    {
+      "id": 1,
+      "img_src": "wall-panel-antes.webp",
+      "extra_class": "wallPanel"
+    },
+    {
+      "id": 2,
+      "img_src": "wall-panel-despues.webp",
+      "extra_class": "wallPanel"
+    }
   ]
 }

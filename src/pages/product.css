@@ -1,7 +1,8 @@
 .product .contentHeader,
 .product .contentColors,
 .product .galleryProduct,
-.product .medidasProduct {
+.product .medidasProduct,
+.product .comparacionProduct {
   margin-bottom: 30px;
 }
 
@@ -20,7 +21,8 @@
   .product .contentHeader,
   .product .contentColors,
   .product .galleryProduct,
-  .product .medidasProduct {
+  .product .medidasProduct,
+  .product .comparacionProduct {
     margin-bottom: 60px;
   }
 }
