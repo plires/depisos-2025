@@ -18,8 +18,29 @@
   align-items: flex-start;
 }
 
-.contentColors article a {
+.colorButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
   color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: relative;
+}
+
+.colorButton:hover {
+  opacity: 0.8;
+}
+
+.colorButton:hover h4 {
+  color: var(--third-color);
+}
+
+.colorButton:hover img {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .contentColors article h4 {
@@ -31,12 +52,38 @@
   transform-origin: top left;
   transform: rotate(-90deg) translateX(-100%);
   margin: 0;
+  transition: color 0.3s ease-in-out;
 }
 
 .contentColors article img {
   max-height: 200px;
   height: 200px;
   padding-left: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.modalImageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.modalImageContainer img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.modalImageContainer h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+  text-align: center;
 }
 
 /* MEDIA QUERIES */
@@ -60,6 +107,10 @@
     max-height: 240px;
     height: 240px;
   }
+
+  .modalImageContainer h3 {
+    font-size: 2.5rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -78,6 +129,10 @@
 
   .contentColors article h4 {
     font-size: 1.25rem;
+  }
+
+  .modalImageContainer h3 {
+    font-size: 3rem;
   }
 }
 
