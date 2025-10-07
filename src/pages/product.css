@@ -1,6 +1,7 @@
 .product .contentHeader,
 .product .contentColors,
-.product .galleryProduct {
+.product .galleryProduct,
+.product .medidasProduct {
   margin-bottom: 30px;
 }
 
@@ -18,7 +19,8 @@
 @media (min-width: 992px) {
   .product .contentHeader,
   .product .contentColors,
-  .product .galleryProduct {
+  .product .galleryProduct,
+  .product .medidasProduct {
     margin-bottom: 60px;
   }
 }

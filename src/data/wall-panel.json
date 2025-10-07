@@ -67,5 +67,19 @@
       "img_src": "wall-panel-galeria-e.webp",
       "col": "col-md-6"
     }
+  ],
+  "medidas": [
+    {
+      "id": 1,
+      "img_src": "wall-panel-medidas-a.webp",
+      "col": "col-md-6",
+      "extra_class": "wallPanel"
+    },
+    {
+      "id": 2,
+      "img_src": "wall-panel-medidas-b.webp",
+      "col": "col-md-6",
+      "extra_class": "wallPanel"
+    }
   ]
 }

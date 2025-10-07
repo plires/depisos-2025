@@ -1,0 +1,53 @@
+.medidasProduct article {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.medidasProduct article img {
+  max-width: 70%;
+}
+
+.medidasProduct article:last-child {
+  margin-bottom: 0;
+}
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .medidasProduct :global(article.col-md-6) {
+    margin-bottom: 0 !important;
+  }
+
+  .medidasProduct article img {
+    max-width: 80%;
+  }
+
+  /* Para producto Wall Panel */
+  .medidasProduct :global(article.wallPanel:first-child img) {
+    max-width: 100%;
+  }
+  /* Para producto Wall Panel end */
+}
+
+@media (min-width: 992px) {
+  /* Para producto Wall Panel */
+  .medidasProduct :global(article.wallPanel:last-child img) {
+    max-width: 65%;
+  }
+  /* Para producto Wall Panel end */
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}
