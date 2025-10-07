@@ -59,7 +59,6 @@
   max-height: 200px;
   height: 200px;
   padding-left: 1rem;
-  border-radius: 8px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -75,7 +74,6 @@
   max-width: 100%;
   max-height: 70vh;
   object-fit: contain;
-  border-radius: 8px;
 }
 
 .modalImageContainer h3 {
