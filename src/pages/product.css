@@ -1,0 +1,32 @@
+.product .contentHeader {
+  margin-bottom: 30px;
+}
+
+.product h3 {
+  font-weight: 700;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .product .contentHeader {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}

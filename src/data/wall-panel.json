@@ -1,0 +1,44 @@
+{
+  "header": [
+    {
+      "id": 1,
+      "title": "Wall Panel",
+      "subtitle": "WPC sustentable",
+      "description": "Revestimiento de pared fabricado con fibras de madera reciclada y polímeros. Ideal para muros interiores y fachadas exteriores modernas. Resistente al clima, la humedad y de fácil instalación. Dos formatos diferentes.",
+      "img_header_background_src": "wall-panel-background-header.webp",
+      "img_header_detail_src": "wall-panel-detalle-header.webp"
+    }
+  ],
+  "colores": [
+    {
+      "id": 1,
+      "title": "Charcoal",
+      "img_src": "wall-panel-charcoal.webp"
+    },
+    {
+      "id": 2,
+      "title": "Natural",
+      "img_src": "wall-panel-natural.webp"
+    },
+    {
+      "id": 3,
+      "title": "Teka",
+      "img_src": "wall-panel-teka.webp"
+    },
+    {
+      "id": 4,
+      "title": "White Oak",
+      "img_src": "wall-panel-white-oak.webp"
+    },
+    {
+      "id": 5,
+      "title": "Red Cedar",
+      "img_src": "wall-panel-red-cedar.webp"
+    },
+    {
+      "id": 6,
+      "title": "Teka New Sanding",
+      "img_src": "wall-panel-teka-new-sanding.webp"
+    }
+  ]
+}
