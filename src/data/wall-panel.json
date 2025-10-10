@@ -93,5 +93,33 @@
       "img_src": "wall-panel-despues.webp",
       "extra_class": "wallPanel"
     }
-  ]
+  ],
+  "accessories": [
+    {
+      "id": 1,
+      "img_src": "wall-panel-accesorios.webp",
+      "description": "Ángulo de inicio y ángulo side cover para terminaciones y esquinas prolijas.",
+      "extra_class": "wallPanel"
+    }
+  ],
+  "technicalSheet": {
+    "data": {
+      "Accesorios": "Ángulo de inicio, ángulo side cover",
+      "Uso": "Decoración y construcción",
+      "Material": "WPC sustentable",
+      "Ancho, Alto y Espesor": "200 x 2900 x 26 mm / 176 x 2900 x 26 mm",
+      "Formato de venta": "Unidad",
+      "M2 por tabla": "0,58 m2",
+      "Tipo de espacio": "Interior y exterior",
+      "Colores": "Charcoal, Teka, White Oak, Natural, Oak, Red Cedar, Teka New Sanding",
+      "Garantía": "X años"
+    },
+    "ventajas": [
+      "Fácil instalación",
+      "Libre de mantenimiento",
+      "Resistente al clima",
+      "No se destiñe ni deforma",
+      "Resistente a insectos"
+    ]
+  }
 }

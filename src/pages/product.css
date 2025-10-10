@@ -2,7 +2,10 @@
 .product .contentColors,
 .product .galleryProduct,
 .product .medidasProduct,
-.product .comparacionProduct {
+.product .comparacionProduct,
+.product .accessoriesProduct,
+.product .technicalSheetProduct,
+.product .quoteFormProduct {
   margin-bottom: 30px;
 }
 
@@ -22,7 +25,10 @@
   .product .contentColors,
   .product .galleryProduct,
   .product .medidasProduct,
-  .product .comparacionProduct {
+  .product .comparacionProduct,
+  .product .accessoriesProduct,
+  .product .technicalSheetProduct,
+  .product .quoteFormProduct {
     margin-bottom: 60px;
   }
 }
