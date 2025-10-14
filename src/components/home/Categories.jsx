@@ -7,7 +7,11 @@ const Categories = ({ items, col = 'col-md-12' }) => {
   return (
     <section className='row'>
       {items.map(item => (
-        <div key={item.id} className={`${col} p-0 ${styles.contentCategory}`}>
+        <div
+          data-aos='fade-up'
+          key={item.id}
+          className={`${col} p-0 ${styles.contentCategory}`}
+        >
           <img
             className={`${styles.categoryImg}`}
             src={getImageURL(item.img_src)}

@@ -38,7 +38,7 @@ const Carrusel = () => {
                 src={getImageURL(carrusel.img_desktop_src)}
                 alt={carrusel.img_alt}
               />
-              <div className={`${styles.data}`}>
+              <div data-aos='fade-up' className={`${styles.data}`}>
                 <h2>{carrusel.title}</h2>
                 <span dangerouslySetInnerHTML={{ __html: carrusel.subtitle }} />
                 <p

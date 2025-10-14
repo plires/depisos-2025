@@ -6,6 +6,7 @@ import styles from './comparacion-product.module.css'
 const ComparacionProduct = ({ product }) => {
   return (
     <section
+      data-aos='fade-up'
       className={`comparacionProduct container ${styles.comparacionProduct}`}
     >
       <div className='row'>

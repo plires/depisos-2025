@@ -7,7 +7,7 @@ const GalleryProduct = ({ product }) => {
     <section className={`galleryProduct container ${styles.galleryProduct}`}>
       <div className='row'>
         {product.map(item => (
-          <article key={item.id} className={item.col}>
+          <article data-aos='fade-up' key={item.id} className={item.col}>
             <img
               src={getImageURL(item.img_src)}
               alt={`Imagen producto - ${item.id}`}

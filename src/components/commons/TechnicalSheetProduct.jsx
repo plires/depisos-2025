@@ -26,7 +26,7 @@ export default function TechnicalSheetProduct({
       className={`technicalSheetProduct ${styles.technicalSheetProduct} ${className} container`}
     >
       <Row>
-        <Col md={8} className={styles.contentFicha}>
+        <Col data-aos='fade-up' md={8} className={styles.contentFicha}>
           <Card className='shadow-sm h-100'>
             <Card.Body>
               <Card.Title className={`fw-bold latoBoldItalic ${styles.title}`}>
@@ -53,7 +53,7 @@ export default function TechnicalSheetProduct({
           </Card>
         </Col>
 
-        <Col md={4}>
+        <Col data-aos='fade-up' md={4}>
           <Card className='shadow-sm h-100'>
             <Card.Body>
               <Card.Title

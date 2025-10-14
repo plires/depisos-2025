@@ -22,7 +22,7 @@ export default function CuratorFeed() {
   }, [])
 
   return (
-    <div id={CONTAINER_ID}>
+    <div data-aos='fade-up' id={CONTAINER_ID}>
       <a
         href='https://curator.io'
         target='_blank'

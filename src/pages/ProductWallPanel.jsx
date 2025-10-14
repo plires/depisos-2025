@@ -15,7 +15,7 @@ const ProductWallPanel = () => {
   return (
     <main className='product'>
       <HeaderProduct product={product.header[0]} />
-      <section className='contentColors container'>
+      <section data-aos='fade-up' className='contentColors container'>
         <div className='row'>
           <div className='col-md-12'>
             <h3>Colores Disponibles</h3>

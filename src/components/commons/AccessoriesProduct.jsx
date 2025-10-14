@@ -7,13 +7,13 @@ const AccessoriesProduct = ({ product }) => {
     <section
       className={`accessoriesProduct container ${styles.accessoriesProduct}`}
     >
-      <div className='row'>
+      <div data-aos='fade-up' className='row'>
         <div className='col-md-12'>
           <h3 className='latoBoldItalic'>Accesorios</h3>
         </div>
       </div>
 
-      <div className='row'>
+      <div data-aos='fade-up' className='row'>
         <div className='col-md-6'>
           <img
             className='img-fluid'

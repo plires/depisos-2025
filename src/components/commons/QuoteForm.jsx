@@ -27,6 +27,7 @@ export default function QuoteForm({ recaptchaSiteKey }) {
 
   return (
     <form
+      data-aos='fade-up'
       className={`shadow-sm ${styles.contentForm} card`}
       onSubmit={e =>
         submitHandler(e, {

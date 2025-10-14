@@ -8,6 +8,7 @@ const MedidasProduct = ({ product }) => {
       <div className='row'>
         {product.map(item => (
           <article
+            data-aos='fade-up'
             key={item.id}
             className={`galleryProduct ${item.col} ${item.extra_class ? item.extra_class : ''}`.trim()}
           >

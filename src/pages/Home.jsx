@@ -32,7 +32,7 @@ const Home = () => {
       </section>
       <section className='sustentable container'>
         <Link to='sustentabilidad'>
-          <h2 className='latoBold transition'>
+          <h2 data-aos='fade-up' className='latoBold transition'>
             Susten
             <br />
             table
@@ -56,7 +56,7 @@ const Home = () => {
 
       <section className='container especializacion text-center'>
         <div className='row'>
-          <div className='col-md-12'>
+          <div data-aos='fade-up' className='col-md-12'>
             <h2 className='latoBold'>Nos especializamos en</h2>
           </div>
         </div>
@@ -85,7 +85,9 @@ const Home = () => {
       <section className='container instagram'>
         <div className='row'>
           <div className='col-md-12'>
-            <h2 className='text-center'>Instagram Feed</h2>
+            <h2 data-aos='fade-up' className='text-center'>
+              Instagram Feed
+            </h2>
           </div>
         </div>
         <div className='row'>

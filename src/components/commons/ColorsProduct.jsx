@@ -20,6 +20,7 @@ const ColorsProduct = ({ product }) => {
   return (
     <>
       <div
+        data-aos='fade-up'
         className={[
           styles.contentColors, // CSS Module
           'contentColors', // clase global

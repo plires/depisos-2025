@@ -16,8 +16,9 @@ const ArticleDescription = ({
       className={`articulos row contentArticle ${styles.contentArticle} ${styles.left}`}
     >
       <div className={`col-md-7 ${styles.contentImg}`}>
-        <h3 dangerouslySetInnerHTML={{ __html: title }} />
+        <h3 data-aos='fade-up' dangerouslySetInnerHTML={{ __html: title }} />
         <img
+          data-aos='fade-up'
           className={`img-fluid ${styles.image}`}
           src={image}
           alt={altImage}
@@ -25,7 +26,10 @@ const ArticleDescription = ({
       </div>
       <div className={`col-md-5 ${styles.contentData}`}>
         <div className={styles.content}>
-          <p dangerouslySetInnerHTML={{ __html: description }} />
+          <p
+            data-aos='fade-up'
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
           <Button
             data-aos='fade-up'
             target='_blank'
@@ -45,7 +49,10 @@ const ArticleDescription = ({
     >
       <div className={`col-md-5 ${styles.contentData}`}>
         <div className={styles.content}>
-          <p dangerouslySetInnerHTML={{ __html: description }} />
+          <p
+            data-aos='fade-up'
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
           <Button
             data-aos='fade-up'
             target='_blank'
@@ -59,8 +66,9 @@ const ArticleDescription = ({
         </div>
       </div>
       <div className={`col-md-7 ${styles.contentImg}`}>
-        <h3 dangerouslySetInnerHTML={{ __html: title }} />
+        <h3 data-aos='fade-up' dangerouslySetInnerHTML={{ __html: title }} />
         <img
+          data-aos='fade-up'
           className={`img-fluid ${styles.image}`}
           src={image}
           alt={altImage}

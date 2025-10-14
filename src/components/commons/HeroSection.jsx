@@ -18,9 +18,17 @@ const HeroSection = ({ heroDesktop, heroMobile, title, description }) => {
             alt='header profesionales desktop'
           />
           <div className={`${styles.data}`}>
-            {title && <h1 dangerouslySetInnerHTML={{ __html: title }} />}
+            {title && (
+              <h1
+                data-aos='fade-up'
+                dangerouslySetInnerHTML={{ __html: title }}
+              />
+            )}
             {description && (
-              <p dangerouslySetInnerHTML={{ __html: description }} />
+              <p
+                data-aos='fade-up'
+                dangerouslySetInnerHTML={{ __html: description }}
+              />
             )}
           </div>
         </div>
