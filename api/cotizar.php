@@ -40,7 +40,7 @@ $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
 $bucketFile = sys_get_temp_dir() . '/quote_rate_' . md5($ip) . '.json';
 $now = time();
 $window = 10 * 60; // 10 min
-$maxReq = 3;
+$maxReq = 5;
 
 $history = [];
 if (file_exists($bucketFile)) {
@@ -54,9 +54,6 @@ if (count($history) >= $maxReq) {
   echo json_encode(['success' => false, 'error' => 'Demasiadas solicitudes. Intentá más tarde.']);
   exit;
 }
-// agregamos este intento (aún si falla validación)
-$history[] = $now;
-file_put_contents($bucketFile, json_encode($history));
 
 // ==== reCAPTCHA v3 ====
 $recaptchaSecret = $_ENV['VITE_RECAPTCHA_SECRET_KEY'];
@@ -140,7 +137,6 @@ if (!empty($errors)) {
   exit;
 }
 
-
 // Datos ya validados
 $payload = [
   'name'     => $name,
@@ -188,5 +184,9 @@ if (!$sent) {
   ], JSON_UNESCAPED_UNICODE);
   exit;
 }
+
+// ✅ Contar al historial de envios ($bucketFile) SOLO si el mail se envió
+$history[] = $now;
+file_put_contents($bucketFile, json_encode($history), LOCK_EX);
 
 echo json_encode(['success' => true], JSON_UNESCAPED_UNICODE);
