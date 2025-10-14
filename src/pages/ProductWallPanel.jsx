@@ -26,26 +26,26 @@ const ProductWallPanel = () => {
             <ColorsProduct product={product.colores} />
           </div>
         </div>
-        <GalleryProduct product={product.gallery} />
-        <MedidasProduct product={product.medidas} />
-        <ComparacionProduct product={product.comparacion} />
-        {product.accessories && (
-          <AccessoriesProduct product={product.accessories} />
-        )}
-        <TechnicalSheetProduct
-          data={product.technicalSheet.data}
-          ventajas={product.technicalSheet.ventajas}
-        />
+      </section>
+      <GalleryProduct product={product.gallery} />
+      <MedidasProduct product={product.medidas} />
+      <ComparacionProduct product={product.comparacion} />
+      {product.accessories && (
+        <AccessoriesProduct product={product.accessories} />
+      )}
+      <TechnicalSheetProduct
+        data={product.technicalSheet.data}
+        ventajas={product.technicalSheet.ventajas}
+      />
 
-        <section className='quoteFormProduct container'>
-          <div className='row'>
-            <div className='col-md-12 col-lg-8 offset-lg-2'>
-              <QuoteForm
-                recaptchaSiteKey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-              />
-            </div>
+      <section className='quoteFormProduct container'>
+        <div className='row'>
+          <div className='col-md-12 col-lg-8 offset-lg-2'>
+            <QuoteForm
+              recaptchaSiteKey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+            />
           </div>
-        </section>
+        </div>
       </section>
     </main>
   )
