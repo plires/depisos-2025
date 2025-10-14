@@ -22,59 +22,61 @@ export default function TechnicalSheetProduct({
   const rows = Object.entries(data || {})
 
   return (
-    <Row
-      className={`technicalSheetProduct ${styles.technicalSheetProduct} g-3 ${className}`}
+    <section
+      className={`technicalSheetProduct ${styles.technicalSheetProduct} g-3 ${className} container`}
     >
-      <Col md={8}>
-        <Card className='shadow-sm h-100'>
-          <Card.Body>
-            <Card.Title className={`fw-bold latoBoldItalic ${styles.title}`}>
-              {titleLeft}
-            </Card.Title>
+      <Row>
+        <Col md={8} className={styles.contentFicha}>
+          <Card className='shadow-sm h-100'>
+            <Card.Body>
+              <Card.Title className={`fw-bold latoBoldItalic ${styles.title}`}>
+                {titleLeft}
+              </Card.Title>
 
-            <dl
-              className={`${styles.list} ${styles.compact}`}
-              aria-label={titleLeft}
-            >
-              {rows.map(([label, value]) => (
-                <div className={styles.item} key={label}>
-                  <dt className={styles.dt}>{label}</dt>
-                  <dd className={styles.dd}>
-                    <span
-                      className={styles.value}
-                      dangerouslySetInnerHTML={{ __html: value }}
-                    />
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </Card.Body>
-        </Card>
-      </Col>
+              <dl
+                className={`${styles.list} ${styles.compact}`}
+                aria-label={titleLeft}
+              >
+                {rows.map(([label, value]) => (
+                  <div className={styles.item} key={label}>
+                    <dt className={styles.dt}>{label}</dt>
+                    <dd className={styles.dd}>
+                      <span
+                        className={styles.value}
+                        dangerouslySetInnerHTML={{ __html: value }}
+                      />
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </Card.Body>
+          </Card>
+        </Col>
 
-      <Col md={4}>
-        <Card className='shadow-sm h-100'>
-          <Card.Body>
-            <Card.Title
-              className={`fw-bold latoBoldItalic ${styles.title} ${styles.titleVentajas}`}
-            >
-              {titleRight}
-            </Card.Title>
-            <ListGroup variant='flush' className='pt-2'>
-              {ventajas.map(v => (
-                <ListGroup.Item
-                  key={v}
-                  className={`${styles.advItem} d-flex gap-2 align-items-start`}
-                >
-                  <FiCheck className={styles.checkIcon} aria-hidden />
-                  <span>{v}</span>
-                </ListGroup.Item>
-              ))}
-            </ListGroup>
-          </Card.Body>
-        </Card>
-      </Col>
-    </Row>
+        <Col md={4}>
+          <Card className='shadow-sm h-100'>
+            <Card.Body>
+              <Card.Title
+                className={`fw-bold latoBoldItalic ${styles.title} ${styles.titleVentajas}`}
+              >
+                {titleRight}
+              </Card.Title>
+              <ListGroup variant='flush' className='pt-2'>
+                {ventajas.map(v => (
+                  <ListGroup.Item
+                    key={v}
+                    className={`${styles.advItem} d-flex gap-2 align-items-start`}
+                  >
+                    <FiCheck className={styles.checkIcon} aria-hidden />
+                    <span>{v}</span>
+                  </ListGroup.Item>
+                ))}
+              </ListGroup>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </section>
   )
 }
 
