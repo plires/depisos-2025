@@ -1,0 +1,138 @@
+{
+  "header": [
+    {
+      "id": 1,
+      "title": "Perfiles",
+      "subtitle": "WPC sustentable",
+      "description": "Complemento versátil hechos con material WPC, ideales para cerramientos, parasoles o separador de ambientes. Súper resistente, no se deforma ni decolora.",
+      "img_header_background_src": "perfiles-background-header.webp",
+      "img_header_detail_src": "perfiles-detalle-header.webp",
+      "extra_class": "perfiles"
+    }
+  ],
+  "colores": [
+    {
+      "id": 1,
+      "title": "Charcoal",
+      "img_src": "perfiles-charcoal.webp",
+      "extra_class": "perfiles"
+    },
+    {
+      "id": 2,
+      "title": "Natural",
+      "img_src": "perfiles-natural.webp",
+      "extra_class": "perfiles"
+    },
+    {
+      "id": 3,
+      "title": "Oak",
+      "img_src": "perfiles-oak.webp",
+      "extra_class": "perfiles"
+    },
+    {
+      "id": 4,
+      "title": "Red Cedar",
+      "img_src": "perfiles-red-cedar.webp",
+      "extra_class": "perfiles"
+    },
+    {
+      "id": 5,
+      "title": "Teka",
+      "img_src": "perfiles-teka.webp",
+      "extra_class": "perfiles"
+    },
+    {
+      "id": 6,
+      "title": "White Oak",
+      "img_src": "perfiles-white-oak.webp",
+      "extra_class": "perfiles"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "img_src": "perfiles-galeria-a.webp",
+      "col": "col-md-4",
+      "extra_class": "perfiles"
+    },
+    {
+      "id": 2,
+      "img_src": "perfiles-galeria-b.webp",
+      "col": "col-md-4",
+      "extra_class": "perfiles"
+    },
+    {
+      "id": 3,
+      "img_src": "perfiles-galeria-c.webp",
+      "col": "col-md-4",
+      "extra_class": "perfiles"
+    },
+    {
+      "id": 4,
+      "img_src": "perfiles-galeria-d.webp",
+      "col": "col-md-6",
+      "extra_class": "perfiles"
+    },
+    {
+      "id": 5,
+      "img_src": "perfiles-galeria-e.webp",
+      "col": "col-md-6",
+      "extra_class": "perfiles"
+    }
+  ],
+  "medidas": [
+    {
+      "id": 1,
+      "img_src": "perfiles-medidas-a.webp",
+      "col": "col-md-7",
+      "extra_class": "perfiles"
+    },
+    {
+      "id": 2,
+      "img_src": "perfiles-medidas-b.webp",
+      "col": "col-md-5",
+      "extra_class": "perfiles"
+    }
+  ],
+  "comparacion": [
+    {
+      "id": 1,
+      "img_src": "perfiles-antes.webp",
+      "extra_class": "perfiles"
+    },
+    {
+      "id": 2,
+      "img_src": "perfiles-despues.webp",
+      "extra_class": "perfiles"
+    }
+  ],
+  "accessories": [
+    {
+      "id": 1,
+      "img_src": "perfiles-accesorios.webp",
+      "description": "Ángulo de inicio y ángulo side cover para terminaciones y esquinas prolijas.",
+      "extra_class": "perfiles"
+    }
+  ],
+  "technicalSheet": {
+    "extra_class": "perfiles",
+    "data": {
+      "Accesorios": "No tiene accesorios",
+      "Uso": "Decoración y construcción",
+      "Material": "WPC sustentable",
+      "Ancho, Alto y Espesor": "100 x 2900 x 56 mm / 60 x 2900 x 42 mm.",
+      "Formato de venta": "Unidad",
+      "M2 por perfil": "No aplica",
+      "Tipo de espacio": "Interior y exterior",
+      "Colores": "Charcoal, Natural, Oak, Red Cedar, Teka, White Oak",
+      "Garantía": "X años"
+    },
+    "ventajas": [
+      "Fácil instalación",
+      "Libre de mantenimiento",
+      "Resistente al clima",
+      "No se destiñe ni deforma",
+      "Resistente a insectos"
+    ]
+  }
+}

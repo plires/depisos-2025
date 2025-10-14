@@ -3,6 +3,7 @@ import Header from '@/components/commons/Header.jsx'
 import Footer from '@/components/commons/Footer.jsx'
 import Home from '@/pages/Home.jsx'
 import ProductWallPanel from '@/pages/ProductWallPanel.jsx'
+import ProductPerfiles from '@/pages/ProductPerfiles.jsx'
 import Profesionales from '@/pages/Profesionales.jsx'
 import Test from '@/pages/Test.jsx'
 import NotFound from '@/pages/NotFound.jsx'
@@ -26,6 +27,7 @@ function App() {
               path='/productos/wall-panel'
               element={<ProductWallPanel />}
             />
+            <Route path='/productos/perfiles' element={<ProductPerfiles />} />
             <Route path='/profesionales' element={<Profesionales />} />
             <Route path='/test' element={<Test />} />
             <Route path='*' element={<NotFound />} />

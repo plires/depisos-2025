@@ -10,8 +10,12 @@
 }
 
 /* Clases personalizadas por producto */
-.wallPanel {
-  justify-content: space-between;
+.perfiles article {
+  min-width: 80px;
+}
+
+.perfiles article img {
+  padding-left: 1.5rem;
 }
 /* Clases personalizadas por producto end */
 
@@ -59,6 +63,7 @@
   transform: rotate(-90deg) translateX(-100%);
   margin: 0;
   transition: color 0.3s ease-in-out;
+  width: max-content;
 }
 
 .contentColors article img {
@@ -104,6 +109,12 @@
     max-height: 220px;
     height: 220px;
   }
+
+  /* Clases personalizadas por producto */
+  .perfiles article {
+    min-width: 100px;
+  }
+  /* Clases personalizadas por producto end */
 }
 
 @media (min-width: 768px) {
@@ -144,6 +155,12 @@
   .contentColors article h4 {
     font-size: 1.35rem;
   }
+
+  /* Clases personalizadas por producto */
+  .wallPanel {
+    justify-content: space-between;
+  }
+  /* Clases personalizadas por producto end */
 }
 
 @media (min-width: 1600px) {
