@@ -9,6 +9,15 @@ const __dirname = path.dirname(__filename)
 
 export default defineConfig({
   plugins: [react()],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://depisos.test/site-2025',
+        changeOrigin: true,
+        secure: false, // si es cert local
+      },
+    },
+  },
   css: {
     devSourcemap: true,
   },
