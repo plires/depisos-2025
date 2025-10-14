@@ -5,6 +5,8 @@ import Modal from '@/components/commons/ModalColorProduct.jsx'
 import styles from './colors-product.module.css'
 
 const ColorsProduct = ({ product }) => {
+  const extraClass = product?.[0]?.extra_class
+
   const [selectedProduct, setSelectedProduct] = useState(null)
 
   const handleOpenModal = item => {
@@ -17,7 +19,15 @@ const ColorsProduct = ({ product }) => {
 
   return (
     <>
-      <div className={`${styles.contentColors} contentColors`}>
+      <div
+        className={[
+          styles.contentColors, // CSS Module
+          'contentColors', // clase global
+          extraClass && (styles[extraClass] ?? extraClass), // usa styles[extraClass] si existe en el módulo; si no, la agrega como global
+        ]
+          .filter(Boolean)
+          .join(' ')}
+      >
         {product.map(item => (
           <article key={item.id} className={styles.color}>
             <button

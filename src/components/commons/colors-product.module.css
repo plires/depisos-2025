@@ -9,6 +9,12 @@
   gap: 1rem;
 }
 
+/* Clases personalizadas por producto */
+.wallPanel {
+  justify-content: space-between;
+}
+/* Clases personalizadas por producto end */
+
 .contentColors article {
   position: relative;
   flex: 0 0 auto;
