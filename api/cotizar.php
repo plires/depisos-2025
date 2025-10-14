@@ -6,7 +6,7 @@ require_once __DIR__ . '/../php/mailer/QuoteMailer.php';
 
 use App\Mailer\QuoteMailer;
 
-$allowedOrigin = $_ENV['VITE_DOMAIN']; //https://depisos.test
+$allowedOrigin = $_ENV['VITE_DOMAIN'];
 
 header("Access-Control-Allow-Origin: $allowedOrigin");
 header("Vary: Origin"); // por si servís a varios orígenes
@@ -37,26 +37,26 @@ if (!is_array($data)) {
 // ==== Rate limiting simple (por IP) ====
 // Máx 3 solicitudes / 10 minutos
 $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
-// $bucketFile = sys_get_temp_dir() . '/quote_rate_' . md5($ip) . '.json';
-// $now = time();
-// $window = 10 * 60; // 10 min
-// $maxReq = 3;
+$bucketFile = sys_get_temp_dir() . '/quote_rate_' . md5($ip) . '.json';
+$now = time();
+$window = 10 * 60; // 10 min
+$maxReq = 3;
 
-// $history = [];
-// if (file_exists($bucketFile)) {
-//   $json = file_get_contents($bucketFile);
-//   $history = json_decode($json, true) ?: [];
-// }
-// // limpiar fuera de ventana
-// $history = array_values(array_filter($history, fn($t) => ($now - (int)$t) < $window));
-// if (count($history) >= $maxReq) {
-//   http_response_code(429);
-//   echo json_encode(['success' => false, 'error' => 'Demasiadas solicitudes. Intentá más tarde.']);
-//   exit;
-// }
-// // agregamos este intento (aún si falla validación)
-// $history[] = $now;
-// file_put_contents($bucketFile, json_encode($history));
+$history = [];
+if (file_exists($bucketFile)) {
+  $json = file_get_contents($bucketFile);
+  $history = json_decode($json, true) ?: [];
+}
+// limpiar fuera de ventana
+$history = array_values(array_filter($history, fn($t) => ($now - (int)$t) < $window));
+if (count($history) >= $maxReq) {
+  http_response_code(429);
+  echo json_encode(['success' => false, 'error' => 'Demasiadas solicitudes. Intentá más tarde.']);
+  exit;
+}
+// agregamos este intento (aún si falla validación)
+$history[] = $now;
+file_put_contents($bucketFile, json_encode($history));
 
 // ==== reCAPTCHA v3 ====
 $recaptchaSecret = $_ENV['VITE_RECAPTCHA_SECRET_KEY'];
