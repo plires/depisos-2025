@@ -115,6 +115,7 @@
     }
   ],
   "technicalSheet": {
+    "extra_class": "wallPanel",
     "data": {
       "Accesorios": "Ángulo de inicio, ángulo side cover",
       "Uso": "Decoración y construcción",
