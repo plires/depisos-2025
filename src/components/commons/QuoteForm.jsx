@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { handleSubmit as submitHandler } from '@/utils/dataUtils'
 
 import styles from './quote-form.module.css'
 
@@ -20,97 +21,6 @@ export default function QuoteForm({ recaptchaSiteKey }) {
     return () => document.head.removeChild(s)
   }, [recaptchaSiteKey])
 
-  const validate = form => {
-    const data = Object.fromEntries(new FormData(form).entries())
-    const next = {}
-    const name = (data.name || '').trim()
-    if (name.length < 3) next.name = 'Ingresá al menos 3 caracteres.'
-
-    const email = (data.email || '').trim()
-    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
-    if (!emailRe.test(email)) next.email = 'Email no válido.'
-
-    const phone = (data.phone || '').trim()
-    if (phone.replace(/\D/g, '').length < 7) next.phone = 'Teléfono no válido.'
-
-    const m2 = (data.surface || '').replace(',', '.').trim()
-    const m2Num = Number(m2)
-    if (!m2 || Number.isNaN(m2Num) || m2Num <= 0)
-      next.surface = 'Ingresá un número mayor a 0.'
-
-    if (!data.province) next.province = 'Seleccioná una provincia.'
-
-    const comments = (data.comments || '').trim()
-    if (comments.length < 10)
-      next.comments = 'Ingresá un mensaje (mayor a 10 caracteres).'
-
-    setErrors(next)
-    return {
-      ok: Object.keys(next).length === 0,
-      cleaned: { ...data, surface: m2Num },
-    }
-  }
-
-  const getRecaptchaToken = async () => {
-    if (!recaptchaSiteKey || !window.grecaptcha?.execute) return null
-    return await window.grecaptcha.execute(recaptchaSiteKey, {
-      action: 'cotizar',
-    })
-  }
-
-  const handleSubmit = async e => {
-    e.preventDefault()
-    setServerMsg(null)
-    setServerErr(null)
-
-    const { ok, cleaned } = validate(e.currentTarget)
-    if (!ok) return
-
-    try {
-      setSubmitting(true)
-
-      const originUrl = window.location.href
-
-      const token = await getRecaptchaToken() // puede ser null en dev
-      const res = await fetch('/api/cotizar.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...cleaned,
-          recaptchaToken: token,
-          originUrl,
-        }),
-      })
-
-      const payload = await res.json().catch(() => ({}))
-      if (!res.ok || payload.success !== true) {
-        // 👇 Manejo fino de 422 con errores por campo
-        if (res.status === 422 && payload.fields) {
-          setErrors(payload.fields) // pinta invalid-feedback en cada campo
-          setServerErr(payload.error || '') // comentario específico arriba (alert)
-          if (payload.field) {
-            // Llevar el foco al primer campo con error (si existe en el DOM)
-            const el = document.getElementById(payload.field)
-            if (el) el.focus()
-          }
-          return // no arrojamos Error, ya mostramos feedback
-        }
-
-        // Otros errores (400, 500, etc.)
-        throw new Error(payload.error || 'No pudimos procesar tu solicitud.')
-      }
-
-      setServerMsg(
-        '¡Gracias! Recibimos tu solicitud y te contactaremos pronto.',
-      )
-      setLocked(true) // ← deja el form read-only tras éxito
-    } catch (err) {
-      setServerErr(err.message)
-    } finally {
-      setSubmitting(false)
-    }
-  }
-
   // Helpers feedback
   const invalid = n => (errors[n] ? 'is-invalid' : '')
   const msg = n => errors[n]
@@ -118,7 +28,17 @@ export default function QuoteForm({ recaptchaSiteKey }) {
   return (
     <form
       className={`shadow-sm ${styles.contentForm} card`}
-      onSubmit={handleSubmit}
+      onSubmit={e =>
+        submitHandler(e, {
+          setServerMsg,
+          setServerErr,
+          setSubmitting,
+          setLocked,
+          setErrors,
+          recaptchaSiteKey,
+          // fetchUrl: "/api/cotizar.php", // opcional si querés cambiar endpoint
+        })
+      }
       ref={formRef}
       noValidate
     >

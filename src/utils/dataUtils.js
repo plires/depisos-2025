@@ -47,3 +47,134 @@ export const getLink = link => {
 export const getImageURL = name => {
   return new URL(`../assets/img/${name}`, import.meta.url).href
 }
+
+/** Valida y normaliza datos del formulario.
+ * Devuelve { ok, cleaned, errors } y NO toca setState.
+ */
+export const validate = form => {
+  const data = Object.fromEntries(new FormData(form).entries())
+  const errors = {}
+
+  const name = (data.name || '').trim()
+  if (name.length < 3) errors.name = 'Ingresá al menos 3 caracteres.'
+
+  const email = (data.email || '').trim()
+  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
+  if (!emailRe.test(email)) errors.email = 'Email no válido.'
+
+  const phone = (data.phone || '').trim()
+  if (phone.replace(/\D/g, '').length < 7) errors.phone = 'Teléfono no válido.'
+
+  const m2 = (data.surface || '').replace(',', '.').trim()
+  const m2Num = Number(m2)
+  if (!m2 || Number.isNaN(m2Num) || m2Num <= 0) {
+    errors.surface = 'Ingresá un número mayor a 0.'
+  }
+
+  if (!data.province) errors.province = 'Seleccioná una provincia.'
+
+  const comments = (data.comments || '').trim()
+  if (comments.length < 10) {
+    errors.comments = 'Ingresá un mensaje (mayor a 10 caracteres).'
+  }
+
+  return {
+    ok: Object.keys(errors).length === 0,
+    cleaned: { ...data, surface: m2Num },
+    errors,
+  }
+}
+
+/** Espera a que reCAPTCHA v3 esté listo. */
+const waitForRecaptchaReady = () =>
+  new Promise(resolve => {
+    const tryReady = () => {
+      if (window.grecaptcha && window.grecaptcha.ready) {
+        window.grecaptcha.ready(resolve)
+      } else {
+        setTimeout(tryReady, 50)
+      }
+    }
+    tryReady()
+  })
+
+/** Obtiene token de reCAPTCHA v3 (acción "cotizar"). Devuelve string|null. */
+export const getRecaptchaToken = async recaptchaSiteKey => {
+  if (!recaptchaSiteKey) return null
+  await waitForRecaptchaReady()
+  if (!window.grecaptcha?.execute) return null
+  try {
+    const token = await window.grecaptcha.execute(recaptchaSiteKey, {
+      action: 'cotizar',
+    })
+    return token || null
+  } catch {
+    return null
+  }
+}
+
+/** Maneja el submit completo (validación, token, fetch, feedback).
+ *  Inyectá las dependencias desde el componente.
+ */
+export const handleSubmit = async (e, deps) => {
+  const {
+    setServerMsg,
+    setServerErr,
+    setSubmitting,
+    setLocked,
+    setErrors,
+    recaptchaSiteKey,
+    fetchUrl = '/api/cotizar.php',
+  } = deps
+
+  e.preventDefault()
+  setServerMsg?.(null)
+  setServerErr?.(null)
+
+  const { ok, cleaned, errors } = validate(e.currentTarget)
+  if (!ok) {
+    setErrors?.(errors)
+    return
+  }
+
+  try {
+    setSubmitting?.(true)
+
+    const originUrl = window.location.href
+    const recaptchaToken = await getRecaptchaToken(recaptchaSiteKey)
+
+    const res = await fetch(fetchUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...cleaned, recaptchaToken, originUrl }),
+    })
+
+    const payload = await res.json().catch(() => ({}))
+
+    if (!res.ok || payload.success !== true) {
+      // Validación de servidor (422) con mapa de campos
+      if (res.status === 422 && payload.fields) {
+        setErrors?.(payload.fields)
+        setServerErr?.(payload.error || '')
+        if (payload.field) {
+          const el = document.getElementById(payload.field)
+          if (el) el.focus()
+        }
+        return
+      }
+
+      // Otros errores (400/500)
+      throw new Error(payload.error || 'No pudimos procesar tu solicitud.')
+    }
+
+    setErrors?.({})
+    setServerMsg?.(
+      '¡Gracias! Recibimos tu solicitud y te contactaremos pronto.',
+    )
+    setLocked?.(true) // bloquea el form tras éxito
+  } catch (err) {
+    setServerErr?.(err.message || String(err))
+  } finally {
+    setSubmitting?.(false)
+  }
+}
