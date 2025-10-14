@@ -23,28 +23,31 @@ export default function QuoteForm({ recaptchaSiteKey }) {
   const validate = form => {
     const data = Object.fromEntries(new FormData(form).entries())
     const next = {}
-    const name = (data.nombre || '').trim()
-    if (name.length < 3) next.nombre = 'Ingresá al menos 3 caracteres.'
+    const name = (data.name || '').trim()
+    if (name.length < 3) next.name = 'Ingresá al menos 3 caracteres.'
 
     const email = (data.email || '').trim()
     const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
     if (!emailRe.test(email)) next.email = 'Email no válido.'
 
-    const telefono = (data.telefono || '').trim()
-    if (telefono.replace(/\D/g, '').length < 7)
-      next.telefono = 'Teléfono no válido.'
+    const phone = (data.phone || '').trim()
+    if (phone.replace(/\D/g, '').length < 7) next.phone = 'Teléfono no válido.'
 
-    const m2 = (data.superficie || '').replace(',', '.').trim()
+    const m2 = (data.surface || '').replace(',', '.').trim()
     const m2Num = Number(m2)
     if (!m2 || Number.isNaN(m2Num) || m2Num <= 0)
-      next.superficie = 'Ingresá un número mayor a 0.'
+      next.surface = 'Ingresá un número mayor a 0.'
 
-    if (!data.provincia) next.provincia = 'Seleccioná una provincia.'
+    if (!data.province) next.province = 'Seleccioná una provincia.'
+
+    const comments = (data.comments || '').trim()
+    if (comments.length < 10)
+      next.comments = 'Ingresá un mensaje (mayor a 10 caracteres).'
 
     setErrors(next)
     return {
       ok: Object.keys(next).length === 0,
-      cleaned: { ...data, superficie: m2Num },
+      cleaned: { ...data, surface: m2Num },
     }
   }
 
@@ -66,15 +69,34 @@ export default function QuoteForm({ recaptchaSiteKey }) {
     try {
       setSubmitting(true)
 
+      const originUrl = window.location.href
+
       const token = await getRecaptchaToken() // puede ser null en dev
       const res = await fetch('/api/cotizar.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...cleaned, recaptchaToken: token }),
+        body: JSON.stringify({
+          ...cleaned,
+          recaptchaToken: token,
+          originUrl,
+        }),
       })
 
       const payload = await res.json().catch(() => ({}))
       if (!res.ok || payload.success !== true) {
+        // 👇 Manejo fino de 422 con errores por campo
+        if (res.status === 422 && payload.fields) {
+          setErrors(payload.fields) // pinta invalid-feedback en cada campo
+          setServerErr(payload.error || '') // comentario específico arriba (alert)
+          if (payload.field) {
+            // Llevar el foco al primer campo con error (si existe en el DOM)
+            const el = document.getElementById(payload.field)
+            if (el) el.focus()
+          }
+          return // no arrojamos Error, ya mostramos feedback
+        }
+
+        // Otros errores (400, 500, etc.)
         throw new Error(payload.error || 'No pudimos procesar tu solicitud.')
       }
 
@@ -94,33 +116,33 @@ export default function QuoteForm({ recaptchaSiteKey }) {
   const msg = n => errors[n]
 
   return (
-    <form onSubmit={handleSubmit} ref={formRef} noValidate>
-      <div className='row mb-3'>
-        <div className='col-12 text-center'>
-          <h3 className='fw-semibold fst-italic'>Cotizador</h3>
-        </div>
+    <form
+      className={`shadow-sm ${styles.contentForm} card`}
+      onSubmit={handleSubmit}
+      ref={formRef}
+      noValidate
+    >
+      <div className='text-center'>
+        <h3 className='fw-semibold fst-italic'>Cotizador</h3>
       </div>
 
       {/* Fieldset permite deshabilitar todo de una */}
       <fieldset disabled={submitting || locked}>
         {/* Nombre */}
         <div className='row mb-3 align-items-center'>
-          <label
-            htmlFor='nombre'
-            className='col-sm-4 col-form-label text-sm-end'
-          >
+          <label htmlFor='name' className='col-sm-4 col-form-label text-sm-end'>
             Nombre:
           </label>
           <div className='col-sm-8'>
             <input
               type='text'
-              className={`form-control ${invalid('nombre')}`}
-              id='nombre'
-              name='nombre'
+              className={`form-control ${invalid('name')}`}
+              id='name'
+              name='name'
               required
               maxLength={80}
             />
-            <div className='invalid-feedback'>{msg('nombre')}</div>
+            <div className='invalid-feedback'>{msg('name')}</div>
           </div>
         </div>
 
@@ -147,7 +169,7 @@ export default function QuoteForm({ recaptchaSiteKey }) {
         {/* Teléfono */}
         <div className='row mb-3 align-items-center'>
           <label
-            htmlFor='telefono'
+            htmlFor='phone'
             className='col-sm-4 col-form-label text-sm-end'
           >
             Teléfono:
@@ -155,49 +177,49 @@ export default function QuoteForm({ recaptchaSiteKey }) {
           <div className='col-sm-8'>
             <input
               type='tel'
-              className={`form-control ${invalid('telefono')}`}
-              id='telefono'
-              name='telefono'
+              className={`form-control ${invalid('phone')}`}
               required
+              id='phone'
+              name='phone'
             />
-            <div className='invalid-feedback'>{msg('telefono')}</div>
+            <div className='invalid-feedback'>{msg('phone')}</div>
           </div>
         </div>
 
         {/* Superficie */}
         <div className='row mb-3 align-items-center'>
           <label
-            htmlFor='superficie'
+            htmlFor='surface'
             className='col-sm-4 col-form-label text-sm-end'
           >
-            Superficie a cubrir en m2:
+            superficie a cubrir en m2:
           </label>
           <div className='col-sm-8'>
             <input
               type='text'
-              className={`form-control ${invalid('superficie')}`}
-              id='superficie'
-              name='superficie'
+              className={`form-control ${invalid('surface')}`}
+              id='surface'
+              name='surface'
               inputMode='decimal'
               required
             />
-            <div className='invalid-feedback'>{msg('superficie')}</div>
+            <div className='invalid-feedback'>{msg('surface')}</div>
           </div>
         </div>
 
         {/* Provincia */}
         <div className='row mb-3 align-items-center'>
           <label
-            htmlFor='provincia'
+            htmlFor='province'
             className='col-sm-4 col-form-label text-sm-end'
           >
             Provincia:
           </label>
           <div className='col-sm-8'>
             <select
-              id='provincia'
-              name='provincia'
-              className={`form-select ${invalid('provincia')}`}
+              id='province'
+              name='province'
+              className={`form-select ${invalid('province')}`}
               required
               defaultValue=''
             >
@@ -212,32 +234,35 @@ export default function QuoteForm({ recaptchaSiteKey }) {
               <option>Neuquén</option>
               <option>Resto del país</option>
             </select>
-            <div className='invalid-feedback'>{msg('provincia')}</div>
+            <div className='invalid-feedback'>{msg('province')}</div>
           </div>
         </div>
 
-        {/* Mensaje */}
+        {/* Comentario */}
         <div className='row mb-3'>
           <label
-            htmlFor='mensaje'
+            htmlFor='comments'
             className='col-sm-4 col-form-label text-sm-end'
           >
-            Agregar mensaje (opcional):
+            Agregar comentario:
           </label>
           <div className='col-sm-8'>
             <textarea
-              id='mensaje'
-              name='mensaje'
-              className='form-control'
+              required
+              id='comments'
+              name='comments'
+              className={`form-control ${styles.textarea} ${invalid('comments')}`}
               rows={5}
               maxLength={1500}
+              minLength={10}
             />
+            <div className='invalid-feedback'>{msg('comments')}</div>
             <div className='form-text'>Hasta 1500 caracteres.</div>
           </div>
         </div>
       </fieldset>
 
-      {/* Mensajes del servidor */}
+      {/* Mensaje del servidor */}
       {serverMsg && (
         <div className='row mb-3'>
           <div className='col-sm-8 offset-sm-4'>
@@ -255,7 +280,7 @@ export default function QuoteForm({ recaptchaSiteKey }) {
 
       {/* Botón */}
       <div className='row'>
-        <div className='col-sm-12'>
+        <div className='col-sm-12 text-center'>
           <button
             className='btn btn-dark rounded-pill px-5 d-inline-flex align-items-center gap-2'
             type='submit'

@@ -1,3 +1,6 @@
+.contentForm {
+  padding: 2rem;
+}
 /* MEDIA QUERIES */
 @media (min-width: 576px) {
 }
