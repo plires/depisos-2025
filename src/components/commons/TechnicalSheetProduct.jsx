@@ -23,7 +23,7 @@ export default function TechnicalSheetProduct({
 
   return (
     <section
-      className={`technicalSheetProduct ${styles.technicalSheetProduct} g-3 ${className} container`}
+      className={`technicalSheetProduct ${styles.technicalSheetProduct} ${className} container`}
     >
       <Row>
         <Col md={8} className={styles.contentFicha}>
