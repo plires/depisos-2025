@@ -6,66 +6,78 @@
       "subtitle": "WPC sustentable",
       "description": "Revestimiento de pared fabricado con fibras de madera reciclada y polímeros. Ideal para muros interiores y fachadas exteriores modernas. Resistente al clima, la humedad y de fácil instalación. Dos formatos diferentes.",
       "img_header_background_src": "wall-panel-background-header.webp",
-      "img_header_detail_src": "wall-panel-detalle-header.webp"
+      "img_header_detail_src": "wall-panel-detalle-header.webp",
+      "extra_class": "wallPanel"
     }
   ],
   "colores": [
     {
       "id": 1,
       "title": "Charcoal",
-      "img_src": "wall-panel-charcoal.webp"
+      "img_src": "wall-panel-charcoal.webp",
+      "extra_class": "wallPanel"
     },
     {
       "id": 2,
       "title": "Natural",
-      "img_src": "wall-panel-natural.webp"
+      "img_src": "wall-panel-natural.webp",
+      "extra_class": "wallPanel"
     },
     {
       "id": 3,
       "title": "Teka",
-      "img_src": "wall-panel-teka.webp"
+      "img_src": "wall-panel-teka.webp",
+      "extra_class": "wallPanel"
     },
     {
       "id": 4,
       "title": "White Oak",
-      "img_src": "wall-panel-white-oak.webp"
+      "img_src": "wall-panel-white-oak.webp",
+      "extra_class": "wallPanel"
     },
     {
       "id": 5,
       "title": "Red Cedar",
-      "img_src": "wall-panel-red-cedar.webp"
+      "img_src": "wall-panel-red-cedar.webp",
+      "extra_class": "wallPanel"
     },
     {
       "id": 6,
       "title": "Teka New Sanding",
-      "img_src": "wall-panel-teka-new-sanding.webp"
+      "img_src": "wall-panel-teka-new-sanding.webp",
+      "extra_class": "wallPanel"
     }
   ],
   "gallery": [
     {
       "id": 1,
       "img_src": "wall-panel-galeria-a.webp",
-      "col": "col-md-4"
+      "col": "col-md-4",
+      "extra_class": "wallPanel"
     },
     {
       "id": 2,
       "img_src": "wall-panel-galeria-b.webp",
-      "col": "col-md-4"
+      "col": "col-md-4",
+      "extra_class": "wallPanel"
     },
     {
       "id": 3,
       "img_src": "wall-panel-galeria-c.webp",
-      "col": "col-md-4"
+      "col": "col-md-4",
+      "extra_class": "wallPanel"
     },
     {
       "id": 4,
       "img_src": "wall-panel-galeria-d.webp",
-      "col": "col-md-6"
+      "col": "col-md-6",
+      "extra_class": "wallPanel"
     },
     {
       "id": 5,
       "img_src": "wall-panel-galeria-e.webp",
-      "col": "col-md-6"
+      "col": "col-md-6",
+      "extra_class": "wallPanel"
     }
   ],
   "medidas": [
