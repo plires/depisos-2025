@@ -1,0 +1,131 @@
+{
+  "header": [
+    {
+      "id": 1,
+      "title": "DECK DUAL",
+      "subtitle": "WPC sustentable",
+      "description": "Piso exterior reversible con dos colores diferentes en el mismo producto. Fabricado con materiales reciclados, ofrece alta resistencia al sol, lluvia e insectos, libre de mantenimiento, ideal para el tránsito intenso.",
+      "img_header_background_src": "deck-dual-background-header.webp",
+      "img_header_detail_src": "deck-dual-detalle-header.webp",
+      "extra_class": "deckDual"
+    }
+  ],
+  "colores": [
+    {
+      "id": 1,
+      "title": "Charcoal + Stone Gray",
+      "img_src": "deck-dual-carcoal-stone-gray.webp",
+      "extra_class": "deckDual"
+    },
+    {
+      "id": 2,
+      "title": "Natural + Teka ",
+      "img_src": "deck-dual-natural-teka.webp",
+      "extra_class": "deckDual"
+    },
+    {
+      "id": 3,
+      "title": "Red Cedar + Maple",
+      "img_src": "deck-dual-red-cedar-maple.webp",
+      "extra_class": "deckDual"
+    },
+    {
+      "id": 4,
+      "title": "Teka + Red Cedar",
+      "img_src": "deck-dual-teka-red-cedar.webp",
+      "extra_class": "deckDual"
+    },
+    {
+      "id": 5,
+      "title": "White Oak + Teka",
+      "img_src": "deck-dual-white-oak-teka.webp",
+      "extra_class": "deckDual"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "img_src": "deck-dual-galeria-a.webp",
+      "col": "col-md-4",
+      "extra_class": "deckDual"
+    },
+    {
+      "id": 2,
+      "img_src": "deck-dual-galeria-b.webp",
+      "col": "col-md-4",
+      "extra_class": "deckDual"
+    },
+    {
+      "id": 3,
+      "img_src": "deck-dual-galeria-c.webp",
+      "col": "col-md-4",
+      "extra_class": "deckDual"
+    },
+    {
+      "id": 4,
+      "img_src": "deck-dual-galeria-d.webp",
+      "col": "col-md-6",
+      "extra_class": "deckDual"
+    },
+    {
+      "id": 5,
+      "img_src": "deck-dual-galeria-e.webp",
+      "col": "col-md-6",
+      "extra_class": "deckDual"
+    }
+  ],
+  "medidas": [
+    {
+      "id": 1,
+      "img_src": "deck-dual-medidas-a.webp",
+      "col": "col-md-7",
+      "extra_class": "deckDual"
+    },
+    {
+      "id": 2,
+      "img_src": "deck-dual-medidas-b.webp",
+      "col": "col-md-5",
+      "extra_class": "deckDual"
+    }
+  ],
+  "comparacion": [
+    {
+      "id": 1,
+      "img_src": "deck-dual-antes.webp",
+      "extra_class": "deckDual"
+    },
+    {
+      "id": 2,
+      "img_src": "deck-dual-despues.webp",
+      "extra_class": "deckDual"
+    }
+  ],
+  "accessories": [
+    {
+      "id": 1,
+      "img_src": "deck-dual-accesorios.webp",
+      "description": "Clip metálico de encastre para Deck Dual. Facilita la instalación y oculta los tornillos para un acabado prolijo.",
+      "extra_class": "deckDual"
+    }
+  ],
+  "technicalSheet": {
+    "extra_class": "deckDual",
+    "data": {
+      "Accesorios": "Clip metálico para Deck Dual",
+      "Uso": "Decoración y construcción",
+      "Material": "WPC sustentable",
+      "Ancho, Alto y Espesor": "145x2200x22 mm.",
+      "Formato de venta": "Unidad",
+      "M2 por tabla": "0,312 m2",
+      "Tipo de espacio": "exterior",
+      "Colores": "Charcoal, Teka, White Oak, Natural, Oak, Red Cedar, Teka New Sanding",
+      "Garantía": "X años"
+    },
+    "ventajas": [
+      "Dos colores en 1 sólo producto",
+      "Libre de mantenimiento",
+      "Resistente al clima",
+      "No se destiñe ni deforma"
+    ]
+  }
+}
