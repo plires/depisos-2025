@@ -1,0 +1,162 @@
+{
+  "header": [
+    {
+      "id": 1,
+      "title": "FLAT Panel",
+      "subtitle": "WPC + bambú",
+      "description": "Panel decorativo ecológico para interiores con diferentes texturas para combinar. Compuesto por PVC y fibra de bambú, es resistente a la humedad y los insectos. Instalación rápida sin dañar la superficie.",
+      "img_header_background_src": "flat-panel-background-header.webp",
+      "img_header_detail_src": "flat-panel-detalle-header.webp",
+      "extra_class": "flatPanel"
+    }
+  ],
+  "colores": [
+    {
+      "id": 1,
+      "title": "Varillado Beige",
+      "img_src": "flat-panel-varillado-beige.webp",
+      "extra_class": "flatPanel"
+    },
+    {
+      "id": 2,
+      "title": "Varillado Roble Oscuro",
+      "img_src": "flat-panel-varillado-roble-oscuro.webp",
+      "extra_class": "flatPanel"
+    },
+    {
+      "id": 3,
+      "title": "Varillado Roble Claro",
+      "img_src": "flat-panel-varillado-roble-claro.webp",
+      "extra_class": "flatPanel"
+    },
+    {
+      "id": 4,
+      "title": "Varillado Roble Gris",
+      "img_src": "flat-panel-varillado-roble-gris.webp",
+      "extra_class": "flatPanel"
+    },
+    {
+      "id": 5,
+      "title": "Hilado Beige",
+      "img_src": "flat-panel-hilado-beige.webp",
+      "extra_class": "flatPanel"
+    },
+    {
+      "id": 6,
+      "title": "Roble Oscuro",
+      "img_src": "flat-panel-roble-oscuro.webp",
+      "extra_class": "flatPanel"
+    },
+    {
+      "id": 7,
+      "title": "Roble Claro",
+      "img_src": "flat-panel-roble-claro.webp",
+      "extra_class": "flatPanel"
+    },
+    {
+      "id": 8,
+      "title": "Roble Gris",
+      "img_src": "flat-panel-roble-gris.webp",
+      "extra_class": "flatPanel"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "img_src": "flat-panel-galeria-a.webp",
+      "col": "col-md-4",
+      "extra_class": "flatPanel"
+    },
+    {
+      "id": 2,
+      "img_src": "flat-panel-galeria-b.webp",
+      "col": "col-md-4",
+      "extra_class": "flatPanel"
+    },
+    {
+      "id": 3,
+      "img_src": "flat-panel-galeria-c.webp",
+      "col": "col-md-4",
+      "extra_class": "flatPanel"
+    },
+    {
+      "id": 4,
+      "img_src": "flat-panel-galeria-d.webp",
+      "col": "col-md-6",
+      "extra_class": "flatPanel"
+    },
+    {
+      "id": 5,
+      "img_src": "flat-panel-galeria-e.webp",
+      "col": "col-md-6",
+      "extra_class": "flatPanel"
+    }
+  ],
+  "medidas": [
+    {
+      "id": 1,
+      "img_src": "flat-panel-medidas-a.webp",
+      "col": "col-md-7",
+      "extra_class": "flatPanel"
+    },
+    {
+      "id": 2,
+      "img_src": "flat-panel-medidas-b.webp",
+      "col": "col-md-5",
+      "extra_class": "flatPanel"
+    },
+    {
+      "id": 3,
+      "img_src": "flat-panel-medidas-b.webp",
+      "col": "col-md-5",
+      "extra_class": "flatPanel"
+    },
+    {
+      "id": 4,
+      "img_src": "flat-panel-medidas-b.webp",
+      "col": "col-md-5",
+      "extra_class": "flatPanel"
+    }
+  ],
+  "comparacion": [
+    {
+      "id": 1,
+      "img_src": "flat-panel-antes.webp",
+      "extra_class": "flatPanel"
+    },
+    {
+      "id": 2,
+      "img_src": "flat-panel-despues.webp",
+      "extra_class": "flatPanel"
+    }
+  ],
+  "accessories": [
+    {
+      "id": 1,
+      "img_src": "flat-panel-accesorios.webp",
+      "description": "Clip metálico diseñado para asegurar una fijación firme y duradera del Flat Panel al muro, garantizando una instalación estable y prolija.",
+      "extra_class": "flatPanel"
+    }
+  ],
+  "technicalSheet": {
+    "extra_class": "flatPanel",
+    "data": {
+      "Accesorios": "Clip Metálico de sujeción.",
+      "Uso": "Revestimiento decorativo.",
+      "Material": "WPC + bambú sustentable",
+      "Ancho, Alto y Espesor": "Acanalado: 140 x 2800 x 15mm.<br />Varillado: 150 x 2800 x 10mm.<br />Lisos: 600 x 2800 x 10mm.",
+      "Formato de venta": "Unidad",
+      "M2 por tabla": "0,58 m2",
+      "Tipo de espacio": "Interior y exterior",
+      "Colores": "Charcoal, Teka, White Oak, Natural, Oak, Red Cedar, Teka New Sanding",
+      "Garantía": "X años"
+    },
+    "ventajas": [
+      "Resistente a la humedad",
+      "Combinable entre texturas",
+      "Instalación rápida y limpia",
+      "Inmune a insectos",
+      "Ecológico y sustentable"
+    ]
+  }
+}
