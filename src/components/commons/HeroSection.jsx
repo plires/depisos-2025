@@ -1,9 +1,15 @@
 import styles from './hero-section.module.css'
 
-const HeroSection = ({ heroDesktop, heroMobile, title, description }) => {
+const HeroSection = ({
+  heroDesktop,
+  heroMobile,
+  title,
+  description,
+  extraClass = false,
+}) => {
   return (
     <section
-      className={`container-fluid profesionalesHero ${styles.contentSection}`}
+      className={`container-fluid profesionalesHero ${styles.contentSection} ${extraClass && extraClass}`}
     >
       <div className='row'>
         <div className={`col-md-12 p-0 ${styles.content}`}>
@@ -17,7 +23,7 @@ const HeroSection = ({ heroDesktop, heroMobile, title, description }) => {
             src={heroDesktop}
             alt='header profesionales desktop'
           />
-          <div className={`${styles.data}`}>
+          <div className={`${styles.data} data`}>
             {title && (
               <h1
                 data-aos='fade-up'
