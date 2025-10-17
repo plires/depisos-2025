@@ -1,0 +1,106 @@
+.sustentabilidad .headerSustentabilidad {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.sustentabilidad .headerSustentabilidad .data {
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.sustentabilidad .headerSustentabilidad h1 {
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.75rem;
+}
+
+.sustentabilidad .headerSustentabilidad h1 br {
+  display: none;
+}
+
+.sustentabilidad .contentSustentabilidad {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sustentabilidad .contentSustentabilidad p:last-child {
+  margin-bottom: 0;
+}
+
+.sustentabilidad .contentSustentabilidad .contentData {
+  margin-bottom: 30px;
+}
+
+.sustentabilidad .contentSustentabilidad img {
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+  .sustentabilidad .headerSustentabilidad h1 br {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 768px) {
+  .sustentabilidad .headerSustentabilidad .data {
+    left: 100%;
+    padding-left: 5%;
+  }
+
+  .sustentabilidad .headerSustentabilidad h1 {
+    text-align: left;
+    font-size: 2.5rem;
+  }
+
+  .sustentabilidad .headerSustentabilidad {
+    margin-bottom: 60px;
+  }
+
+  .sustentabilidad .contentSustentabilidad p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .sustentabilidad .contentSustentabilidad,
+  .sustentabilidad .contentSustentabilidad .contentData {
+    margin-bottom: 60px;
+  }
+
+  .sustentabilidad .headerSustentabilidad .data {
+    left: 5%;
+  }
+
+  .sustentabilidad .headerSustentabilidad h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sustentabilidad .headerSustentabilidad h1 {
+    font-size: 3.5rem;
+  }
+
+  .sustentabilidad .contentSustentabilidad p {
+    font-size: 1.35rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .sustentabilidad .headerSustentabilidad h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+  .sustentabilidad .headerSustentabilidad h1 {
+    font-size: 5rem;
+  }
+}
