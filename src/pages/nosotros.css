@@ -1,0 +1,125 @@
+.nosotros .headerNosotros {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.nosotros .headerNosotros .data {
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.nosotros .headerNosotros h1 {
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.75rem;
+}
+
+.nosotros .headerNosotros h1 br {
+  display: none;
+}
+
+.nosotros .contentNosotros {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.nosotros .contentNosotros h2 {
+  font-weight: 700;
+}
+
+.nosotros .contentNosotros .imgContentNosotros {
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-bottom: 30px;
+}
+
+.nosotros .contentDataNosotros {
+  margin-bottom: 30px;
+}
+
+.nosotros .contentDataNosotros p:last-child {
+  margin-bottom: 0;
+}
+
+.nosotros .contentNosotros .ContentDataNosotros p:last-child {
+  margin-bottom: 0;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+  .nosotros .headerNosotros h1 br {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 768px) {
+  .nosotros .headerNosotros,
+  .nosotros .contentNosotros,
+  .nosotros .contentDataNosotros {
+    margin-bottom: 60px;
+  }
+
+  .nosotros .headerNosotros .data {
+    left: 100%;
+    padding-left: 5%;
+  }
+
+  .nosotros .headerNosotros h1 {
+    text-align: left;
+    font-size: 2.5rem;
+  }
+
+  .nosotros .headerNosotros {
+    margin-bottom: 60px;
+  }
+
+  .nosotros .contentNosotros p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .nosotros .contentNosotros {
+    text-align: left;
+  }
+
+  .nosotros .headerNosotros .data {
+    left: 5%;
+  }
+
+  .nosotros .headerNosotros h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nosotros .headerNosotros h1 {
+    font-size: 3.5rem;
+  }
+
+  .nosotros .contentNosotros p {
+    font-size: 1.35rem;
+  }
+
+  .nosotros .contentNosotros h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .nosotros .headerNosotros h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+  .nosotros .headerNosotros h1 {
+    font-size: 5rem;
+  }
+}

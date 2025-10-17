@@ -9,6 +9,7 @@ import ProductSiding from '@/pages/ProductSiding.jsx'
 import ProductFlatPanel from '@/pages/ProductFlatPanel.jsx'
 import Profesionales from '@/pages/Profesionales.jsx'
 import Sustentabilidad from '@/pages/Sustentabilidad.jsx'
+import Nosotros from '@/pages/Nosotros.jsx'
 import Test from '@/pages/Test.jsx'
 import NotFound from '@/pages/NotFound.jsx'
 import { AppProvider } from '@/context/app'
@@ -40,6 +41,7 @@ function App() {
             />
             <Route path='/profesionales' element={<Profesionales />} />
             <Route path='/sustentabilidad' element={<Sustentabilidad />} />
+            <Route path='/nosotros' element={<Nosotros />} />
             <Route path='/test' element={<Test />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
