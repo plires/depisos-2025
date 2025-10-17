@@ -29,8 +29,12 @@ body {
   grid-template-rows: auto 1fr auto;
 } */
 
-p {
+/* p {
   text-wrap: balance;
+} */
+
+p span {
+  font-weight: 700;
 }
 
 a {
