@@ -9,19 +9,19 @@ const HeroSection = ({
 }) => {
   return (
     <section
-      className={`container-fluid profesionalesHero ${styles.contentSection} ${extraClass && extraClass}`}
+      className={`container-fluid ${styles.contentSection} ${extraClass && extraClass}`}
     >
       <div className='row'>
         <div className={`col-md-12 p-0 ${styles.content}`}>
           <img
             className={`${styles.mobile}`}
             src={heroMobile}
-            alt='header profesionales desktop'
+            alt='header Hero mobile'
           />
           <img
             className={`${styles.desktop}`}
             src={heroDesktop}
-            alt='header profesionales desktop'
+            alt='header Hero desktop'
           />
           <div className={`${styles.data} data`}>
             {title && (

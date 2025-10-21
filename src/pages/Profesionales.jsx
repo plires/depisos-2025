@@ -18,6 +18,7 @@ const Profesionales = () => {
         heroMobile={heroMobile}
         title='Profesionales'
         description='Contamos con instaladores, arquitectos y decoradores para ayudarte en todo el proceso de tu proyecto.'
+        extraClass='profesionalesHero'
       />
       <section className='container'>
         <ArticleDescription
