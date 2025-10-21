@@ -51,7 +51,7 @@ export default function QuoteForm({ recaptchaSiteKey }) {
       <fieldset disabled={submitting || locked}>
         {/* Nombre */}
         <div className='row mb-3 align-items-center'>
-          <label htmlFor='name' className='col-sm-4 col-form-label text-sm-end'>
+          <label htmlFor='name' className='col-sm-4 col-form-label'>
             Nombre:
           </label>
           <div className='col-sm-8'>
@@ -69,10 +69,7 @@ export default function QuoteForm({ recaptchaSiteKey }) {
 
         {/* Email */}
         <div className='row mb-3 align-items-center'>
-          <label
-            htmlFor='email'
-            className='col-sm-4 col-form-label text-sm-end'
-          >
+          <label htmlFor='email' className='col-sm-4 col-form-label'>
             Email:
           </label>
           <div className='col-sm-8'>
@@ -89,10 +86,7 @@ export default function QuoteForm({ recaptchaSiteKey }) {
 
         {/* Teléfono */}
         <div className='row mb-3 align-items-center'>
-          <label
-            htmlFor='phone'
-            className='col-sm-4 col-form-label text-sm-end'
-          >
+          <label htmlFor='phone' className='col-sm-4 col-form-label'>
             Teléfono:
           </label>
           <div className='col-sm-8'>
@@ -109,10 +103,7 @@ export default function QuoteForm({ recaptchaSiteKey }) {
 
         {/* Superficie */}
         <div className='row mb-3 align-items-center'>
-          <label
-            htmlFor='surface'
-            className='col-sm-4 col-form-label text-sm-end'
-          >
+          <label htmlFor='surface' className='col-sm-4 col-form-label'>
             superficie a cubrir en m2:
           </label>
           <div className='col-sm-8'>
@@ -130,10 +121,7 @@ export default function QuoteForm({ recaptchaSiteKey }) {
 
         {/* Provincia */}
         <div className='row mb-3 align-items-center'>
-          <label
-            htmlFor='province'
-            className='col-sm-4 col-form-label text-sm-end'
-          >
+          <label htmlFor='province' className='col-sm-4 col-form-label'>
             Provincia:
           </label>
           <div className='col-sm-8'>
@@ -161,10 +149,7 @@ export default function QuoteForm({ recaptchaSiteKey }) {
 
         {/* Comentario */}
         <div className='row mb-3'>
-          <label
-            htmlFor='comments'
-            className='col-sm-4 col-form-label text-sm-end'
-          >
+          <label htmlFor='comments' className='col-sm-4 col-form-label'>
             Agregar comentario:
           </label>
           <div className='col-sm-8'>
