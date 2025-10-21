@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from '@/components/commons/Header.jsx'
 import Footer from '@/components/commons/Footer.jsx'
 import Home from '@/pages/Home.jsx'
+import PlacaInicial from '@/pages/PlacaInicial.jsx'
 import ProductWallPanel from '@/pages/ProductWallPanel.jsx'
 import ProductPerfiles from '@/pages/ProductPerfiles.jsx'
 import ProductDeckDual from '@/pages/ProductDeckDual.jsx'
@@ -27,6 +28,7 @@ function App() {
           <ToastContainer />
           <Header />
           <Routes>
+            {/* <Route path='/' element={<PlacaInicial />} /> */}
             <Route path='/' element={<Home />} />
             <Route
               path='/productos/wall-panel'
