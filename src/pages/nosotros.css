@@ -3,11 +3,11 @@
   margin-bottom: 30px;
 }
 
-.nosotros .headerNosotros .data {
+/* .nosotros .headerNosotros .data {
   width: 100%;
   padding-left: 12px;
   padding-right: 12px;
-}
+} */
 
 .nosotros .headerNosotros h1 {
   margin-bottom: 0;
@@ -85,9 +85,9 @@
     text-align: left;
   }
 
-  .nosotros .headerNosotros .data {
+  /* .nosotros .headerNosotros .data {
     left: 5%;
-  }
+  } */
 
   .nosotros .headerNosotros h1 {
     font-size: 3rem;

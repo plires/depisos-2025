@@ -14,12 +14,12 @@ const HeroSection = ({
       <div className='row'>
         <div className={`col-md-12 p-0 ${styles.content}`}>
           <img
-            className={`${styles.mobile}`}
+            className={`img-fluid ${styles.mobile}`}
             src={heroMobile}
             alt='header Hero mobile'
           />
           <img
-            className={`${styles.desktop}`}
+            className={`img-fluid ${styles.desktop}`}
             src={heroDesktop}
             alt='header Hero desktop'
           />

@@ -17,7 +17,6 @@ const Profesionales = () => {
         heroDesktop={heroDesktop}
         heroMobile={heroMobile}
         title='nosotros'
-        extraClass='headerNosotros'
       />
       <section className='contentNosotros container'>
         <div data-aos='fade-up' className='row'>

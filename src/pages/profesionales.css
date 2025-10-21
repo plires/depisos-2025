@@ -1,7 +1,3 @@
-.profesionales .profesionalesHero {
-  margin-bottom: 30px;
-}
-
 .profesionales .contentArticle:last-child {
   border-bottom: none;
 }
@@ -13,9 +9,6 @@
 }
 
 @media (min-width: 992px) {
-  .profesionales .profesionalesHero {
-    margin-bottom: 60px;
-  }
 }
 
 @media (min-width: 1200px) {

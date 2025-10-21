@@ -14,7 +14,6 @@ const Profesionales = () => {
         heroMobile={heroMobile}
         title='nuestro compromiso <br />
         con la sustentabilidad'
-        extraClass='headerSustentabilidad'
       />
       <section className='contentSustentabilidad container'>
         <div className='row'>
