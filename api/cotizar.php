@@ -1,6 +1,4 @@
 <?php
-var_dump('asdasdsad');
-exit;
 // api/cotizar.php
 
 require_once __DIR__ . '/../php/bootstrap.php';
@@ -8,12 +6,13 @@ require_once __DIR__ . '/../php/mailer/QuoteMailer.php';
 
 use App\Mailer\QuoteMailer;
 
-$allowedOrigin = $_ENV['VITE_DOMAIN'];
-
-
+if ($_ENV['VITE_ENVIRONMENT'] === 'dev') {
+  $allowedOrigin = '*';
+} else {
+  $allowedOrigin = $_ENV['VITE_DOMAIN'];
+}
 
 header("Access-Control-Allow-Origin: $allowedOrigin");
-header("Vary: Origin"); // por si servís a varios orígenes
 header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Max-Age: 86400"); // cachea preflight
@@ -99,24 +98,64 @@ function clean($v)
   return filter_var($v, FILTER_UNSAFE_RAW);
 }
 
-$name    = clean($data['name']   ?? '');
-$email     = clean($data['email']    ?? '');
-$phone  = clean($data['phone'] ?? '');
-$surface = $data['surface']     ?? null;
-$province = clean($data['province'] ?? '');
-$comments   = clean($data['comments']  ?? '');
-$profile   = clean($data['profile']  ?? '');
-$originUrl   = clean($data['originUrl']  ?? '');
+$name      = clean($data['name']      ?? '');
+$email     = clean($data['email']     ?? '');
+$phone     = clean($data['phone']     ?? '');
+$surface   = $data['surface']         ?? null; // lo parseamos aparte para aceptar coma
+$province  = clean($data['province']  ?? null);
+$comments  = clean($data['comments']  ?? '');
+$profile   = clean($data['profile']   ?? null);
+$originUrl = clean($data['originUrl'] ?? '');
+$type      = clean($data['type']      ?? '');
+
+$isContacto = ($type === 'contacto');
 
 $errors = [];
-if (mb_strlen($name) < 3) $errors['name'] = 'Nombre demasiado corto.';
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors['email'] = 'Email inválido.';
-if (preg_match_all('/\d/', $phone) < 7) $errors['phone'] = 'Teléfono inválido.';
-if (!is_numeric($surface) || $surface <= 0 || $surface > 100000) $errors['surface'] = 'surface inválida.';
-if ($province === '') $errors['province'] = 'Provincia requerida.';
-if ($profile === '') $errors['profile'] = 'Perfil requerido.';
+
+// --- Validaciones SIEMPRE ---
+if (mb_strlen($name) < 3) {
+  $errors['name'] = 'Nombre demasiado corto.';
+}
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  $errors['email'] = 'Email inválido.';
+}
+
+if (preg_match_all('/\d/', $phone) < 7) {
+  $errors['phone'] = 'Teléfono inválido.';
+}
+
+// normalizo comments por si llega crudo
 $comments = trim(clean($data['comments'] ?? ''));
-if (mb_strlen($comments) < 5) $errors['comments'] = 'Ingresá un comentario (al menos 10 caracteres).';
+if (mb_strlen($comments) < 10) {
+  $errors['comments'] = 'Ingresá un comentario (al menos 10 caracteres).';
+}
+
+// --- Condicionales por tipo ---
+if ($isContacto) {
+  // Validar profile; ignorar province y surface
+  if (empty($profile)) {
+    $errors['profile'] = 'Perfil requerido.';
+  }
+} else {
+  // Ignorar profile; validar province y surface
+
+  if (empty($province)) {
+    $errors['province'] = 'Provincia requerida.';
+  }
+
+  // surface: aceptar coma decimal, > 0
+  $surfaceRaw = str_replace(',', '.', trim((string)($surface ?? '')));
+  $surfaceNum = ($surfaceRaw !== '' && is_numeric($surfaceRaw)) ? (float)$surfaceRaw : null;
+
+  if ($surfaceNum === null || $surfaceNum <= 0) {
+    $errors['surface'] = 'superficie inválida.';
+  }
+
+  if ($surfaceNum !== null && $surfaceNum > 100000) {
+    $errors['surface'] = 'superficie inválida.';
+  }
+}
 
 // (opcional) recortar tamaños máximos por seguridad
 $originUrl = mb_substr($originUrl, 0, 1024);

@@ -55,6 +55,7 @@ export const validate = (form, type) => {
   const data = Object.fromEntries(new FormData(form).entries())
   const errors = {}
 
+  // --- Campos que SIEMPRE se validan ---
   const name = (data.name || '').trim()
   if (name.length < 3) errors.name = 'Ingresá al menos 3 caracteres.'
 
@@ -65,26 +66,42 @@ export const validate = (form, type) => {
   const phone = (data.phone || '').trim()
   if (phone.replace(/\D/g, '').length < 7) errors.phone = 'Teléfono no válido.'
 
-  const m2 = (data.surface || '').replace(',', '.').trim()
-  const m2Num = Number(m2)
-  if (!m2 || Number.isNaN(m2Num) || m2Num <= 0) {
-    errors.surface = 'Ingresá un número mayor a 0.'
-  }
-
-  if (!data.province) errors.province = 'Seleccioná una provincia.'
-
   const comments = (data.comments || '').trim()
   if (comments.length < 10) {
     errors.comments = 'Ingresá un mensaje (mayor a 10 caracteres).'
   }
 
+  // --- Condicionales por type ---
+  let m2Num // la usamos en cleaned si corresponde
+
   if (type === 'contacto') {
+    // Validar profile, ignorar province y surface
     if (!data.profile) errors.profile = 'Seleccioná tu perfil.'
+  } else {
+    // Ignorar profile, validar province y surface
+    const m2Raw = (data.surface ?? '').toString().replace(',', '.').trim()
+    m2Num = Number(m2Raw)
+
+    if (!m2Raw || Number.isNaN(m2Num) || m2Num <= 0) {
+      errors.surface = 'Ingresá un número mayor a 0.'
+    }
+
+    if (!data.province) {
+      errors.province = 'Seleccioná una provincia.'
+    }
   }
 
   return {
     ok: Object.keys(errors).length === 0,
-    cleaned: { ...data, surface: m2Num },
+    cleaned: {
+      ...data,
+      name,
+      email,
+      phone,
+      comments,
+      // Solo incluimos surface numérica cuando NO es 'contacto'
+      surface: type !== 'contacto' ? m2Num : undefined,
+    },
     errors,
   }
 }
@@ -151,7 +168,7 @@ export const handleSubmit = async (e, deps) => {
     const res = await fetch(fetchUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ...cleaned, recaptchaToken, originUrl }),
+      body: JSON.stringify({ ...cleaned, recaptchaToken, originUrl, type }),
     })
 
     const payload = await res.json().catch(() => ({}))
