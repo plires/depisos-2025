@@ -51,7 +51,7 @@ export const getImageURL = name => {
 /** Valida y normaliza datos del formulario.
  * Devuelve { ok, cleaned, errors } y NO toca setState.
  */
-export const validate = form => {
+export const validate = (form, type) => {
   const data = Object.fromEntries(new FormData(form).entries())
   const errors = {}
 
@@ -76,6 +76,10 @@ export const validate = form => {
   const comments = (data.comments || '').trim()
   if (comments.length < 10) {
     errors.comments = 'Ingresá un mensaje (mayor a 10 caracteres).'
+  }
+
+  if (type === 'contacto') {
+    if (!data.profile) errors.profile = 'Seleccioná tu perfil.'
   }
 
   return {
@@ -124,14 +128,15 @@ export const handleSubmit = async (e, deps) => {
     setLocked,
     setErrors,
     recaptchaSiteKey,
-    fetchUrl = '/api/cotizar.php',
+    fetchUrl = import.meta.env.VITE_ROOT + 'api/cotizar.php',
+    type,
   } = deps
 
   e.preventDefault()
   setServerMsg?.(null)
   setServerErr?.(null)
 
-  const { ok, cleaned, errors } = validate(e.currentTarget)
+  const { ok, cleaned, errors } = validate(e.currentTarget, type)
   if (!ok) {
     setErrors?.(errors)
     return

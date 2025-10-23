@@ -1,4 +1,6 @@
 <?php
+var_dump('asdasdsad');
+exit;
 // api/cotizar.php
 
 require_once __DIR__ . '/../php/bootstrap.php';
@@ -7,6 +9,8 @@ require_once __DIR__ . '/../php/mailer/QuoteMailer.php';
 use App\Mailer\QuoteMailer;
 
 $allowedOrigin = $_ENV['VITE_DOMAIN'];
+
+
 
 header("Access-Control-Allow-Origin: $allowedOrigin");
 header("Vary: Origin"); // por si servís a varios orígenes
@@ -101,6 +105,7 @@ $phone  = clean($data['phone'] ?? '');
 $surface = $data['surface']     ?? null;
 $province = clean($data['province'] ?? '');
 $comments   = clean($data['comments']  ?? '');
+$profile   = clean($data['profile']  ?? '');
 $originUrl   = clean($data['originUrl']  ?? '');
 
 $errors = [];
@@ -109,6 +114,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors['email'] = 'Email invál
 if (preg_match_all('/\d/', $phone) < 7) $errors['phone'] = 'Teléfono inválido.';
 if (!is_numeric($surface) || $surface <= 0 || $surface > 100000) $errors['surface'] = 'surface inválida.';
 if ($province === '') $errors['province'] = 'Provincia requerida.';
+if ($profile === '') $errors['profile'] = 'Perfil requerido.';
 $comments = trim(clean($data['comments'] ?? ''));
 if (mb_strlen($comments) < 5) $errors['comments'] = 'Ingresá un comentario (al menos 10 caracteres).';
 
@@ -145,22 +151,23 @@ $payload = [
   'surface' => $surface,
   'province'  => $province,
   'comments'    => $comments,
+  'profile'    => $profile,
   'ip'         => $ip,
   'originUrl'  => $originUrl,
 ];
 
-// Config SMTP (mejor si vienen de .env)
+// Config SMTP
 $mailCfg = [
-  'host'       => $_ENV['SMTP_HOST']       ?? 'smtp.tuservidor.com',
-  'port'       => (int)($_ENV['SMTP_PORT'] ?? 587),
+  'host'       => $_ENV['SMTP_HOST'],
+  'port'       => (int)($_ENV['SMTP_PORT']),
   'smtp_auth'  => true,
-  'username'   => $_ENV['SMTP_USER']       ?? 'no-reply@tusitio.com',
-  'password'   => $_ENV['SMTP_PASS']       ?? '',
-  'encryption' => $_ENV['SMTP_ENCRYPTION'] ?? 'tls', // 'tls' | 'ssl'
-  'from_email' => $_ENV['SMTP_FROM']       ?? 'no-reply@tusitio.com',
-  'from_name'  => $_ENV['SMTP_FROM_NAME']  ?? 'Sitio Web',
-  'to_email'   => $_ENV['SALES_TO']        ?? 'ventas@tusitio.com',
-  'to_name'    => $_ENV['SALES_TO_NAME']   ?? 'Equipo de Ventas',
+  'username'   => $_ENV['SMTP_USER'],
+  'password'   => $_ENV['SMTP_PASS'],
+  'encryption' => $_ENV['SMTP_ENCRYPTION'],
+  'from_email' => $_ENV['SMTP_FROM'],
+  'from_name'  => $_ENV['SMTP_FROM_NAME'],
+  'to_email'   => $_ENV['SALES_TO'],
+  'to_name'    => $_ENV['SALES_TO_NAME'],
 ];
 
 $mailer = new QuoteMailer($mailCfg);

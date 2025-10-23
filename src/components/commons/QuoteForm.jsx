@@ -3,7 +3,7 @@ import { handleSubmit as submitHandler } from '@/utils/dataUtils'
 
 import styles from './quote-form.module.css'
 
-export default function QuoteForm({ recaptchaSiteKey }) {
+export default function QuoteForm({ recaptchaSiteKey, type = false }) {
   const [submitting, setSubmitting] = useState(false)
   const [locked, setLocked] = useState(false) // read-only tras éxito
   const [serverMsg, setServerMsg] = useState(null)
@@ -37,7 +37,7 @@ export default function QuoteForm({ recaptchaSiteKey }) {
           setLocked,
           setErrors,
           recaptchaSiteKey,
-          // fetchUrl: "/api/cotizar.php", // opcional si querés cambiar endpoint
+          type,
         })
       }
       ref={formRef}
@@ -101,51 +101,84 @@ export default function QuoteForm({ recaptchaSiteKey }) {
           </div>
         </div>
 
-        {/* Superficie */}
-        <div className='row mb-3 align-items-center'>
-          <label htmlFor='surface' className='col-sm-4 col-form-label'>
-            superficie a cubrir en m2:
-          </label>
-          <div className='col-sm-8'>
-            <input
-              type='text'
-              className={`form-control ${invalid('surface')}`}
-              id='surface'
-              name='surface'
-              inputMode='decimal'
-              required
-            />
-            <div className='invalid-feedback'>{msg('surface')}</div>
-          </div>
-        </div>
+        {type !== 'contacto' ? (
+          <>
+            {/* Superficie */}
+            <div className='row mb-3 align-items-center'>
+              <label htmlFor='surface' className='col-sm-4 col-form-label'>
+                superficie a cubrir en m2:
+              </label>
+              <div className='col-sm-8'>
+                <input
+                  type='text'
+                  className={`form-control ${invalid('surface')}`}
+                  id='surface'
+                  name='surface'
+                  inputMode='decimal'
+                  required
+                />
+                <div className='invalid-feedback'>{msg('surface')}</div>
+              </div>
+            </div>
 
-        {/* Provincia */}
-        <div className='row mb-3 align-items-center'>
-          <label htmlFor='province' className='col-sm-4 col-form-label'>
-            Provincia:
-          </label>
-          <div className='col-sm-8'>
-            <select
-              id='province'
-              name='province'
-              className={`form-select ${invalid('province')}`}
-              required
-              defaultValue=''
-            >
-              <option value='' disabled>
-                Seleccioná…
-              </option>
-              <option>Buenos Aires</option>
-              <option>CABA</option>
-              <option>Córdoba</option>
-              <option>Santa Fe</option>
-              <option>Mendoza</option>
-              <option>Neuquén</option>
-              <option>Resto del país</option>
-            </select>
-            <div className='invalid-feedback'>{msg('province')}</div>
+            {/* Provincia */}
+            <div className='row mb-3 align-items-center'>
+              <label htmlFor='province' className='col-sm-4 col-form-label'>
+                Provincia:
+              </label>
+              <div className='col-sm-8'>
+                <select
+                  id='province'
+                  name='province'
+                  className={`form-select ${invalid('province')}`}
+                  required
+                  defaultValue=''
+                >
+                  <option value='' disabled>
+                    Seleccioná…
+                  </option>
+                  <option>Buenos Aires</option>
+                  <option>CABA</option>
+                  <option>Córdoba</option>
+                  <option>Santa Fe</option>
+                  <option>Mendoza</option>
+                  <option>Neuquén</option>
+                  <option>Resto del país</option>
+                </select>
+                <div className='invalid-feedback'>{msg('province')}</div>
+              </div>
+            </div>
+          </>
+        ) : null}
+
+        {type === 'contacto' ? (
+          // Perfil
+          <div className='row mb-3 align-items-center'>
+            <label htmlFor='profile' className='col-sm-4 col-form-label'>
+              ¿Qué perfil sos?:
+            </label>
+            <div className='col-sm-8'>
+              <select
+                id='profile'
+                name='profile'
+                className={`form-select ${invalid('profile')}`}
+                required
+                defaultValue=''
+              >
+                <option value='' disabled>
+                  Seleccioná…
+                </option>
+                <option>Particular</option>
+                <option>Arquitecto</option>
+                <option>Decorador/a</option>
+                <option>Estudio</option>
+                <option>Corporativo</option>
+                <option>Otro</option>
+              </select>
+              <div className='invalid-feedback'>{msg('profile')}</div>
+            </div>
           </div>
-        </div>
+        ) : null}
 
         {/* Comentario */}
         <div className='row mb-3'>
