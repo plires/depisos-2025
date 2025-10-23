@@ -193,12 +193,20 @@
               <td class="label">Mensaje</td>
               <td style="white-space:pre-line;"><?= $escape($comments) ?></td>
             </tr>
+            <tr>
+              <td class="label">Perfil de ususario</td>
+              <td><?= $escape($profile) ?></td>
+            </tr>
             <?php if (!empty($originUrl)): ?>
               <tr>
                 <td class="label">Origen (URL)</td>
                 <td><a href="<?= $escape($originUrl) ?>" style="color:#111;"><?= $escape($originUrl) ?></a></td>
               </tr>
             <?php endif; ?>
+            <tr>
+              <td class="label">Origen de la consulta</td>
+              <td><?= $escape($source) ?></td>
+            </tr>
           </table>
 
           <p class="muted" style="margin:16px 0 0;">
