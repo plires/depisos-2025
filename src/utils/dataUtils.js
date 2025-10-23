@@ -163,12 +163,24 @@ export const handleSubmit = async (e, deps) => {
     setSubmitting?.(true)
 
     const originUrl = window.location.href
+
+    var source = 'Formulario de Cotización'
+
+    if (type === 'contacto') {
+      source = 'Formulario de Contacto'
+    }
     const recaptchaToken = await getRecaptchaToken(recaptchaSiteKey)
 
     const res = await fetch(fetchUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ...cleaned, recaptchaToken, originUrl, type }),
+      body: JSON.stringify({
+        ...cleaned,
+        recaptchaToken,
+        originUrl,
+        source,
+        type,
+      }),
     })
 
     const payload = await res.json().catch(() => ({}))

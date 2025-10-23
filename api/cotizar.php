@@ -106,6 +106,7 @@ $province  = clean($data['province']  ?? null);
 $comments  = clean($data['comments']  ?? '');
 $profile   = clean($data['profile']   ?? null);
 $originUrl = clean($data['originUrl'] ?? '');
+$source      = clean($data['source']      ?? '');
 $type      = clean($data['type']      ?? '');
 
 $isContacto = ($type === 'contacto');
@@ -193,6 +194,7 @@ $payload = [
   'profile'    => $profile,
   'ip'         => $ip,
   'originUrl'  => $originUrl,
+  'source'  => $source,
 ];
 
 // Config SMTP
