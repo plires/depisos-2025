@@ -10,11 +10,40 @@
   display: none;
 }
 
+.contacto .contentData {
+  margin-bottom: 2rem;
+}
+
+.contacto .contentData p {
+  margin-right: 3px;
+  font-size: 0.85rem;
+}
+
+.contacto .contentData p:last-child {
+  margin-bottom: 0;
+}
+
+.contacto .contentData span {
+  margin-right: 3px;
+  font-size: 1.25rem;
+}
+
+.contacto .contentForm {
+  margin-bottom: 3rem;
+}
+
+.contacto .contentMap {
+  margin-bottom: 3rem;
+}
 /* MEDIA QUERIES */
 @media (min-width: 576px) {
 }
 
 @media (min-width: 768px) {
+  .contacto .contentContact {
+    margin-bottom: 60px;
+  }
+
   .contacto .contactoHero .data {
     width: 100%;
     left: 100%;
@@ -28,6 +57,14 @@
   .contacto h1 br {
     display: inline-block;
   }
+
+  .contacto .contentData h4 {
+    margin-bottom: 1.5rem;
+  }
+
+  .contacto .contentForm label {
+    font-size: 0.85rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -37,6 +74,23 @@
 
   .contacto .contactoHero .data {
     left: 5%;
+  }
+
+  .contacto .contentData h4 {
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+  }
+
+  .contacto .contentData p {
+    font-size: 1rem;
+  }
+
+  .contacto .contentData span {
+    font-size: 1.5rem;
+  }
+
+  .contacto .contentForm label {
+    font-size: 1rem;
   }
 }
 
