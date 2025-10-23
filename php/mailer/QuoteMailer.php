@@ -119,7 +119,9 @@ class QuoteMailer
       "Superficie (m2): " . ($data['surface'] ?? '') . "\n" .
       "Provincia: " . ($data['province'] ?? '') . "\n" .
       "Mensaje:\n" . ($data['comments'] ?? '') . "\n" .
+      "Perfil de usuario:\n" . ($data['profile'] ?? '') . "\n" .
       "Origen URL: " . ($data['originUrl'] ?? '') . "\n" .
+      "Origen Consulta: " . ($data['source'] ?? '') . "\n" .
       "IP: " . ($data['ip'] ?? '') . "\n";
 
     // HTML desde plantilla PHP
@@ -139,8 +141,10 @@ class QuoteMailer
       'surface' => $data['surface'] ?? '',
       'province'  => $data['province'] ?? '',
       'comments'    => $data['comments']   ?? '',
+      'profile'    => $data['profile']   ?? '',
       'ip'         => $data['ip']        ?? '',
       'originUrl'  => $data['originUrl']  ?? '',
+      'source'  => $data['source']  ?? '',
       'escape'     => $escape,
     ];
 
