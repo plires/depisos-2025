@@ -161,7 +161,7 @@
   <center class="wrapper">
     <table role="presentation" class="container" cellpadding="0" cellspacing="0" width="100%">
       <tr>
-        <td class="header">Nueva solicitud de cotización</td>
+        <td class="header"><?= $escape($source) ?></td>
       </tr>
 
       <tr>
