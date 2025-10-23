@@ -1,0 +1,53 @@
+.contacto .contactoHero {
+  margin-bottom: 30px;
+}
+
+.contacto .contactoHero h1 {
+  text-align: center;
+}
+
+.contacto h1 br {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .contacto .contactoHero .data {
+    width: 100%;
+    left: 100%;
+    padding-left: 5%;
+  }
+
+  .contacto .contactoHero h1 {
+    text-align: left;
+  }
+
+  .contacto h1 br {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 992px) {
+  .contacto .contactoHero {
+    margin-bottom: 60px;
+  }
+
+  .contacto .contactoHero .data {
+    left: 5%;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}
