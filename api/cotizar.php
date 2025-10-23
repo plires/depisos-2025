@@ -101,12 +101,12 @@ function clean($v)
 $name      = clean($data['name']      ?? '');
 $email     = clean($data['email']     ?? '');
 $phone     = clean($data['phone']     ?? '');
-$surface   = $data['surface']         ?? null; // lo parseamos aparte para aceptar coma
-$province  = clean($data['province']  ?? null);
+$surface   = $data['surface']         ?? ''; // lo parseamos aparte para aceptar coma
+$province  = clean($data['province']  ?? '');
 $comments  = clean($data['comments']  ?? '');
-$profile   = clean($data['profile']   ?? null);
+$profile    = clean($data['profile']    ?? '');
 $originUrl = clean($data['originUrl'] ?? '');
-$source      = clean($data['source']      ?? '');
+$source    = clean($data['source']    ?? '');
 $type      = clean($data['type']      ?? '');
 
 $isContacto = ($type === 'contacto');
@@ -147,7 +147,7 @@ if ($isContacto) {
 
   // surface: aceptar coma decimal, > 0
   $surfaceRaw = str_replace(',', '.', trim((string)($surface ?? '')));
-  $surfaceNum = ($surfaceRaw !== '' && is_numeric($surfaceRaw)) ? (float)$surfaceRaw : null;
+  $surfaceNum = ($surfaceRaw !== '' && is_numeric($surfaceRaw)) ? (float)$surfaceRaw : '';
 
   if ($surfaceNum === null || $surfaceNum <= 0) {
     $errors['surface'] = 'superficie inválida.';
@@ -185,17 +185,43 @@ if (!empty($errors)) {
 
 // Datos ya validados
 $payload = [
-  'name'     => $name,
-  'email'      => $email,
-  'phone'   => $phone,
-  'surface' => $surface,
-  'province'  => $province,
+  'name'        => $name,
+  'email'       => $email,
+  'phone'       => $phone,
+  'surface'     => $surface,
+  'province'    => $province,
   'comments'    => $comments,
-  'profile'    => $profile,
-  'ip'         => $ip,
-  'originUrl'  => $originUrl,
-  'source'  => $source,
+  'profile'      => $profile,
+  'ip'          => $ip,
+  'originUrl'   => $originUrl,
+  'source'      => $source,
 ];
+
+// Incluir modelo de Contact
+require_once __DIR__ . '/models/Contact.php';
+
+// ===== GUARDAR EN BASE DE DATOS =====
+$contact = new Contact();
+
+// Asignar valores al objeto
+$contact->name = $payload['name'];
+$contact->email = $payload['email'];
+$contact->phone = $payload['phone'];
+$contact->comments = $payload['comments'];
+$contact->surface = $payload['surface'];
+$contact->province = $payload['province'];
+$contact->profile = $payload['profile'];
+$contact->ip = $payload['ip'];
+$contact->originUrl = $payload['originUrl'];
+$contact->source = $payload['source'];
+
+// Intentar guardar en la base de datos
+$saved = $contact->create();
+
+if (!$saved) {
+  // Solo registrar el error, pero continuar
+  error_log("Error al guardar en la base de datos - Email: {$email}");
+}
 
 // Config SMTP
 $mailCfg = [
