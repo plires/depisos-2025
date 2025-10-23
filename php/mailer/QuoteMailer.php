@@ -18,10 +18,10 @@ class QuoteMailer
   private string $toEmail;
   private string $toName;
 
-  private ?string $lastError = null;   // 👈 nuevo
+  private ?string $lastError = null;
 
   public function getLastError(): ?string
-  {   // 👈 getter
+  {
     return $this->lastError;
   }
 
@@ -32,7 +32,7 @@ class QuoteMailer
     $this->smtpAuth   = (bool)($cfg['smtp_auth'] ?? true);
     $this->username   = $cfg['username']   ?? '';
     $this->password   = $cfg['password']   ?? '';
-    $this->encryption = $cfg['encryption'] ?? 'tls'; // 'tls' | 'ssl'
+    $this->encryption = $cfg['encryption'] ?? 'tls';
     $this->fromEmail  = $cfg['from_email'] ?? 'no-reply@example.com';
     $this->fromName   = $cfg['from_name']  ?? 'Sitio Web';
     $this->toEmail    = $cfg['to_email']   ?? 'ventas@example.com';
@@ -40,11 +40,10 @@ class QuoteMailer
   }
 
   /** Envía el email de cotización con HTML y AltBody.
-   *  $data: ['nombre','email','telefono','superficie','provincia','mensaje','ip']
+   *  $data: ['name','email','phone','surface','province','comments','profile','ip','originUrl','source']
    */
   public function send(array $data): bool
   {
-
     $this->lastError = null;
 
     $mail = new PHPMailer(true);
@@ -54,7 +53,6 @@ class QuoteMailer
 
     try {
       // SMTP
-      //Server settings
       $_ENV['VITE_ENVIRONMENT'] === 'dev'
         ? $mail->isSendmail()
         : $mail->isSMTP();
@@ -78,7 +76,7 @@ class QuoteMailer
 
       // Reply-To al usuario
       if (!empty($data['email'])) {
-        $mail->addReplyTo($data['email'], $data['nombre'] ?? $data['email']);
+        $mail->addReplyTo($data['email'], $data['name'] ?? $data['email']);
       }
 
       // Contenido
@@ -87,21 +85,12 @@ class QuoteMailer
       $mail->Body    = $html;
       $mail->AltBody = $alt;
 
-      // (Opcional) DKIM
-      // $mail->DKIM_domain = 'tu-dominio.com';
-      // $mail->DKIM_private = __DIR__.'/../../dkim/private.key';
-      // $mail->DKIM_selector = 'default';
-      // $mail->DKIM_identity = $mail->From;
-
       return $mail->send();
     } catch (Exception $e) {
-      // Detalle fino del error
-      $this->lastError = $e->getMessage();        // Exception de PHPMailer
+      $this->lastError = $e->getMessage();
       if (isset($mail) && $mail->ErrorInfo) {
         $this->lastError .= ' | ErrorInfo: ' . $mail->ErrorInfo;
       }
-      // Log opcional a archivo:
-      // error_log('[MAIL ERROR] '.$this->lastError);
       return false;
     }
   }
@@ -111,18 +100,31 @@ class QuoteMailer
   {
     $escape = fn($v) => htmlspecialchars((string)$v, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 
-    // AltBody texto plano
-    $alt = "Nueva solicitud de cotización\n\n" .
-      "Nombre: " . ($data['name'] ?? '') . "\n" .
-      "Email:  " . ($data['email'] ?? '') . "\n" .
-      "Teléfono: " . ($data['phone'] ?? '') . "\n" .
-      "Superficie (m2): " . ($data['surface'] ?? '') . "\n" .
-      "Provincia: " . ($data['province'] ?? '') . "\n" .
-      "Mensaje:\n" . ($data['comments'] ?? '') . "\n" .
-      "Perfil de usuario:\n" . ($data['profile'] ?? '') . "\n" .
-      "Origen URL: " . ($data['originUrl'] ?? '') . "\n" .
-      "Origen Consulta: " . ($data['source'] ?? '') . "\n" .
-      "IP: " . ($data['ip'] ?? '') . "\n";
+    // Helper para verificar si un campo tiene valor
+    $hasValue = fn($v) => isset($v) && $v !== '' && $v !== null;
+
+    // Definir los campos con sus etiquetas para renderizado dinámico
+    $fields = [
+      'name'     => ['label' => 'Nombre',              'value' => $data['name'] ?? ''],
+      'email'    => ['label' => 'Email',               'value' => $data['email'] ?? ''],
+      'phone'    => ['label' => 'Teléfono',            'value' => $data['phone'] ?? ''],
+      'surface'  => ['label' => 'Superficie (m²)',     'value' => $data['surface'] ?? ''],
+      'province' => ['label' => 'Provincia',           'value' => $data['province'] ?? ''],
+      'comments' => ['label' => 'Mensaje',             'value' => $data['comments'] ?? ''],
+      'profile'  => ['label' => 'Perfil de usuario',   'value' => $data['profile'] ?? ''],
+      'originUrl'=> ['label' => 'Origen (URL)',        'value' => $data['originUrl'] ?? ''],
+      'source'   => ['label' => 'Origen de la consulta', 'value' => $data['source'] ?? ''],
+    ];
+
+    // AltBody texto plano - solo campos con valor
+    $alt = "Nueva solicitud de cotización\n\n";
+    foreach ($fields as $key => $field) {
+      if ($hasValue($field['value'])) {
+        $alt .= $field['label'] . ": " . $field['value'] . "\n";
+      }
+    }
+    // IP siempre se muestra
+    $alt .= "IP: " . ($data['ip'] ?? '') . "\n";
 
     // HTML desde plantilla PHP
     $tplPath = __DIR__ . '/../templates/quote_email.php';
@@ -133,27 +135,17 @@ class QuoteMailer
       return [$html, $alt];
     }
 
-    // variables disponibles dentro de la plantilla
+    // Variables disponibles dentro de la plantilla
     $vars = [
-      'name'     => $data['name']    ?? '',
-      'email'      => $data['email']     ?? '',
-      'phone'   => $data['phone']  ?? '',
-      'surface' => $data['surface'] ?? '',
-      'province'  => $data['province'] ?? '',
-      'comments'    => $data['comments']   ?? '',
-      'profile'    => $data['profile']   ?? '',
-      'ip'         => $data['ip']        ?? '',
-      'originUrl'  => $data['originUrl']  ?? '',
-      'source'  => $data['source']  ?? '',
-      'escape'     => $escape,
+      'fields'   => $fields,
+      'ip'       => $data['ip'] ?? '',
+      'escape'   => $escape,
+      'hasValue' => $hasValue,
     ];
 
     // Render con output buffering
     ob_start();
-    /** @noinspection PhpIncludeInspection */
-
     extract($vars, EXTR_SKIP);
-
     include $tplPath;
     $html = (string)ob_get_clean();
 

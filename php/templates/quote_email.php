@@ -1,13 +1,18 @@
 <?php
-
-/** @var callable $escape */ ?>
+/** 
+ * @var array $fields Array de campos con 'label' y 'value'
+ * @var string $ip Dirección IP del usuario
+ * @var callable $escape Función para escapar HTML
+ * @var callable $hasValue Función para verificar si un valor existe
+ */
+?>
 <!doctype html>
 <html lang="es">
 
 <head>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- ayuda en mobile -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Nueva solicitud de cotización</title>
 
   <style>
@@ -56,7 +61,6 @@
     .container {
       width: 100%;
       max-width: 640px;
-      /* desktop */
       margin: 0 auto;
       background: #ffffff;
       border: 1px solid #e6e6e6;
@@ -125,14 +129,12 @@
         font-size: 16px;
       }
 
-      /* un pelín más grande en mobile */
       .label {
         width: auto;
         display: block;
         margin-bottom: 4px;
       }
 
-      /* etiquetas arriba */
       .table td {
         display: block;
         width: 100%;
@@ -161,7 +163,14 @@
   <center class="wrapper">
     <table role="presentation" class="container" cellpadding="0" cellspacing="0" width="100%">
       <tr>
-        <td class="header"><?= $escape($source) ?></td>
+        <td class="header">
+          <?php
+          // Mostrar el source si existe, sino un título por defecto
+          echo $hasValue($fields['source']['value'])
+            ? $escape($fields['source']['value'])
+            : 'Nueva solicitud de cotización';
+          ?>
+        </td>
       </tr>
 
       <tr>
@@ -169,49 +178,40 @@
           <p style="margin:0 0 12px">Ingresó un nuevo pedido desde el formulario del sitio.</p>
 
           <table role="presentation" class="table" cellpadding="0" cellspacing="0">
-            <tr>
-              <td class="label">Nombre</td>
-              <td><?= $escape($name) ?></td>
-            </tr>
-            <tr>
-              <td class="label">Email</td>
-              <td><a href="mailto:<?= $escape($email) ?>" style="color:#111;"><?= $escape($email) ?></a></td>
-            </tr>
-            <tr>
-              <td class="label">Teléfono</td>
-              <td><?= $escape($phone) ?></td>
-            </tr>
-            <tr>
-              <td class="label">Superficie (m²)</td>
-              <td><?= $escape($surface) ?></td>
-            </tr>
-            <tr>
-              <td class="label">Provincia</td>
-              <td><?= $escape($province) ?></td>
-            </tr>
-            <tr>
-              <td class="label">Mensaje</td>
-              <td style="white-space:pre-line;"><?= $escape($comments) ?></td>
-            </tr>
-            <tr>
-              <td class="label">Perfil de ususario</td>
-              <td><?= $escape($profile) ?></td>
-            </tr>
-            <?php if (!empty($originUrl)): ?>
+            <?php
+            // Renderizar solo los campos que tienen valor
+            foreach ($fields as $key => $field):
+              // Saltar 'source' porque ya se muestra en el header
+              if ($key === 'source') continue;
+
+              // Solo renderizar si el campo tiene valor
+              if (!$hasValue($field['value'])) continue;
+
+              $value = $field['value'];
+              $label = $field['label'];
+            ?>
               <tr>
-                <td class="label">Origen (URL)</td>
-                <td><a href="<?= $escape($originUrl) ?>" style="color:#111;"><?= $escape($originUrl) ?></a></td>
+                <td class="label"><?= $escape($label) ?></td>
+                <td>
+                  <?php if ($key === 'email'): ?>
+                    <a href="mailto:<?= $escape($value) ?>" style="color:#111;"><?= $escape($value) ?></a>
+                  <?php elseif ($key === 'originUrl'): ?>
+                    <a href="<?= $escape($value) ?>" style="color:#111;"><?= $escape($value) ?></a>
+                  <?php elseif ($key === 'comments'): ?>
+                    <span style="white-space:pre-line;"><?= $escape($value) ?></span>
+                  <?php else: ?>
+                    <?= $escape($value) ?>
+                  <?php endif; ?>
+                </td>
               </tr>
-            <?php endif; ?>
-            <tr>
-              <td class="label">Origen de la consulta</td>
-              <td><?= $escape($source) ?></td>
-            </tr>
+            <?php endforeach; ?>
           </table>
 
-          <p class="muted" style="margin:16px 0 0;">
-            IP: <?= $escape($ip) ?>
-          </p>
+          <?php if ($hasValue($ip)): ?>
+            <p class="muted" style="margin:16px 0 0;">
+              IP: <?= $escape($ip) ?>
+            </p>
+          <?php endif; ?>
         </td>
       </tr>
     </table>
