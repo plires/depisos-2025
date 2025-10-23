@@ -1,78 +1,84 @@
+/* Contenedor principal */
 .contentColors {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  max-width: calc(100vw - 24px);
-  width: fit-content;
-  gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
-/* Clases personalizadas por producto */
-.perfiles article {
-  min-width: 80px;
+/* Carrusel Slick */
+.colorSlider {
+  width: 100%;
+  padding: 0 40px;
 }
 
-.perfiles article img {
-  padding-left: 1.5rem;
+/* Wrapper para cada slide */
+.slideWrapper {
+  padding: 0 10px;
+  outline: none;
 }
-/* Clases personalizadas por producto end */
 
-.contentColors article {
+/* Artículo del color */
+.color {
   position: relative;
-  flex: 0 0 auto;
-  overflow-x: hidden;
-  display: flex;
-  justify-content: flex-end;
+  background-color: aqua;
+  display: flex !important;
+  justify-content: center;
   align-items: flex-start;
+  outline: none;
+  height: 100%;
 }
 
-.colorButton {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: var(--primary-color);
-  transition: all 0.3s ease-in-out;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  position: relative;
-}
-
-.colorButton:hover {
-  opacity: 0.8;
-}
-
-.colorButton:hover h4 {
-  color: var(--third-color);
-}
-
-.colorButton:hover img {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.contentColors article h4 {
+/* Título vertical del color */
+.color h4 {
   font-size: 0.85rem;
   font-weight: 700;
-  position: absolute;
-  left: 0;
-  top: 10px;
-  transform-origin: top left;
-  transform: rotate(-90deg) translateX(-100%);
+  transform-origin: top right;
+  transform: rotate(-90deg) translateX(-15%);
   margin: 0;
   transition: color 0.3s ease-in-out;
   width: max-content;
+  white-space: nowrap;
 }
 
-.contentColors article img {
-  max-height: 200px;
-  height: 200px;
-  padding-left: 1rem;
+/* Imagen del color */
+.color img {
   transition: all 0.3s ease-in-out;
 }
 
+/* Estilos para las flechas del carrusel */
+.colorSlider :global(.slick-prev),
+.colorSlider :global(.slick-next) {
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+}
+
+.colorSlider :global(.slick-prev) {
+  left: -5px;
+}
+
+.colorSlider :global(.slick-next) {
+  right: -5px;
+}
+
+.colorSlider :global(.slick-prev:before),
+.colorSlider :global(.slick-next:before) {
+  font-size: 20px;
+  opacity: 0.75;
+  color: var(--primary-color);
+}
+
+.colorSlider :global(.slick-prev:hover:before),
+.colorSlider :global(.slick-next:hover:before) {
+  opacity: 1;
+}
+
+.colorSlider :global(.slick-disabled:before) {
+  opacity: 0.25;
+}
+/* Estilos para las flechas del carrusel end */
+
+/* Estilos del modal */
 .modalImageContainer {
   display: flex;
   flex-direction: column;
@@ -94,74 +100,52 @@
   margin: 0;
   text-align: center;
 }
+/* Estilos del modal end */
 
 /* MEDIA QUERIES */
 @media (min-width: 576px) {
-  .contentColors {
-    width: initial;
+  .colorSlider {
+    padding: 0 45px;
   }
-
-  .contentColors article h4 {
-    font-size: 1rem;
-  }
-
-  .contentColors article img {
-    max-height: 220px;
-    height: 220px;
-  }
-
-  /* Clases personalizadas por producto */
-  .perfiles article {
-    min-width: 100px;
-  }
-  /* Clases personalizadas por producto end */
 }
 
 @media (min-width: 768px) {
-  .contentColors article img {
-    max-height: 240px;
-    height: 240px;
+  .slideWrapper {
+    padding: 0 12px;
   }
 
+  /* Estilos del modal */
   .modalImageContainer h3 {
     font-size: 2.5rem;
   }
+  /* Estilos del modal end */
 }
 
 @media (min-width: 992px) {
-  .contentColors article img {
-    max-height: 260px;
-    height: 260px;
-  }
 }
 
 @media (min-width: 1200px) {
-  .contentColors article img {
-    max-height: 280px;
-    height: 280px;
-    padding-left: 1.25rem;
+  .slideWrapper {
+    padding: 0 15px;
   }
 
-  .contentColors article h4 {
-    font-size: 1.25rem;
-  }
-
+  /* Estilos del modal */
   .modalImageContainer h3 {
     font-size: 3rem;
   }
+  /* Estilos del modal end */
 }
 
 @media (min-width: 1400px) {
-  .contentColors article h4 {
-    font-size: 1.35rem;
-  }
-
-  /* Clases personalizadas por producto */
-  .wallPanel {
-    justify-content: space-between;
-  }
-  /* Clases personalizadas por producto end */
 }
 
-@media (min-width: 1600px) {
+/* Ajustes para pantallas extra pequeñas */
+@media (max-width: 575px) {
+  .colorSlider {
+    padding: 0 20px;
+  }
+
+  .slideWrapper {
+    padding: 0 8px;
+  }
 }
