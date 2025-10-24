@@ -87,7 +87,7 @@ const NavMenu = () => {
         }
         transition
       ></Menu>
-      <Menu
+      {/* <Menu
         menuButton={
           <button type='button' className='btn'>
             <NavLink className='transition' to={'/blog'}>
@@ -96,7 +96,7 @@ const NavMenu = () => {
           </button>
         }
         transition
-      ></Menu>
+      ></Menu> */}
       <Menu
         menuButton={
           <button type='button' className='btn'>
