@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <AppProvider>
-        <Router>
+        <Router basename='/dev/'>
           <ScrollToTop />
           <ToastContainer />
           <Header />
