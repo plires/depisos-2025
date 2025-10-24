@@ -195,6 +195,7 @@ $payload = [
   'ip'          => $ip,
   'originUrl'   => $originUrl,
   'source'      => $source,
+  'type'        => $type,
 ];
 
 // Incluir modelo de Contact

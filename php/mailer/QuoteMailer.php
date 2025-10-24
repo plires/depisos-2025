@@ -51,6 +51,16 @@ class QuoteMailer
     // Construir contenidos (HTML + ALT)
     [$html, $alt] = $this->buildBodies($data);
 
+
+    switch ($data['type']) {
+      case 'contacto':
+        $subject = 'Gracias por tu contacto';
+        break;
+      default:
+        $subject = 'Nueva solicitud de cotización';
+        break;
+    }
+
     try {
       // SMTP
       $_ENV['VITE_ENVIRONMENT'] === 'dev'
@@ -81,7 +91,7 @@ class QuoteMailer
 
       // Contenido
       $mail->isHTML(true);
-      $mail->Subject = 'Nueva solicitud de cotización';
+      $mail->Subject = $subject;
       $mail->Body    = $html;
       $mail->AltBody = $alt;
 
@@ -112,7 +122,7 @@ class QuoteMailer
       'province' => ['label' => 'Provincia',           'value' => $data['province'] ?? ''],
       'comments' => ['label' => 'Mensaje',             'value' => $data['comments'] ?? ''],
       'profile'  => ['label' => 'Perfil de usuario',   'value' => $data['profile'] ?? ''],
-      'originUrl'=> ['label' => 'Origen (URL)',        'value' => $data['originUrl'] ?? ''],
+      'originUrl' => ['label' => 'Origen (URL)',        'value' => $data['originUrl'] ?? ''],
       'source'   => ['label' => 'Origen de la consulta', 'value' => $data['source'] ?? ''],
     ];
 
