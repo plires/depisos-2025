@@ -1,0 +1,184 @@
+{
+  "header": [
+    {
+      "id": 1,
+      "title": "VINYL PANEL",
+      "subtitle": "Línea Plenos",
+      "description": "Nuestra línea más minimalista en una gran variedad de colores. Tonos lisos con textura estriada para darle un toque a cualquier espacio. Ya sea en pared o techo.",
+      "img_header_background_src": "vinyl-panel-plenos-background-header.webp",
+      "img_header_detail_src": "vinyl-panel-plenos-detalle-header.webp",
+      "extra_class": "vinylPlenos"
+    }
+  ],
+  "colores": [
+    {
+      "id": 1,
+      "title": "Almendra",
+      "img_src": "vinyl-panel-plenos-almendra.webp",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 2,
+      "title": "Arcilla",
+      "img_src": "vinyl-panel-plenos-arcilla.webp",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 3,
+      "title": "Avellana",
+      "img_src": "vinyl-panel-plenos-avellana.webp",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 4,
+      "title": "Beige",
+      "img_src": "vinyl-panel-plenos-beige.webp",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 5,
+      "title": "Blanco",
+      "img_src": "vinyl-panel-plenos-blanco.webp",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 6,
+      "title": "Celeste Pastel",
+      "img_src": "vinyl-panel-plenos-celeste-pastel.webp",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 7,
+      "title": "Rosa Pastel",
+      "img_src": "vinyl-panel-plenos-rosa-pastel.webp",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 8,
+      "title": "Verde Pastel",
+      "img_src": "vinyl-panel-plenos-verde-pastel.webp",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 9,
+      "title": "Gris Topo",
+      "img_src": "vinyl-panel-plenos-gris-topo.webp",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 10,
+      "title": "Hueso",
+      "img_src": "vinyl-panel-plenos-hueso.webp",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 11,
+      "title": "Negro",
+      "img_src": "vinyl-panel-plenos-negro.webp",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 12,
+      "title": "Ocre",
+      "img_src": "vinyl-panel-plenos-ocre.webp",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 13,
+      "title": "Visón",
+      "img_src": "vinyl-panel-plenos-vison.webp",
+      "extra_class": "vinylPlenos"
+    }
+  ],
+  "otrasLineas": [
+    {
+      "id": 1,
+      "linea": "Línea Printer - Nativa",
+      "src": "/productos/vinyl-panel/printer"
+    },
+    {
+      "id": 2,
+      "linea": "Línea Foliados",
+      "src": "/productos/vinyl-panel/foliados"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "img_src": "vinyl-panel-plenos-galeria-a.webp",
+      "col": "col-md-4",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 2,
+      "img_src": "vinyl-panel-plenos-galeria-b.webp",
+      "col": "col-md-4",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 3,
+      "img_src": "vinyl-panel-plenos-galeria-c.webp",
+      "col": "col-md-4",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 4,
+      "img_src": "vinyl-panel-plenos-galeria-d.webp",
+      "col": "col-md-6",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 5,
+      "img_src": "vinyl-panel-plenos-galeria-e.webp",
+      "col": "col-md-6",
+      "extra_class": "vinylPlenos"
+    }
+  ],
+  "medidas": [
+    {
+      "id": 1,
+      "img_src": "vinyl-panel-plenos-medidas-a.webp",
+      "col": "col-md-7",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 2,
+      "img_src": "vinyl-panel-plenos-medidas-b.webp",
+      "col": "col-md-5",
+      "extra_class": "vinylPlenos"
+    }
+  ],
+  "comparacion": [
+    {
+      "id": 1,
+      "img_src": "vinyl-panel-plenos-antes.webp",
+      "extra_class": "vinylPlenos"
+    },
+    {
+      "id": 2,
+      "img_src": "vinyl-panel-plenos-despues.webp",
+      "extra_class": "vinylPlenos"
+    }
+  ],
+  "technicalSheet": {
+    "extra_class": "vinylPlenos",
+    "data": {
+      "Accesorios": "Perfiles H, J y Soleraplast",
+      "Uso": "Revestimiento de muro y techos.",
+      "Material": "PVC sustentable",
+      "Ancho, Alto y Espesor": "220 x 2900 x 18 mm.",
+      "Formato de venta": "Paquete con 4 tiras.",
+      "M2 por tabla": "2,32 m2",
+      "Tipo de espacio": "interior",
+      "Colores": "Almmendra, Arcilla, Avellana, Beige, Blanco, Celeste Pastel, <br />Verde Pastel, Rosa Pastel, Gris Topo, Hueso, Negro, Ocre, Visón",
+      "Garantía": "X años"
+    },
+    "ventajas": [
+      "Resistente a la humedad",
+      "Libre de mantenimiento",
+      "Rápida instalación",
+      "Versátil: muro o techo",
+      "Variedad de colores"
+    ]
+  }
+}
