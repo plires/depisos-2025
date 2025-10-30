@@ -29,17 +29,19 @@ const NavMenu = () => {
         }
         transition
       >
-        <SubMenu label='Revestimientos'>
+        <SubMenu label='Línea wpc'>
           <MenuItem>
             <NavLink className='transition' to={'productos/wall-panel'}>
               Wall Panel
             </NavLink>
           </MenuItem>
+          <MenuDivider />
           <MenuItem>
             <NavLink className='transition' to={'productos/siding'}>
               Siding
             </NavLink>
           </MenuItem>
+          <MenuDivider />
           <MenuItem>
             <NavLink className='transition' to={'productos/perfiles'}>
               Perfiles
@@ -47,35 +49,88 @@ const NavMenu = () => {
           </MenuItem>
           <MenuDivider />
           <MenuItem>
-            <NavLink className='transition' to={'productos/flat-panel'}>
-              Flat Panel
+            <NavLink className='transition' to={'productos/deck-dual'}>
+              Deck Dual
+            </NavLink>
+          </MenuItem>
+        </SubMenu>
+
+        <MenuDivider />
+
+        <MenuItem>
+          <NavLink className='transition' to={'productos/flat-panel'}>
+            Flat Panel
+          </NavLink>
+        </MenuItem>
+
+        <MenuDivider />
+
+        <SubMenu label='Cielorraso'>
+          <MenuItem>
+            <NavLink
+              className='transition'
+              to={'productos/cielorraso/foliados'}
+            >
+              Foliados
             </NavLink>
           </MenuItem>
           <MenuDivider />
           <MenuItem>
-            <NavLink className='transition' to={'productos/vinyl-panel'}>
-              Vinyl Panel
+            <NavLink className='transition' to={'productos/cielorraso/printer'}>
+              Printer
             </NavLink>
           </MenuItem>
         </SubMenu>
+
         <MenuDivider />
-        <MenuItem>
-          <NavLink className='transition' to={'productos/deck-dual'}>
-            Deck Dual
-          </NavLink>
-        </MenuItem>
+
+        <SubMenu label='Vinyl Panel'>
+          <MenuItem>
+            <NavLink className='transition' to={'productos/vinyl-panel/plenos'}>
+              Plenos
+            </NavLink>
+          </MenuItem>
+          <MenuDivider />
+          <MenuItem>
+            <NavLink
+              className='transition'
+              to={'productos/vinyl-panel/foliados'}
+            >
+              Foliados
+            </NavLink>
+          </MenuItem>
+          <MenuDivider />
+          <MenuItem>
+            <NavLink
+              className='transition'
+              to={'productos/vinyl-panel/printer'}
+            >
+              Printer
+            </NavLink>
+          </MenuItem>
+        </SubMenu>
+
         <MenuDivider />
-        <MenuItem>
-          <NavLink className='transition' to={'productos/pisos-melaminicos'}>
-            Pisos a Prueba de Agua
-          </NavLink>
-        </MenuItem>
-        <MenuDivider />
-        <MenuItem>
-          <NavLink className='transition' to={'productos/cielorrasos'}>
-            Cielorraso Impreso
-          </NavLink>
-        </MenuItem>
+
+        <SubMenu label='PISOS WATERPROOF'>
+          <MenuItem>
+            <NavLink
+              className='transition'
+              to={'productos/pisos-waterproof/melaminicos'}
+            >
+              Melaminicos
+            </NavLink>
+          </MenuItem>
+          <MenuDivider />
+          <MenuItem>
+            <NavLink
+              className='transition'
+              to={'productos/pisos-waterproof/spc'}
+            >
+              SPC
+            </NavLink>
+          </MenuItem>
+        </SubMenu>
       </Menu>
       <Menu
         menuButton={
