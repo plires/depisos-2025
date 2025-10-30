@@ -1,5 +1,6 @@
 import HeaderProduct from '@/components/commons/HeaderProduct.jsx'
 import ColorsProduct from '@/components/commons/ColorsProduct.jsx'
+import OtherLinesProduct from '@/components/commons/OtherLinesProduct.jsx'
 import GalleryProduct from '@/components/commons/GalleryProduct.jsx'
 import MedidasProduct from '@/components/commons/MedidasProduct.jsx'
 import ComparacionProduct from '@/components/commons/ComparacionProduct.jsx'
@@ -27,6 +28,22 @@ const ProductCielorrasoFoliado = () => {
           </div>
         </div>
       </section>
+
+      {product.otrasLineas && (
+        <section data-aos='fade-up' className='contentOtherLines container'>
+          <div className='row'>
+            <div className='col-md-12'>
+              <h3>Otras líneas de cielorraso</h3>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col-md-12'>
+              <OtherLinesProduct product={product.otrasLineas} />
+            </div>
+          </div>
+        </section>
+      )}
+
       <GalleryProduct product={product.gallery} />
       <MedidasProduct product={product.medidas} />
       <ComparacionProduct product={product.comparacion} />

@@ -48,6 +48,13 @@
       "extra_class": "cielorrasoFoliado"
     }
   ],
+  "otrasLineas": [
+    {
+      "id": 1,
+      "linea": "Línea Printer",
+      "src": "/productos/cielorraso/printer"
+    }
+  ],
   "gallery": [
     {
       "id": 1,
