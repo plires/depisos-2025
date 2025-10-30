@@ -1,0 +1,136 @@
+{
+  "header": [
+    {
+      "id": 1,
+      "title": "VINYL PANEL",
+      "subtitle": "Línea Printer - Nativa",
+      "description": "Un revestimiento práctico y elegante que aporta un acabado moderno a cualquier espacio. Ideal para ambientes residenciales o comerciales interiores. Apto para muro y techo, también combinable con cielorraso.",
+      "img_header_background_src": "vinyl-panel-printer-background-header.webp",
+      "img_header_detail_src": "vinyl-panel-printer-detalle-header.webp",
+      "extra_class": "vinylPrinter"
+    }
+  ],
+  "colores": [
+    {
+      "id": 1,
+      "title": "Nogal",
+      "img_src": "vinyl-panel-printer-nogal.webp",
+      "extra_class": "vinylPrinter"
+    },
+    {
+      "id": 2,
+      "title": "Legno",
+      "img_src": "vinyl-panel-printer-legno.webp",
+      "extra_class": "vinylPrinter"
+    },
+    {
+      "id": 3,
+      "title": "Cerejeira",
+      "img_src": "vinyl-panel-printer-cerejeira.webp",
+      "extra_class": "vinylPrinter"
+    },
+    {
+      "id": 4,
+      "title": "Tauarí",
+      "img_src": "vinyl-panel-printer-tauri.webp",
+      "extra_class": "vinylPrinter"
+    },
+    {
+      "id": 5,
+      "title": "Carvalho",
+      "img_src": "vinyl-panel-printer-carvalho.webp",
+      "extra_class": "vinylPrinter"
+    }
+  ],
+  "otrasLineas": [
+    {
+      "id": 1,
+      "linea": "Línea Foliados",
+      "src": "/productos/vinyl-panel/foliados"
+    },
+    {
+      "id": 2,
+      "linea": "Línea Plenos",
+      "src": "/productos/vinyl-panel/plenos"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "img_src": "vinyl-panel-printer-galeria-a.webp",
+      "col": "col-md-4",
+      "extra_class": "vinylPrinter"
+    },
+    {
+      "id": 2,
+      "img_src": "vinyl-panel-printer-galeria-b.webp",
+      "col": "col-md-4",
+      "extra_class": "vinylPrinter"
+    },
+    {
+      "id": 3,
+      "img_src": "vinyl-panel-printer-galeria-c.webp",
+      "col": "col-md-4",
+      "extra_class": "vinylPrinter"
+    },
+    {
+      "id": 4,
+      "img_src": "vinyl-panel-printer-galeria-d.webp",
+      "col": "col-md-6",
+      "extra_class": "vinylPrinter"
+    },
+    {
+      "id": 5,
+      "img_src": "vinyl-panel-printer-galeria-e.webp",
+      "col": "col-md-6",
+      "extra_class": "vinylPrinter"
+    }
+  ],
+  "medidas": [
+    {
+      "id": 1,
+      "img_src": "vinyl-panel-printer-medidas-a.webp",
+      "col": "col-md-7",
+      "extra_class": "vinylPrinter"
+    },
+    {
+      "id": 2,
+      "img_src": "vinyl-panel-printer-medidas-b.webp",
+      "col": "col-md-5",
+      "extra_class": "vinylPrinter"
+    }
+  ],
+  "comparacion": [
+    {
+      "id": 1,
+      "img_src": "vinyl-panel-printer-antes.webp",
+      "extra_class": "vinylPrinter"
+    },
+    {
+      "id": 2,
+      "img_src": "vinyl-panel-printer-despues.webp",
+      "extra_class": "vinylPrinter"
+    }
+  ],
+  "technicalSheet": {
+    "extra_class": "vinylPrinter",
+    "data": {
+      "Accesorios": "Perfiles H, J y Soleraplast",
+      "Uso": "Revestimiento de muro y techos.",
+      "Material": "PVC sustentable",
+      "Ancho, Alto y Espesor": "220 x 2900 x 18 mm.",
+      "Formato de venta": "Paquete con 4 tiras.",
+      "M2 por tabla": "2,32 m2",
+      "Tipo de espacio": "interior",
+      "Colores": "Nogal, Legno, Cerejeira, Tauarí, Carvalho",
+      "Garantía": "X años"
+    },
+    "ventajas": [
+      "Resistente a la humedad",
+      "Bajo mantenimiento",
+      "Rápida instalación",
+      "Versátil: muro o techo",
+      "Variedad de colores"
+    ]
+  }
+}
