@@ -1,0 +1,157 @@
+{
+  "header": [
+    {
+      "id": 1,
+      "title": "cielorraso",
+      "subtitle": "Línea Printer",
+      "description": "Acabado liso e impecable para techos. Proporciona la calidez visual de la madera real, siendo una opción práctica, ligera y de fácil limpieza. Además podés sumar textura combinandolo con Vinyl Panel.",
+      "img_header_background_src": "cielorraso-printer-background-header.webp",
+      "img_header_detail_src": "cielorraso-printer-detalle-header.webp",
+      "extra_class": "cielorrasoPrinter"
+    }
+  ],
+  "colores": [
+    {
+      "nativa": [
+        {
+          "id": 1,
+          "title": "Nogal",
+          "img_src": "cielorraso-printer-nogal.webp",
+          "extra_class": "cielorrasoPrinter"
+        },
+        {
+          "id": 2,
+          "title": "Cerejeira",
+          "img_src": "cielorraso-printer-cerejeira.webp",
+          "extra_class": "cielorrasoPrinter"
+        },
+        {
+          "id": 3,
+          "title": "Carvalo",
+          "img_src": "cielorraso-printer-carvalho.webp",
+          "extra_class": "cielorrasoPrinter"
+        },
+        {
+          "id": 4,
+          "title": "Tauari",
+          "img_src": "cielorraso-printer-tauri.webp",
+          "extra_class": "cielorrasoPrinter"
+        },
+        {
+          "id": 5,
+          "title": "Legno",
+          "img_src": "cielorraso-printer-legno.webp",
+          "extra_class": "cielorrasoPrinter"
+        }
+      ]
+    },
+    {
+      "evolucion": [
+        {
+          "id": 1,
+          "title": "Agar Beige",
+          "img_src": "cielorraso-printer-agar-beige.webp",
+          "extra_class": "cielorrasoPrinter"
+        },
+        {
+          "id": 2,
+          "title": "Agar Castagno",
+          "img_src": "cielorraso-printer-agar-castagno.webp",
+          "extra_class": "cielorrasoPrinter"
+        },
+        {
+          "id": 3,
+          "title": "Agar Legno",
+          "img_src": "cielorraso-printer-agar-legno.webp",
+          "extra_class": "cielorrasoPrinter"
+        }
+      ]
+    }
+  ],
+  "otrasLineas": [
+    {
+      "id": 1,
+      "linea": "Línea Foliado",
+      "src": "/productos/cielorraso/foliados"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "img_src": "cielorraso-printer-galeria-a.webp",
+      "col": "col-md-4",
+      "extra_class": "cielorrasoPrinter"
+    },
+    {
+      "id": 2,
+      "img_src": "cielorraso-printer-galeria-b.webp",
+      "col": "col-md-4",
+      "extra_class": "cielorrasoPrinter"
+    },
+    {
+      "id": 3,
+      "img_src": "cielorraso-printer-galeria-c.webp",
+      "col": "col-md-4",
+      "extra_class": "cielorrasoPrinter"
+    },
+    {
+      "id": 4,
+      "img_src": "cielorraso-printer-galeria-d.webp",
+      "col": "col-md-6",
+      "extra_class": "cielorrasoPrinter"
+    },
+    {
+      "id": 5,
+      "img_src": "cielorraso-printer-galeria-e.webp",
+      "col": "col-md-6",
+      "extra_class": "cielorrasoPrinter"
+    }
+  ],
+  "medidas": [
+    {
+      "id": 1,
+      "img_src": "cielorraso-printer-medidas-a.webp",
+      "col": "col-md-7",
+      "extra_class": "cielorrasoPrinter"
+    },
+    {
+      "id": 2,
+      "img_src": "cielorraso-printer-medidas-b.webp",
+      "col": "col-md-5",
+      "extra_class": "cielorrasoPrinter"
+    }
+  ],
+  "comparacion": [
+    {
+      "id": 1,
+      "img_src": "cielorraso-printer-antes.webp",
+      "extra_class": "cielorrasoPrinter"
+    },
+    {
+      "id": 2,
+      "img_src": "cielorraso-printer-despues.webp",
+      "extra_class": "cielorrasoPrinter"
+    }
+  ],
+  "technicalSheet": {
+    "extra_class": "cielorrasoPrinter",
+    "data": {
+      "Accesorios": "Perfiles H, J y Soleraplast",
+      "Uso": "Revestimiento de techos.",
+      "Material": "PVC sustentable",
+      "Ancho, Alto y Espesor": "200 x (4000, 5000 o 6000) x 8 mm.",
+      "Formato de venta": "Paquete con 10 tiras.",
+      "M2 por tabla": "0,8/1/1,2 m2 (depende de la altura escogida)",
+      "Tipo de espacio": "interior",
+      "Colores": "Nativa: Nogal, Legno, Cerejeira, Tauarí, Carvalho. <br /> Evolución: Agar Beige, Agar Castagno, Agar Legno",
+      "Garantía": "X años"
+    },
+    "ventajas": [
+      "Resistente al agua",
+      "Libre de mantenimiento",
+      "Instalación rápida",
+      "Versátil: muro o techo",
+      "Variedad de opciones"
+    ]
+  }
+}

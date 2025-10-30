@@ -9,6 +9,7 @@ import ProductDeckDual from '@/pages/ProductDeckDual.jsx'
 import ProductSiding from '@/pages/ProductSiding.jsx'
 import ProductFlatPanel from '@/pages/ProductFlatPanel.jsx'
 import ProductCielorrasoFoliado from '@/pages/ProductCielorrasoFoliado.jsx'
+import ProductCielorrasoPrinter from '@/pages/ProductCielorrasoPrinter.jsx'
 import Profesionales from '@/pages/Profesionales.jsx'
 import Sustentabilidad from '@/pages/Sustentabilidad.jsx'
 import Nosotros from '@/pages/Nosotros.jsx'
@@ -47,6 +48,10 @@ function App() {
             <Route
               path='/productos/cielorraso/foliados'
               element={<ProductCielorrasoFoliado />}
+            />
+            <Route
+              path='/productos/cielorraso/printer'
+              element={<ProductCielorrasoPrinter />}
             />
             <Route path='/profesionales' element={<Profesionales />} />
             <Route path='/sustentabilidad' element={<Sustentabilidad />} />
