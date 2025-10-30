@@ -33,7 +33,7 @@ const ProductVinylPlenos = () => {
         <section data-aos='fade-up' className='contentOtherLines container'>
           <div className='row'>
             <div className='col-md-12'>
-              <h3>Otras líneas de cielorraso</h3>
+              <h3>Otras líneas de vinyl panel</h3>
             </div>
           </div>
           <div className='row'>
