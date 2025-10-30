@@ -1,0 +1,130 @@
+{
+  "header": [
+    {
+      "id": 1,
+      "title": "cielorraso",
+      "subtitle": "Línea Foliado",
+      "description": "Solución para techos que combina la apariencia cálida y natural de la madera con todos los beneficios de durabilidad e impermeabilidad del PVC.También combinable con Vinyl Panel.",
+      "img_header_background_src": "cielorraso-foliado-background-header.webp",
+      "img_header_detail_src": "cielorraso-foliado-detalle-header.webp",
+      "extra_class": "cielorrasoFoliado"
+    }
+  ],
+  "colores": [
+    {
+      "id": 1,
+      "title": "Nogal",
+      "img_src": "cielorraso-foliado-nogal.webp",
+      "extra_class": "cielorrasoFoliado"
+    },
+    {
+      "id": 2,
+      "title": "Nogal Habano",
+      "img_src": "cielorraso-foliado-nogal-habano.webp",
+      "extra_class": "cielorrasoFoliado"
+    },
+    {
+      "id": 3,
+      "title": "Roble Escandinavo",
+      "img_src": "cielorraso-foliado-roble-escandinavo.webp",
+      "extra_class": "cielorrasoFoliado"
+    },
+    {
+      "id": 4,
+      "title": "Roble Español",
+      "img_src": "cielorraso-foliado-roble-espanol.webp",
+      "extra_class": "cielorrasoFoliado"
+    },
+    {
+      "id": 5,
+      "title": "Roble Gris",
+      "img_src": "cielorraso-foliado-roble-gris.webp",
+      "extra_class": "cielorrasoFoliado"
+    },
+    {
+      "id": 6,
+      "title": "Roble Siberia",
+      "img_src": "cielorraso-foliado-roble-siberia.webp",
+      "extra_class": "cielorrasoFoliado"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "img_src": "cielorraso-foliado-galeria-a.webp",
+      "col": "col-md-4",
+      "extra_class": "cielorrasoFoliado"
+    },
+    {
+      "id": 2,
+      "img_src": "cielorraso-foliado-galeria-b.webp",
+      "col": "col-md-4",
+      "extra_class": "cielorrasoFoliado"
+    },
+    {
+      "id": 3,
+      "img_src": "cielorraso-foliado-galeria-c.webp",
+      "col": "col-md-4",
+      "extra_class": "cielorrasoFoliado"
+    },
+    {
+      "id": 4,
+      "img_src": "cielorraso-foliado-galeria-d.webp",
+      "col": "col-md-6",
+      "extra_class": "cielorrasoFoliado"
+    },
+    {
+      "id": 5,
+      "img_src": "cielorraso-foliado-galeria-e.webp",
+      "col": "col-md-6",
+      "extra_class": "cielorrasoFoliado"
+    }
+  ],
+  "medidas": [
+    {
+      "id": 1,
+      "img_src": "cielorraso-foliado-medidas-a.webp",
+      "col": "col-md-7",
+      "extra_class": "cielorrasoFoliado"
+    },
+    {
+      "id": 2,
+      "img_src": "cielorraso-foliado-medidas-b.webp",
+      "col": "col-md-5",
+      "extra_class": "cielorrasoFoliado"
+    }
+  ],
+  "comparacion": [
+    {
+      "id": 1,
+      "img_src": "cielorraso-foliado-antes.webp",
+      "extra_class": "cielorrasoFoliado"
+    },
+    {
+      "id": 2,
+      "img_src": "cielorraso-foliado-despues.webp",
+      "extra_class": "cielorrasoFoliado"
+    }
+  ],
+  "technicalSheet": {
+    "extra_class": "cielorrasoFoliado",
+    "data": {
+      "Accesorios": "Perfiles H, J y Soleraplast",
+      "Uso": "Revestimiento de techos.",
+      "Material": "PVC + lámina de foliado.",
+      "Ancho, Alto y Espesor": "200 x (4000, 5000 o 6000) x 8 mm.",
+      "Formato de venta": "Paquete con 10 tiras.",
+      "M2 por tabla": "Paquete con 10 tiras. 0,8/1/1,2 m2 (depende de la altura escogida)",
+      "Tipo de espacio": "interior",
+      "Colores": "Nogal, Nogal Habano, Roble Escandinavo, Roble Español, Roble Gris, Roble Siberia.",
+      "Garantía": "X años"
+    },
+    "ventajas": [
+      "Resistente a la humedad",
+      "Fácil mantenimiento",
+      "Rápida instalación",
+      "Simi madera",
+      "Variedad de opciones"
+    ]
+  }
+}

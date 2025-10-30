@@ -8,12 +8,14 @@ import ProductPerfiles from '@/pages/ProductPerfiles.jsx'
 import ProductDeckDual from '@/pages/ProductDeckDual.jsx'
 import ProductSiding from '@/pages/ProductSiding.jsx'
 import ProductFlatPanel from '@/pages/ProductFlatPanel.jsx'
+import ProductCielorrasoFoliado from '@/pages/ProductCielorrasoFoliado.jsx'
 import Profesionales from '@/pages/Profesionales.jsx'
 import Sustentabilidad from '@/pages/Sustentabilidad.jsx'
 import Nosotros from '@/pages/Nosotros.jsx'
 import Contacto from '@/pages/Contacto.jsx'
 import Test from '@/pages/Test.jsx'
 import NotFound from '@/pages/NotFound.jsx'
+
 import { AppProvider } from '@/context/app'
 import ScrollToTop from '@/utils/scrollToTop'
 import { ToastContainer } from 'react-toastify'
@@ -41,6 +43,10 @@ function App() {
             <Route
               path='/productos/flat-panel'
               element={<ProductFlatPanel />}
+            />
+            <Route
+              path='/productos/cielorraso/foliados'
+              element={<ProductCielorrasoFoliado />}
             />
             <Route path='/profesionales' element={<Profesionales />} />
             <Route path='/sustentabilidad' element={<Sustentabilidad />} />
