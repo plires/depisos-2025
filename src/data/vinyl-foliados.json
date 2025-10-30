@@ -1,0 +1,142 @@
+{
+  "header": [
+    {
+      "id": 1,
+      "title": "VINYL PANEL",
+      "subtitle": "Línea Foliados",
+      "description": "Una alternativa moderna que simula la calidez de la madera con las ventajas del PVC: es resistente a la humedad, fácil de instalar y requiere un mantenimiento mínimo. Ideal para interior: muro o techo y combinable con cielorraso.",
+      "img_header_background_src": "vinyl-panel-foliado-background-header.webp",
+      "img_header_detail_src": "vinyl-panel-foliado-detalle-header.webp",
+      "extra_class": "vinylFoliado"
+    }
+  ],
+  "colores": [
+    {
+      "id": 1,
+      "title": "Nogal",
+      "img_src": "vinyl-panel-foliado-nogal.webp",
+      "extra_class": "vinylFoliado"
+    },
+    {
+      "id": 2,
+      "title": "Nogal Habano",
+      "img_src": "vinyl-panel-foliado-nogal-habano.webp",
+      "extra_class": "vinylFoliado"
+    },
+    {
+      "id": 3,
+      "title": "Roble Español",
+      "img_src": "vinyl-panel-foliado-roble-espanol.webp",
+      "extra_class": "vinylFoliado"
+    },
+    {
+      "id": 4,
+      "title": "Roble Siberia",
+      "img_src": "vinyl-panel-foliado-roble-siberia.webp",
+      "extra_class": "vinylFoliado"
+    },
+    {
+      "id": 5,
+      "title": "Roble Escandinavo",
+      "img_src": "vinyl-panel-foliado-roble-escandinavo.webp",
+      "extra_class": "vinylFoliado"
+    },
+    {
+      "id": 6,
+      "title": "Roble Gris",
+      "img_src": "vinyl-panel-foliado-roble-gris.webp",
+      "extra_class": "vinylFoliado"
+    }
+  ],
+  "otrasLineas": [
+    {
+      "id": 1,
+      "linea": "Línea Plenos",
+      "src": "/productos/vinyl-panel/plenos"
+    },
+    {
+      "id": 2,
+      "linea": "Línea Printer - Nativa",
+      "src": "/productos/vinyl-panel/printer"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "img_src": "vinyl-panel-foliado-galeria-a.webp",
+      "col": "col-md-4",
+      "extra_class": "vinylFoliado"
+    },
+    {
+      "id": 2,
+      "img_src": "vinyl-panel-foliado-galeria-b.webp",
+      "col": "col-md-4",
+      "extra_class": "vinylFoliado"
+    },
+    {
+      "id": 3,
+      "img_src": "vinyl-panel-foliado-galeria-c.webp",
+      "col": "col-md-4",
+      "extra_class": "vinylFoliado"
+    },
+    {
+      "id": 4,
+      "img_src": "vinyl-panel-foliado-galeria-d.webp",
+      "col": "col-md-6",
+      "extra_class": "vinylFoliado"
+    },
+    {
+      "id": 5,
+      "img_src": "vinyl-panel-foliado-galeria-e.webp",
+      "col": "col-md-6",
+      "extra_class": "vinylFoliado"
+    }
+  ],
+  "medidas": [
+    {
+      "id": 1,
+      "img_src": "vinyl-panel-foliado-medidas-a.webp",
+      "col": "col-md-7",
+      "extra_class": "vinylFoliado"
+    },
+    {
+      "id": 2,
+      "img_src": "vinyl-panel-foliado-medidas-b.webp",
+      "col": "col-md-5",
+      "extra_class": "vinylFoliado"
+    }
+  ],
+  "comparacion": [
+    {
+      "id": 1,
+      "img_src": "vinyl-panel-foliado-antes.webp",
+      "extra_class": "vinylFoliado"
+    },
+    {
+      "id": 2,
+      "img_src": "vinyl-panel-foliado-despues.webp",
+      "extra_class": "vinylFoliado"
+    }
+  ],
+  "technicalSheet": {
+    "extra_class": "vinylFoliado",
+    "data": {
+      "Accesorios": "Perfiles H, J y Soleraplast",
+      "Uso": "Revestimiento de muro y techos.",
+      "Material": "PVC sustentable",
+      "Ancho, Alto y Espesor": "220 x 2900 x 18 mm.",
+      "Formato de venta": "Paquete con 4 tiras.",
+      "M2 por tabla": "2,32 m2",
+      "Tipo de espacio": "interior",
+      "Colores": "Nogal, Nogal Habano, Roble Español, Roble Siberia, Roble Escandinavo, Roble Gris.",
+      "Garantía": "X años"
+    },
+    "ventajas": [
+      "Resistente a la humedad",
+      "Libre de mantenimiento",
+      "Rápida instalación",
+      "Versátil: muro o techo",
+      "Variedad de colores"
+    ]
+  }
+}

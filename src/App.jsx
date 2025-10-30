@@ -10,6 +10,7 @@ import ProductSiding from '@/pages/ProductSiding.jsx'
 import ProductFlatPanel from '@/pages/ProductFlatPanel.jsx'
 import ProductCielorrasoFoliado from '@/pages/ProductCielorrasoFoliado.jsx'
 import ProductCielorrasoPrinter from '@/pages/ProductCielorrasoPrinter.jsx'
+import ProductVinylFoliados from '@/pages/ProductVinylFoliados.jsx'
 import ProductVinylPrinter from '@/pages/ProductVinylPrinter.jsx'
 import ProductVinylPlenos from '@/pages/ProductVinylPlenos.jsx'
 import Profesionales from '@/pages/Profesionales.jsx'
@@ -50,6 +51,10 @@ function App() {
             <Route
               path='/productos/cielorraso/foliados'
               element={<ProductCielorrasoFoliado />}
+            />
+            <Route
+              path='/productos/vinyl-panel/foliados'
+              element={<ProductVinylFoliados />}
             />
             <Route
               path='/productos/vinyl-panel/printer'
