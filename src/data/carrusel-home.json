@@ -72,13 +72,23 @@
     },
     {
       "id": 8,
-      "title": "PISOS SPC Y MELAMÍNICOS",
+      "title": "PISOS MELAMÍNICOS",
       "subtitle": "A prueba de agua",
-      "description": "Elegí sin miedo al agua: pisos resistentes, <br />elegantes y 100% funcionales.",
-      "img_desktop_src": "slide-pisos-desktop.webp",
-      "img_mobile_src": "slide-pisos-mobile.webp",
-      "img_alt": "imagen carrusel pisos",
-      "link": "/productos/pisos/"
+      "description": "Diseño que se luce, resistencia que perdura: pisos elegantes y preparados para todo.",
+      "img_desktop_src": "slide-pisos-melaminicos-desktop.webp",
+      "img_mobile_src": "slide-pisos-melaminicos-mobile.webp",
+      "img_alt": "imagen carrusel pisos melaminicos",
+      "link": "/productos/pisos-waterproof/melaminicos"
+    },
+    {
+      "id": 9,
+      "title": "PISOS SPC",
+      "subtitle": "A prueba de agua",
+      "description": "Elegí sin miedo al agua: pisos resistentes, elegantes y 100% funcionales.",
+      "img_desktop_src": "slide-pisos-spc-desktop.webp",
+      "img_mobile_src": "slide-pisos-spc-mobile.webp",
+      "img_alt": "imagen carrusel pisos spc",
+      "link": "/productos/pisos-waterproof/spc"
     }
   ]
 }
