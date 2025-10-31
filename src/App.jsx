@@ -10,6 +10,7 @@ import ProductSiding from '@/pages/ProductSiding.jsx'
 import ProductFlatPanel from '@/pages/ProductFlatPanel.jsx'
 import ProductCielorrasoFoliado from '@/pages/ProductCielorrasoFoliado.jsx'
 import ProductCielorrasoPrinter from '@/pages/ProductCielorrasoPrinter.jsx'
+import ProductPisosSPC from '@/pages/ProductPisosSPC.jsx'
 import ProductVinylFoliados from '@/pages/ProductVinylFoliados.jsx'
 import ProductVinylPrinter from '@/pages/ProductVinylPrinter.jsx'
 import ProductVinylPlenos from '@/pages/ProductVinylPlenos.jsx'
@@ -67,6 +68,10 @@ function App() {
             <Route
               path='/productos/cielorraso/printer'
               element={<ProductCielorrasoPrinter />}
+            />
+            <Route
+              path='/productos/pisos-waterproof/spc'
+              element={<ProductPisosSPC />}
             />
             <Route path='/profesionales' element={<Profesionales />} />
             <Route path='/sustentabilidad' element={<Sustentabilidad />} />

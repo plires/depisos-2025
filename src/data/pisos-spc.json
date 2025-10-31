@@ -1,0 +1,135 @@
+{
+  "header": [
+    {
+      "id": 1,
+      "title": "pisos spc",
+      "subtitle": "a prueba de agua",
+      "description": "Pisos de SPC (Stone Plastic Composite) con sistema click. Su núcleo rígido de piedra y polímeros los hace 100%  mpermeables, con alta resistencia al tráfico. Incluyen manta para una instalación rápida y eficiente.",
+      "img_header_background_src": "pisos-spc-background-header.webp",
+      "img_header_detail_src": "pisos-spc-detalle-header.webp",
+      "extra_class": "pisosSPC"
+    }
+  ],
+  "colores": [
+    {
+      "id": 1,
+      "title": "Autumn",
+      "img_src": "pisos-spc-autumn.webp",
+      "extra_class": "pisosSPC"
+    },
+    {
+      "id": 2,
+      "title": "Golden Oak",
+      "img_src": "pisos-spc-golden-oak.webp",
+      "extra_class": "pisosSPC"
+    },
+    {
+      "id": 3,
+      "title": "Silver",
+      "img_src": "pisos-spc-silver.webp",
+      "extra_class": "pisosSPC"
+    },
+    {
+      "id": 4,
+      "title": "Spring",
+      "img_src": "pisos-spc-spring.webp",
+      "extra_class": "pisosSPC"
+    },
+    {
+      "id": 5,
+      "title": "Winter",
+      "img_src": "pisos-spc-winter.webp",
+      "extra_class": "pisosSPC"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "img_src": "pisos-spc-galeria-a.webp",
+      "col": "col-md-4",
+      "extra_class": "pisosSPC"
+    },
+    {
+      "id": 2,
+      "img_src": "pisos-spc-galeria-b.webp",
+      "col": "col-md-4",
+      "extra_class": "pisosSPC"
+    },
+    {
+      "id": 3,
+      "img_src": "pisos-spc-galeria-c.webp",
+      "col": "col-md-4",
+      "extra_class": "pisosSPC"
+    },
+    {
+      "id": 4,
+      "img_src": "pisos-spc-galeria-d.webp",
+      "col": "col-md-6",
+      "extra_class": "pisosSPC"
+    },
+    {
+      "id": 5,
+      "img_src": "pisos-spc-galeria-e.webp",
+      "col": "col-md-6",
+      "extra_class": "pisosSPC"
+    }
+  ],
+  "medidas": [
+    {
+      "id": 1,
+      "img_src": "pisos-spc-medidas-a.webp",
+      "col": "col-md-7",
+      "extra_class": "pisosSPC"
+    },
+    {
+      "id": 2,
+      "img_src": "pisos-spc-medidas-b.webp",
+      "col": "col-md-5",
+      "extra_class": "pisosSPC"
+    },
+    {
+      "id": 3,
+      "img_src": "pisos-spc-medidas-b.webp",
+      "col": "col-md-5",
+      "extra_class": "pisosSPC"
+    },
+    {
+      "id": 4,
+      "img_src": "pisos-spc-medidas-b.webp",
+      "col": "col-md-5",
+      "extra_class": "pisosSPC"
+    }
+  ],
+  "comparacion": [
+    {
+      "id": 1,
+      "img_src": "pisos-spc-antes.webp",
+      "extra_class": "pisosSPC"
+    },
+    {
+      "id": 2,
+      "img_src": "pisos-spc-despues.webp",
+      "extra_class": "pisosSPC"
+    }
+  ],
+  "technicalSheet": {
+    "extra_class": "pisosSPC",
+    "data": {
+      "Accesorios": "Zócalos rigidos Top Line",
+      "Uso": "Revestimiento para pisos",
+      "Material": "Vinílico a prueba de agua con manta incluida.",
+      "Ancho, Alto y Espesor": "228 x 1524 x 45 mm.",
+      "Formato de venta": "8 unidades por caja",
+      "M2 por tabla": "2,78 m2 por caja.",
+      "Tipo de espacio": "Interior",
+      "Colores": "Autumn, Golden Oak, Sandalwood, Silver, Spring, Winter.",
+      "Garantía": "X años"
+    },
+    "ventajas": [
+      "Fácil mantenimiento",
+      "100% Waterproof",
+      "Rapida instalación con sistema click",
+      "Resistente a la abrasión"
+    ]
+  }
+}
