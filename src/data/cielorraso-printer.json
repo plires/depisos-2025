@@ -16,31 +16,31 @@
         {
           "id": 1,
           "title": "Nogal",
-          "img_src": "cielorraso-printer-nogal.webp",
+          "img_src": "cielorraso-printer-nativa-nogal.webp",
           "extra_class": "cielorrasoPrinter"
         },
         {
           "id": 2,
           "title": "Cerejeira",
-          "img_src": "cielorraso-printer-cerejeira.webp",
+          "img_src": "cielorraso-printer-nativa-cerejeira.webp",
           "extra_class": "cielorrasoPrinter"
         },
         {
           "id": 3,
           "title": "Carvalo",
-          "img_src": "cielorraso-printer-carvalho.webp",
+          "img_src": "cielorraso-printer-nativa-carvalho.webp",
           "extra_class": "cielorrasoPrinter"
         },
         {
           "id": 4,
           "title": "Tauari",
-          "img_src": "cielorraso-printer-tauri.webp",
+          "img_src": "cielorraso-printer-nativa-tauri.webp",
           "extra_class": "cielorrasoPrinter"
         },
         {
           "id": 5,
           "title": "Legno",
-          "img_src": "cielorraso-printer-legno.webp",
+          "img_src": "cielorraso-printer-nativa-legno.webp",
           "extra_class": "cielorrasoPrinter"
         }
       ]
@@ -50,19 +50,19 @@
         {
           "id": 1,
           "title": "Agar Beige",
-          "img_src": "cielorraso-printer-agar-beige.webp",
+          "img_src": "cielorraso-printer-evolucion-agar-beige.webp",
           "extra_class": "cielorrasoPrinter"
         },
         {
           "id": 2,
           "title": "Agar Castagno",
-          "img_src": "cielorraso-printer-agar-castagno.webp",
+          "img_src": "cielorraso-printer-evolucion-agar-castagno.webp",
           "extra_class": "cielorrasoPrinter"
         },
         {
           "id": 3,
           "title": "Agar Legno",
-          "img_src": "cielorraso-printer-agar-legno.webp",
+          "img_src": "cielorraso-printer-evolucion-agar-legno.webp",
           "extra_class": "cielorrasoPrinter"
         }
       ]
