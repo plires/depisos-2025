@@ -1,0 +1,118 @@
+{
+  "header": [
+    {
+      "id": 1,
+      "title": "pisos MELAMÍNICOS",
+      "subtitle": "a prueba de agua",
+      "description": "Nuestros pisos melamínicos utilizan una base de HDF de alta densidad, recubierta con una película de diseño y una protectora. El resultado es un piso resistente al tráfico y a la humedad, que mantiene su belleza y acabado por más tiempo.",
+      "img_header_background_src": "pisos-melaminicos-background-header.webp",
+      "img_header_detail_src": "pisos-melaminicos-detalle-header.webp",
+      "extra_class": "pisosMelaminicos"
+    }
+  ],
+  "colores": [
+    {
+      "id": 1,
+      "title": "Everest",
+      "img_src": "pisos-melaminicos-everest.webp",
+      "extra_class": "pisosMelaminicos"
+    },
+    {
+      "id": 2,
+      "title": "Mont Blanc",
+      "img_src": "pisos-melaminicos-mont-blanc.webp",
+      "extra_class": "pisosMelaminicos"
+    },
+    {
+      "id": 3,
+      "title": "Aconcagua",
+      "img_src": "pisos-melaminicos-aconcagua.webp",
+      "extra_class": "pisosMelaminicos"
+    },
+    {
+      "id": 4,
+      "title": "Terminio",
+      "img_src": "pisos-melaminicos-terminio.webp",
+      "extra_class": "pisosMelaminicos"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "img_src": "pisos-melaminicos-galeria-a.webp",
+      "col": "col-md-4",
+      "extra_class": "pisosMelaminicos"
+    },
+    {
+      "id": 2,
+      "img_src": "pisos-melaminicos-galeria-b.webp",
+      "col": "col-md-4",
+      "extra_class": "pisosMelaminicos"
+    },
+    {
+      "id": 3,
+      "img_src": "pisos-melaminicos-galeria-c.webp",
+      "col": "col-md-4",
+      "extra_class": "pisosMelaminicos"
+    },
+    {
+      "id": 4,
+      "img_src": "pisos-melaminicos-galeria-d.webp",
+      "col": "col-md-6",
+      "extra_class": "pisosMelaminicos"
+    },
+    {
+      "id": 5,
+      "img_src": "pisos-melaminicos-galeria-e.webp",
+      "col": "col-md-6",
+      "extra_class": "pisosMelaminicos"
+    }
+  ],
+  "medidas": [
+    {
+      "id": 1,
+      "img_src": "pisos-melaminicos-medidas-a.webp",
+      "col": "col-md-7",
+      "extra_class": "pisosMelaminicos"
+    },
+    {
+      "id": 2,
+      "img_src": "pisos-melaminicos-medidas-b.webp",
+      "col": "col-md-5",
+      "extra_class": "pisosMelaminicos"
+    }
+  ],
+  "comparacion": [
+    {
+      "id": 1,
+      "img_src": "pisos-melaminicos-antes.webp",
+      "extra_class": "pisosMelaminicos"
+    },
+    {
+      "id": 2,
+      "img_src": "pisos-melaminicos-despues.webp",
+      "extra_class": "pisosMelaminicos"
+    }
+  ],
+  "technicalSheet": {
+    "extra_class": "pisosMelaminicos",
+    "data": {
+      "Accesorios": "Manta Silent Step y zócalos rígidos Top Line.",
+      "Uso": "Revestimiento para pisos",
+      "Material": "Melamina HDF  Waterproof",
+      "Ancho, Alto y Espesor": "195 x 1515 x 8 mm.",
+      "Formato de venta": "8 unidades por caja",
+      "M2 por tabla": "2,36 m2 por caja.",
+      "Tipo de espacio": "Interior y exterior",
+      "Colores": "Aconcagua, Everest, Mont Blanc, Terminio.",
+      "Garantía": "X años"
+    },
+    "ventajas": [
+      "Variedad de diseños",
+      "Fácil mantenimiento",
+      "Encastre machimbrado",
+      "HDF de alta densidad",
+      "Resistente al agua"
+    ]
+  }
+}

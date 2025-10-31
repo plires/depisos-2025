@@ -11,6 +11,7 @@ import ProductFlatPanel from '@/pages/ProductFlatPanel.jsx'
 import ProductCielorrasoFoliado from '@/pages/ProductCielorrasoFoliado.jsx'
 import ProductCielorrasoPrinter from '@/pages/ProductCielorrasoPrinter.jsx'
 import ProductPisosSPC from '@/pages/ProductPisosSPC.jsx'
+import ProductPisosMelaminicos from '@/pages/ProductPisosMelaminicos.jsx'
 import ProductVinylFoliados from '@/pages/ProductVinylFoliados.jsx'
 import ProductVinylPrinter from '@/pages/ProductVinylPrinter.jsx'
 import ProductVinylPlenos from '@/pages/ProductVinylPlenos.jsx'
@@ -72,6 +73,10 @@ function App() {
             <Route
               path='/productos/pisos-waterproof/spc'
               element={<ProductPisosSPC />}
+            />
+            <Route
+              path='/productos/pisos-waterproof/melaminicos'
+              element={<ProductPisosMelaminicos />}
             />
             <Route path='/profesionales' element={<Profesionales />} />
             <Route path='/sustentabilidad' element={<Sustentabilidad />} />
