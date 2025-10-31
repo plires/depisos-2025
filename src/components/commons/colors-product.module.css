@@ -1,72 +1,141 @@
+/* ========================================
+   CONTENEDOR PRINCIPAL DEL CARRUSEL
+   ======================================== */
+
 .contentColors {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  max-width: calc(100vw - 24px);
-  width: fit-content;
-  gap: 1rem;
-}
-
-/* Clases personalizadas por producto */
-.wallPanel {
-  justify-content: space-between;
-}
-/* Clases personalizadas por producto end */
-
-.contentColors article {
   position: relative;
-  flex: 0 0 auto;
-  overflow-x: hidden;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  width: 100%;
+  padding: 0;
 }
+
+.sliderContainer {
+  width: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+/* ========================================
+   CONFIGURACIÓN DE SLICK SLIDER
+   ======================================== */
+
+/* Wrapper para cada slide */
+.slideWrapper {
+  padding: 0 10px;
+  outline: none;
+}
+
+/* Contenedor del artículo */
+.color {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* ========================================
+   BOTÓN DE COLOR Y TÍTULO VERTICAL
+   ======================================== */
 
 .colorButton {
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
-  color: var(--primary-color);
-  transition: all 0.3s ease-in-out;
   display: flex;
-  justify-content: flex-end;
   align-items: flex-start;
+  justify-content: center;
+  width: 100%;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
 .colorButton:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
-.colorButton:hover h4 {
+/* Título vertical */
+.verticalTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  margin: 0;
+  padding-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+
+.colorButton:hover .verticalTitle {
   color: var(--third-color);
 }
 
-.colorButton:hover img {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+/* ========================================
+   CONTENEDOR DE IMAGEN
+   ======================================== */
+
+.imageContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 200px;
+  height: 200px;
 }
 
-.contentColors article h4 {
-  font-size: 0.85rem;
-  font-weight: 700;
-  position: absolute;
-  left: 0;
-  top: 10px;
-  transform-origin: top left;
-  transform: rotate(-90deg) translateX(-100%);
-  margin: 0;
-  transition: color 0.3s ease-in-out;
-}
-
-.contentColors article img {
+.imageContainer img {
   max-height: 200px;
   height: 200px;
-  padding-left: 1rem;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: bottom;
   transition: all 0.3s ease-in-out;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
+
+.colorButton:hover .imageContainer img {
+  transform: translateY(-5px);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+/* ========================================
+   FLECHAS DEL CARRUSEL
+   ======================================== */
+
+.sliderContainer :global(.slick-prev),
+.sliderContainer :global(.slick-next) {
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+}
+
+.sliderContainer :global(.slick-prev) {
+  left: -1rem !important;
+}
+
+.sliderContainer :global(.slick-next) {
+  right: -1rem !important;
+}
+
+.sliderContainer :global(.slick-prev):before,
+.sliderContainer :global(.slick-next):before {
+  font-size: 30px;
+  opacity: 0.75;
+  color: var(--primary-color);
+}
+
+.sliderContainer :global(.slick-prev):hover:before,
+.sliderContainer :global(.slick-next):hover:before {
+  opacity: 1;
+  color: var(--third-color);
+}
+
+/* ========================================
+   MODAL STYLES
+   ======================================== */
 
 .modalImageContainer {
   display: flex;
@@ -80,6 +149,7 @@
   max-width: 100%;
   max-height: 70vh;
   object-fit: contain;
+  border-radius: 8px;
 }
 
 .modalImageContainer h3 {
@@ -90,26 +160,105 @@
   text-align: center;
 }
 
-/* MEDIA QUERIES */
-@media (min-width: 576px) {
-  .contentColors {
-    width: initial;
+/* ========================================
+   CLASES PERSONALIZADAS POR PRODUCTO
+   ======================================== */
+
+.wallPanel {
+  /* Estilos específicos para wall panel si son necesarios */
+}
+
+.flatPanel {
+  /* Estilos específicos para flat panel si son necesarios */
+}
+
+.siding {
+  /* Estilos específicos para siding si son necesarios */
+}
+
+.perfiles {
+  /* Estilos específicos para perfiles si son necesarios */
+}
+
+/* ========================================
+   MEDIA QUERIES - RESPONSIVE
+   ======================================== */
+
+/* Mobile pequeño */
+@media (min-width: 320px) {
+  .verticalTitle {
+    font-size: 0.85rem;
   }
 
-  .contentColors article h4 {
-    font-size: 1rem;
+  .imageContainer {
+    min-height: 280px;
+    height: 280px;
   }
 
-  .contentColors article img {
-    max-height: 220px;
-    height: 220px;
+  .imageContainer img {
+    max-height: 280px;
+    height: 280px;
+  }
+
+  .slideWrapper {
+    padding: 0 8px;
   }
 }
 
+/* Mobile */
+@media (min-width: 576px) {
+  .verticalTitle {
+    font-size: 0.9rem;
+  }
+
+  .imageContainer {
+    min-height: 300px;
+    height: 300px;
+  }
+
+  .imageContainer img {
+    max-height: 300px;
+    height: 300px;
+  }
+
+  .slideWrapper {
+    padding: 0 10px;
+  }
+
+  .sliderContainer :global(.slick-prev) {
+    left: -2rem !important;
+  }
+
+  .sliderContainer :global(.slick-next) {
+    right: -2rem !important;
+  }
+
+  /* Custom para Flat Panel */
+  .flatPanel .imageContainer img {
+    object-fit: fill;
+    object-position: center;
+  }
+  /* Custom para Flat Panel end */
+}
+
+/* Tablet */
 @media (min-width: 768px) {
-  .contentColors article img {
-    max-height: 240px;
-    height: 240px;
+  .verticalTitle {
+    font-size: 1rem;
+  }
+
+  .imageContainer {
+    min-height: 320px;
+    height: 320px;
+  }
+
+  .imageContainer img {
+    max-height: 320px;
+    height: 320px;
+  }
+
+  .slideWrapper {
+    padding: 0 12px;
   }
 
   .modalImageContainer h3 {
@@ -117,22 +266,32 @@
   }
 }
 
+/* Desktop */
 @media (min-width: 992px) {
-  .contentColors article img {
-    max-height: 260px;
-    height: 260px;
+  .verticalTitle {
+    font-size: 1.1rem;
+  }
+
+  .imageContainer {
+    min-height: 325px;
+    height: 325px;
+  }
+
+  .imageContainer img {
+    max-height: 325px;
+    height: 325px;
+  }
+
+  .slideWrapper {
+    padding: 0 15px;
   }
 }
 
+/* Desktop grande */
 @media (min-width: 1200px) {
-  .contentColors article img {
-    max-height: 280px;
-    height: 280px;
-    padding-left: 1.25rem;
-  }
-
-  .contentColors article h4 {
+  .verticalTitle {
     font-size: 1.25rem;
+    letter-spacing: 0.75px;
   }
 
   .modalImageContainer h3 {
@@ -140,11 +299,17 @@
   }
 }
 
+/* Desktop extra grande */
 @media (min-width: 1400px) {
-  .contentColors article h4 {
+  .verticalTitle {
     font-size: 1.35rem;
   }
 }
 
+/* Desktop XXL */
 @media (min-width: 1600px) {
+  .verticalTitle {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
 }
