@@ -86,18 +86,6 @@
       "img_src": "pisos-spc-medidas-b.webp",
       "col": "col-md-5",
       "extra_class": "pisosSPC"
-    },
-    {
-      "id": 3,
-      "img_src": "pisos-spc-medidas-b.webp",
-      "col": "col-md-5",
-      "extra_class": "pisosSPC"
-    },
-    {
-      "id": 4,
-      "img_src": "pisos-spc-medidas-b.webp",
-      "col": "col-md-5",
-      "extra_class": "pisosSPC"
     }
   ],
   "comparacion": [
