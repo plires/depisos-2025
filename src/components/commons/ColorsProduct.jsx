@@ -88,7 +88,6 @@ const ColorsProduct = ({ product }) => {
 
   // Renderizar un carrusel individual
   const renderCarousel = (items, extraClass) => {
-    console.log(items)
     return (
       <Slider {...settings} className={styles.sliderContainer}>
         {items.map(item => (

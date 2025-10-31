@@ -94,7 +94,7 @@
 
 /* Título vertical */
 .verticalTitle {
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--primary-color);
   writing-mode: vertical-rl;
@@ -205,7 +205,7 @@
 /* Mobile pequeño */
 @media (min-width: 320px) {
   .verticalTitle {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 
   .imageContainer {
@@ -226,7 +226,7 @@
 /* Mobile */
 @media (min-width: 576px) {
   .verticalTitle {
-    font-size: 0.9rem;
+    font-size: 1.125rem;
   }
 
   .imageContainer {
@@ -251,18 +251,19 @@
     right: -2rem !important;
   }
 
-  /* Custom para Flat Panel */
-  .flatPanel .imageContainer img {
+  /* Custom para diferentes productos */
+  .flatPanel .imageContainer img,
+  .wallPanel .imageContainer img {
     object-fit: fill;
     object-position: center;
   }
-  /* Custom para Flat Panel end */
+  /* Custom para diferentes productos end */
 }
 
 /* Tablet */
 @media (min-width: 768px) {
   .verticalTitle {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .imageContainer {
@@ -295,7 +296,7 @@
 /* Desktop */
 @media (min-width: 992px) {
   .verticalTitle {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 
   .imageContainer {
@@ -316,7 +317,6 @@
 /* Desktop grande */
 @media (min-width: 1200px) {
   .verticalTitle {
-    font-size: 1.25rem;
     letter-spacing: 0.75px;
   }
 
@@ -331,10 +331,6 @@
 
 /* Desktop extra grande */
 @media (min-width: 1400px) {
-  .verticalTitle {
-    font-size: 1.35rem;
-  }
-
   .groupTitle {
     font-size: 1.6rem;
   }
@@ -343,7 +339,6 @@
 /* Desktop XXL */
 @media (min-width: 1600px) {
   .verticalTitle {
-    font-size: 1.5rem;
     letter-spacing: 1px;
   }
 }
