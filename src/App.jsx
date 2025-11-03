@@ -1,4 +1,11 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from 'react-router-dom'
+import CuratorFeed from '@/components/commons/CuratorFeed.jsx'
+
 import Header from '@/components/commons/Header.jsx'
 import Footer from '@/components/commons/Footer.jsx'
 import Home from '@/pages/Home.jsx'
@@ -14,6 +21,30 @@ import ScrollToTop from '@/utils/scrollToTop'
 import { ToastContainer } from 'react-toastify'
 
 import '@/assets/css/app.css'
+
+function CuratorFeedContainer() {
+  const location = useLocation()
+  const isHomePage = location.pathname === '/' || location.pathname === '/dev/'
+
+  return (
+    <div style={{ display: isHomePage ? 'block' : 'none' }}>
+      <section className='container instagram'>
+        <div className='row'>
+          <div className='col-md-12'>
+            <h2 data-aos='fade-up' className='text-center'>
+              Instagram Feed
+            </h2>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-md-12'>
+            <CuratorFeed />
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
 
 function App() {
   return (
@@ -57,6 +88,9 @@ function App() {
             <Route path='/contacto' element={<Contacto />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
+
+          {/* CuratorFeed siempre montado, visible solo en Home */}
+          <CuratorFeedContainer />
           <Footer />
         </Router>
       </AppProvider>

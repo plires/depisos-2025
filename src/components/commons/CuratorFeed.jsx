@@ -1,4 +1,3 @@
-// src/components/CuratorFeed.jsx
 import { useEffect } from 'react'
 
 const SCRIPT_ID = 'curator-feed-depisos-script'
@@ -8,17 +7,16 @@ const CONTAINER_ID = 'curator-feed-depisos-layout'
 
 export default function CuratorFeed() {
   useEffect(() => {
-    // Evitar carga duplicada (React StrictMode en dev monta/desmonta dos veces)
+    // Cargar el script SOLO si no existe
     if (!document.getElementById(SCRIPT_ID)) {
-      const s = document.createElement('script')
-      s.id = SCRIPT_ID
-      s.src = SCRIPT_SRC
-      s.async = true
-      s.charset = 'UTF-8'
-      // Insertar lo más tarde posible para no bloquear
-      document.body.appendChild(s)
+      const script = document.createElement('script')
+      script.id = SCRIPT_ID
+      script.src = SCRIPT_SRC
+      script.async = true
+      script.charset = 'UTF-8'
+      document.body.appendChild(script)
     }
-    // No removemos el script en unmount para que no se recargue al navegar.
+    // ⚠️ NO hay cleanup - el script persiste siempre
   }, [])
 
   return (

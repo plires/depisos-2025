@@ -3,7 +3,6 @@ import Carrusel from '@/components/home/Carrusel'
 import Categories from '@/components/home/Categories'
 import CaracteristicaSustentable from '@/components/home/CaracteristicaSustentable'
 import IconEspecializacion from '@/components/home/IconEspecializacion'
-import CuratorFeed from '@/components/commons/CuratorFeed'
 
 import {
   getCategoriesTop,
@@ -76,24 +75,9 @@ const Home = () => {
           <IconEspecializacion
             col='col-md-4'
             title='Desarrollos Especiales'
-            description='Obras, eventos o montajes: estamos donde tu proyecto lo requiera con 
-            revestimientos versátiles, estéticos y listos para adaptarse a cada necesidad.'
+            description='Obras, eventos o montajes: estamos donde tu proyecto lo requiera con revestimientos versátiles, estéticos y listos para adaptarse a cada necesidad.'
             icon={iconDesarrollos}
           />
-        </div>
-      </section>
-      <section className='container instagram'>
-        <div className='row'>
-          <div className='col-md-12'>
-            <h2 data-aos='fade-up' className='text-center'>
-              Instagram Feed
-            </h2>
-          </div>
-        </div>
-        <div className='row'>
-          <div className='col-md-12'>
-            <CuratorFeed />
-          </div>
         </div>
       </section>
     </main>
