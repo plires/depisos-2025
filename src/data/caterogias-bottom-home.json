@@ -5,21 +5,21 @@
       "img_src": "home-vinyl-panel.webp",
       "title": "Vinyl <br />Panel",
       "text_btn": "+ info",
-      "link_btn": "/productos/vinyl-panel"
+      "link_btn": "/productos/vinyl-panel/printer"
     },
     {
       "id": 2,
       "img_src": "home-cielorrasos.webp",
       "title": "Cielorraso",
       "text_btn": "+ info",
-      "link_btn": "/productos/cielorraso"
+      "link_btn": "/productos/cielorraso/printer"
     },
     {
       "id": 3,
       "img_src": "home-pisos.webp",
       "title": "Pisos <br />a prueba <br /> de agua",
       "text_btn": "+ info",
-      "link_btn": "/productos/pisos-melaminicos"
+      "link_btn": "/productos/pisos-waterproof/spc"
     }
   ]
 }
