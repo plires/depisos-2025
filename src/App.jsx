@@ -2,24 +2,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from '@/components/commons/Header.jsx'
 import Footer from '@/components/commons/Footer.jsx'
 import Home from '@/pages/Home.jsx'
-// import PlacaInicial from '@/pages/PlacaInicial.jsx'
-import ProductWallPanel from '@/pages/ProductWallPanel.jsx'
-import ProductPerfiles from '@/pages/ProductPerfiles.jsx'
-import ProductDeckDual from '@/pages/ProductDeckDual.jsx'
-import ProductSiding from '@/pages/ProductSiding.jsx'
-import ProductFlatPanel from '@/pages/ProductFlatPanel.jsx'
-import ProductCielorrasoFoliado from '@/pages/ProductCielorrasoFoliado.jsx'
-import ProductCielorrasoPrinter from '@/pages/ProductCielorrasoPrinter.jsx'
-import ProductPisosSPC from '@/pages/ProductPisosSPC.jsx'
-import ProductPisosMelaminicos from '@/pages/ProductPisosMelaminicos.jsx'
-import ProductVinylFoliados from '@/pages/ProductVinylFoliados.jsx'
-import ProductVinylPrinter from '@/pages/ProductVinylPrinter.jsx'
-import ProductVinylPlenos from '@/pages/ProductVinylPlenos.jsx'
+import Product from '@/pages/Product.jsx'
 import Profesionales from '@/pages/Profesionales.jsx'
 import Sustentabilidad from '@/pages/Sustentabilidad.jsx'
 import Nosotros from '@/pages/Nosotros.jsx'
 import Contacto from '@/pages/Contacto.jsx'
-import Test from '@/pages/Test.jsx'
 import NotFound from '@/pages/NotFound.jsx'
 
 import { AppProvider } from '@/context/app'
@@ -37,52 +24,37 @@ function App() {
           <ToastContainer />
           <Header />
           <Routes>
-            {/* <Route path='/' element={<PlacaInicial />} /> */}
             <Route path='/' element={<Home />} />
+
+            {/* Productos con URLs simples */}
+            <Route path='/productos/wall-panel' element={<Product />} />
+            <Route path='/productos/perfiles' element={<Product />} />
+            <Route path='/productos/deck-dual' element={<Product />} />
+            <Route path='/productos/siding' element={<Product />} />
+            <Route path='/productos/flat-panel' element={<Product />} />
+
+            {/* Productos con URLs anidadas - Cielorraso */}
             <Route
-              path='/productos/wall-panel'
-              element={<ProductWallPanel />}
+              path='/productos/cielorraso/:productSlug'
+              element={<Product />}
             />
-            <Route path='/productos/perfiles' element={<ProductPerfiles />} />
-            <Route path='/productos/deck-dual' element={<ProductDeckDual />} />
-            <Route path='/productos/siding' element={<ProductSiding />} />
+
+            {/* Productos con URLs anidadas - Vinyl Panel */}
             <Route
-              path='/productos/flat-panel'
-              element={<ProductFlatPanel />}
+              path='/productos/vinyl-panel/:productSlug'
+              element={<Product />}
             />
+
+            {/* Productos con URLs anidadas - Pisos Waterproof */}
             <Route
-              path='/productos/cielorraso/foliados'
-              element={<ProductCielorrasoFoliado />}
+              path='/productos/pisos-waterproof/:productSlug'
+              element={<Product />}
             />
-            <Route
-              path='/productos/vinyl-panel/foliados'
-              element={<ProductVinylFoliados />}
-            />
-            <Route
-              path='/productos/vinyl-panel/printer'
-              element={<ProductVinylPrinter />}
-            />
-            <Route
-              path='/productos/vinyl-panel/plenos'
-              element={<ProductVinylPlenos />}
-            />
-            <Route
-              path='/productos/cielorraso/printer'
-              element={<ProductCielorrasoPrinter />}
-            />
-            <Route
-              path='/productos/pisos-waterproof/spc'
-              element={<ProductPisosSPC />}
-            />
-            <Route
-              path='/productos/pisos-waterproof/melaminicos'
-              element={<ProductPisosMelaminicos />}
-            />
+
             <Route path='/profesionales' element={<Profesionales />} />
             <Route path='/sustentabilidad' element={<Sustentabilidad />} />
             <Route path='/nosotros' element={<Nosotros />} />
             <Route path='/contacto' element={<Contacto />} />
-            <Route path='/test' element={<Test />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
           <Footer />

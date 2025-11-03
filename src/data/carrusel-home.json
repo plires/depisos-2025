@@ -8,7 +8,7 @@
       "img_desktop_src": "slide-wall-panel-desktop.webp",
       "img_mobile_src": "slide-wall-panel-mobile.webp",
       "img_alt": "imagen carrusel wall panel",
-      "link": "/productos/wall-panel/"
+      "link": "/productos/wall-panel"
     },
     {
       "id": 2,
@@ -18,7 +18,7 @@
       "img_desktop_src": "slide-deck-dual-desktop.webp",
       "img_mobile_src": "slide-deck-dual-mobile.webp",
       "img_alt": "imagen carrusel decks ecologicos dual",
-      "link": "/productos/deck-dual/"
+      "link": "/productos/deck-dual"
     },
     {
       "id": 3,
@@ -28,7 +28,7 @@
       "img_desktop_src": "slide-perfiles-desktop.webp",
       "img_mobile_src": "slide-perfiles-mobile.webp",
       "img_alt": "imagen carrusel perfiles",
-      "link": "/productos/perfiles/"
+      "link": "/productos/perfiles"
     },
     {
       "id": 4,
@@ -38,7 +38,7 @@
       "img_desktop_src": "slide-cielorraso-desktop.webp",
       "img_mobile_src": "slide-cielorraso-mobile.webp",
       "img_alt": "imagen carrusel cielorraso",
-      "link": "/productos/cielorraso/"
+      "link": "/productos/cielorraso/printer"
     },
     {
       "id": 5,
@@ -48,7 +48,7 @@
       "img_desktop_src": "slide-flat-panel-desktop.webp",
       "img_mobile_src": "slide-flat-panel-mobile.webp",
       "img_alt": "imagen carrusel flat-panel",
-      "link": "/productos/flat-panel/"
+      "link": "/productos/flat-panel"
     },
     {
       "id": 6,
@@ -58,7 +58,7 @@
       "img_desktop_src": "slide-vinyl-panel-desktop.webp",
       "img_mobile_src": "slide-vinyl-panel-mobile.webp",
       "img_alt": "imagen carrusel vinyl-panel",
-      "link": "/productos/vinyl-panel/"
+      "link": "/productos/vinyl-panel/printer"
     },
     {
       "id": 7,
@@ -68,7 +68,7 @@
       "img_desktop_src": "slide-siding-desktop.webp",
       "img_mobile_src": "slide-siding-mobile.webp",
       "img_alt": "imagen carrusel siding",
-      "link": "/productos/siding/"
+      "link": "/productos/siding"
     },
     {
       "id": 8,
