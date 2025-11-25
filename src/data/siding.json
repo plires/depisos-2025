@@ -103,15 +103,14 @@
   "technicalSheet": {
     "extra_class": "siding",
     "data": {
-      "Accesorios": "No aplica",
-      "Uso": "Decoración y construcción",
+      "Uso": "Revestimiento de pared",
       "Material": "WPC sustentable",
       "Ancho, Alto y Espesor": "146 x 2900 x 21 mm.",
       "Formato de venta": "Unidad",
-      "M2 por tabla": "0,356 m2",
-      "Tipo de espacio": "Exterior",
+      "M2 por tabla": "0,35 m2",
+      "Tipo de espacio": "Interior / Exterior",
       "Colores": "Charcoal, Teka, Silver Gray, Ipe, Antique.",
-      "Garantía": "X años"
+      "Garantía": "10 años"
     },
     "ventajas": [
       "Protección contra plagas",

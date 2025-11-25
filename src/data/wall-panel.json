@@ -109,15 +109,14 @@
   "technicalSheet": {
     "extra_class": "wallPanel",
     "data": {
-      "Accesorios": "Ángulo de inicio, ángulo side cover",
       "Uso": "Decoración y construcción",
-      "Material": "WPC sustentable",
+      "Material": "Revestimiento de pared",
       "Ancho, Alto y Espesor": "200 x 2900 x 26 mm / 176 x 2900 x 26 mm",
       "Formato de venta": "Unidad",
-      "M2 por tabla": "0,58 m2",
+      "M2 por tabla": "0,58 m2 / 0,46 m2",
       "Tipo de espacio": "Interior y exterior",
       "Colores": "Charcoal, Teka, White Oak, Natural, Oak, Red Cedar, Teka New Sanding",
-      "Garantía": "X años"
+      "Garantía": "10 años"
     },
     "ventajas": [
       "Fácil instalación",
