@@ -1,4 +1,5 @@
 import { getImageURL } from '@/utils/dataUtils.js'
+import iconBtnSustentable from '@/assets/img/icon-btn-sustentable.svg'
 
 import styles from './header-product.module.css'
 
@@ -22,7 +23,14 @@ const HeaderProduct = ({ product }) => {
           />
           <div data-aos='fade-up' className={styles.contentData}>
             <h1>{product.title}</h1>
-            <span>{product.subtitle}</span>
+            <span>
+              {product.subtitle}
+              <img
+                className={styles.iconBtnSustentable}
+                src={iconBtnSustentable}
+                alt={`icono boton sustentable - ${product.id}`}
+              />
+            </span>
             <p>{product.description}</p>
           </div>
         </div>
