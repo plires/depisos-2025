@@ -106,14 +106,6 @@
       "extra_class": "wallPanel"
     }
   ],
-  "accessories": [
-    {
-      "id": 1,
-      "img_src": "wall-panel-accesorios.webp",
-      "description": "Ángulo de inicio y ángulo side cover para terminaciones y esquinas prolijas.",
-      "extra_class": "wallPanel"
-    }
-  ],
   "technicalSheet": {
     "extra_class": "wallPanel",
     "data": {

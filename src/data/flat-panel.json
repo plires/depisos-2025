@@ -112,14 +112,6 @@
       "extra_class": "flatPanel"
     }
   ],
-  "accessories": [
-    {
-      "id": 1,
-      "img_src": "flat-panel-accesorios.webp",
-      "description": "Clip metálico diseñado para asegurar una fijación firme y duradera del Flat Panel al muro, garantizando una instalación estable y prolija.",
-      "extra_class": "flatPanel"
-    }
-  ],
   "technicalSheet": {
     "extra_class": "flatPanel",
     "data": {

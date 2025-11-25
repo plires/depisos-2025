@@ -106,14 +106,6 @@
       "extra_class": "perfiles"
     }
   ],
-  "accessories": [
-    {
-      "id": 1,
-      "img_src": "perfiles-accesorios.webp",
-      "description": "Ángulo de inicio y ángulo side cover para terminaciones y esquinas prolijas.",
-      "extra_class": "perfiles"
-    }
-  ],
   "technicalSheet": {
     "extra_class": "perfiles",
     "data": {
