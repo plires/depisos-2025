@@ -21,9 +21,9 @@ const Footer = () => {
               <br />
               Email: info@depisos.com
               <br />
-              Horarios: Lu - Vie / 9:00 - 18:00 Hs.
+              Horarios: Lu - Vie / 8:00 - 17:00 Hs.
               <br />
-              Sábados 9:30 - 13:30 Hs.
+              Sábados 8:30 - 13:00 Hs.
             </p>
           </div>
           <div className='col-md-4 rrss'>
