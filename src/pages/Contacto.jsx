@@ -42,7 +42,7 @@ const Contacto = () => {
               <span>
                 <MdOutlineWatchLater />
               </span>{' '}
-              Horarios: Lunes a Viernes 9:00 - 18:00 hrs. Sábado 9:30 13:30 hrs.
+              Horarios: Lunes a Viernes 8:00 - 17:00 hrs. Sábado 8:30 13:00 hrs.
             </p>
             <p>
               <span>
@@ -66,7 +66,6 @@ const Contacto = () => {
               height={450}
               title='Mapa Depisos.com'
             />
-            {/* <GoogleMap map={import.meta.env.VITE_GOOGLE_MAP} /> */}
           </div>
         </div>
       </section>
