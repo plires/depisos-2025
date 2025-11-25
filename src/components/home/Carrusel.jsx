@@ -6,6 +6,8 @@ import { getImageURL, getCarruselHome } from '@/utils/dataUtils'
 
 import Slider from 'react-slick'
 
+import iconBtnSustentable from '@/assets/img/icon-btn-sustentable.svg'
+
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import styles from './carrusel.module.css'
@@ -41,13 +43,21 @@ const Carrusel = () => {
               />
               <div data-aos='fade-up' className={`${styles.data}`}>
                 <h2>{carrusel.title}</h2>
-                <span dangerouslySetInnerHTML={{ __html: carrusel.subtitle }} />
+                <span>
+                  {carrusel.subtitle}
+                  <img
+                    className={styles.iconBtnSustentable}
+                    src={iconBtnSustentable}
+                    alt={`icono boton sustentable - ${carrusel.id}`}
+                  />
+                </span>
+
                 <p
                   className={`${styles.description}`}
                   dangerouslySetInnerHTML={{ __html: carrusel.description }}
                 />
                 <button className={`btn btnSolid ${styles.btn}`}>
-                  <Link to={carrusel.link}>+Info</Link>
+                  <Link to={carrusel.link}>+Info</Link>{' '}
                 </button>
               </div>
             </div>
