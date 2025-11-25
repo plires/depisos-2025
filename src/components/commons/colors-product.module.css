@@ -312,6 +312,12 @@
   .slideWrapper {
     padding: 0 15px;
   }
+
+  /* Custom para diferentes productos */
+  .flatPanel h4 {
+    font-size: 1.25rem;
+  }
+  /* Custom para diferentes productos end */
 }
 
 /* Desktop grande */
@@ -334,6 +340,12 @@
   .groupTitle {
     font-size: 1.6rem;
   }
+
+  /* Custom para diferentes productos */
+  .flatPanel h4 {
+    font-size: 1.3rem;
+  }
+  /* Custom para diferentes productos end */
 }
 
 /* Desktop XXL */

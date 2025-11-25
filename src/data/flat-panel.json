@@ -13,50 +13,38 @@
   "colores": [
     {
       "id": 1,
-      "title": "Varillado Beige",
-      "img_src": "flat-panel-varillado-beige.webp",
+      "title": "Liso + Acanalado Beige",
+      "img_src": "flat-panel-liso-acanalado-beige.webp",
       "extra_class": "flatPanel"
     },
     {
       "id": 2,
-      "title": "Varillado Roble Oscuro",
-      "img_src": "flat-panel-varillado-roble-oscuro.webp",
+      "title": "Liso + Acanalado Dark Beige",
+      "img_src": "flat-panel-liso-acanalado-dark-beige.webp",
       "extra_class": "flatPanel"
     },
     {
       "id": 3,
-      "title": "Varillado Roble Claro",
-      "img_src": "flat-panel-varillado-roble-claro.webp",
+      "title": "Liso + Acanalado Grey",
+      "img_src": "flat-panel-liso-acanalado-grey.webp",
       "extra_class": "flatPanel"
     },
     {
       "id": 4,
-      "title": "Varillado Roble Gris",
-      "img_src": "flat-panel-varillado-roble-gris.webp",
+      "title": "Liso + Varillado Roble Claro",
+      "img_src": "flat-panel-liso-varillado-roble-claro.webp",
       "extra_class": "flatPanel"
     },
     {
       "id": 5,
-      "title": "Hilado Beige",
-      "img_src": "flat-panel-hilado-beige.webp",
+      "title": "Liso + Varillado Roble Oscuro",
+      "img_src": "flat-panel-liso-varillado-roble-oscuro.webp",
       "extra_class": "flatPanel"
     },
     {
       "id": 6,
-      "title": "Roble Oscuro",
-      "img_src": "flat-panel-roble-oscuro.webp",
-      "extra_class": "flatPanel"
-    },
-    {
-      "id": 7,
-      "title": "Roble Claro",
-      "img_src": "flat-panel-roble-claro.webp",
-      "extra_class": "flatPanel"
-    },
-    {
-      "id": 8,
-      "title": "Roble Gris",
-      "img_src": "flat-panel-roble-gris.webp",
+      "title": "Liso + Varillado Roble Gris",
+      "img_src": "flat-panel-liso-varillado-roble-gris.webp",
       "extra_class": "flatPanel"
     }
   ],
