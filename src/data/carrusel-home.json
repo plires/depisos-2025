@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "WALL PANEL",
-      "subtitle": "WPC sustentable",
+      "subtitle": "WPC",
       "description": "El revestimiento que necesitás <br />para tus ambientes",
       "img_desktop_src": "slide-wall-panel-desktop.webp",
       "img_mobile_src": "slide-wall-panel-mobile.webp",
@@ -13,7 +13,7 @@
     {
       "id": 2,
       "title": "DECK DUAL",
-      "subtitle": "WPC sustentable",
+      "subtitle": "WPC",
       "description": "Un deck, dos tonos, infinitas posibilidades: <br />elegí tu combinación perfecta.",
       "img_desktop_src": "slide-deck-dual-desktop.webp",
       "img_mobile_src": "slide-deck-dual-mobile.webp",
@@ -23,7 +23,7 @@
     {
       "id": 3,
       "title": "PERFILES",
-      "subtitle": "WPC sustentable",
+      "subtitle": "WPC",
       "description": "Funcionalidad y estética en cada línea: <br />los perfiles que completan tu proyecto.",
       "img_desktop_src": "slide-perfiles-desktop.webp",
       "img_mobile_src": "slide-perfiles-mobile.webp",
@@ -33,7 +33,7 @@
     {
       "id": 4,
       "title": "SIDING",
-      "subtitle": "WPC sustentable",
+      "subtitle": "WPC",
       "description": "Protegé tu fachada con estilo: <br />revestimientos que resisten y decoran.",
       "img_desktop_src": "slide-siding-desktop.webp",
       "img_mobile_src": "slide-siding-mobile.webp",
@@ -43,7 +43,7 @@
     {
       "id": 5,
       "title": "CIELORRASO",
-      "subtitle": "PVC sustentable",
+      "subtitle": "PVC",
       "description": "Ligero, duradero y estético: <br />el cielorraso que renueva tus espacios.",
       "img_desktop_src": "slide-cielorraso-desktop.webp",
       "img_mobile_src": "slide-cielorraso-mobile.webp",
@@ -63,7 +63,7 @@
     {
       "id": 7,
       "title": "VINYL PANEL",
-      "subtitle": "PVC sustentable",
+      "subtitle": "PVC",
       "description": "Versatilidad y estilo en cada panel: <br />rediseñá tus interiores con facilidad.",
       "img_desktop_src": "slide-vinyl-panel-desktop.webp",
       "img_mobile_src": "slide-vinyl-panel-mobile.webp",
