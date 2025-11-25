@@ -13,6 +13,7 @@ import {
 import iconRetail from '@/assets/img/icon-retail.svg'
 import iconHogar from '@/assets/img/icon-hogar.svg'
 import iconDesarrollos from '@/assets/img/icon-desarrollos.svg'
+import iconSustentable from '@/assets/img/icon-sustentable.svg'
 
 import './home.css'
 
@@ -31,11 +32,14 @@ const Home = () => {
       </section>
       <section className='sustentable container'>
         <Link to='sustentabilidad'>
-          <h2 data-aos='fade-up' className='latoBold transition'>
-            Susten
-            <br />
-            table
-          </h2>
+          <div data-aos='fade-up' className='contentIconAndTitle'>
+            <img
+              src={iconSustentable}
+              className='img-fluid'
+              alt='icono sustentable'
+            />
+            <h2 className='latoBold transition'>Sustentable</h2>
+          </div>
           <div className='contentCategories'>
             <CaracteristicaSustentable
               title='Menor impacto <br />ambiental'

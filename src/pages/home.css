@@ -29,7 +29,11 @@
   opacity: 0.8;
 }
 
-.home .sustentable h2 {
+.home .sustentable .contentIconAndTitle {
+  text-align: center;
+}
+
+.home .sustentable .contentIconAndTitle h2 {
   color: white;
   text-shadow:
     2px 8px 6px rgba(0, 0, 0, 0.6),
@@ -37,6 +41,12 @@
   font-size: 2.75rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
+}
+
+.home .sustentable .contentIconAndTitle img {
+  max-width: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home .sustentable h2 br {
@@ -56,6 +66,23 @@
 
 @media (min-width: 768px) {
   /* Section Sustentable */
+  .home .sustentable .contentIconAndTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .home .sustentable .contentIconAndTitle h2 {
+    margin-bottom: 0;
+  }
+
+  .home .sustentable .contentIconAndTitle img {
+    max-width: 80px;
+    margin-left: inherit;
+    margin-right: 30px;
+  }
+
   .home .sustentable .contentCategories {
     width: 100%;
     display: flex;
@@ -83,6 +110,20 @@
   /* Section Categories end */
 
   /* Section Sustentable */
+  .home .sustentable .contentIconAndTitle {
+    flex-direction: column;
+  }
+
+  .home .sustentable .contentIconAndTitle h2 {
+    font-size: 1.75rem;
+    margin-right: 1rem;
+  }
+
+  .home .sustentable .contentIconAndTitle img {
+    max-width: 130px;
+    margin: auto;
+  }
+
   .home .sustentable a {
     display: flex;
     justify-content: space-around;
@@ -106,6 +147,14 @@
     padding: 2rem 1rem;
   }
 
+  .home .sustentable .contentIconAndTitle h2 {
+    font-size: 2rem;
+  }
+
+  .home .sustentable .contentIconAndTitle img {
+    max-width: 180px;
+  }
+
   .home .sustentable .contentCategories {
     justify-content: flex-end;
   }
@@ -124,8 +173,13 @@
 
 @media (min-width: 1400px) {
   /* Section Sustentable */
-  .home .sustentable h2 {
-    font-size: 4rem;
+  .home .sustentable .contentIconAndTitle h2 {
+    font-size: 2.25rem;
+    margin-right: 0;
+  }
+
+  .home .sustentable .contentIconAndTitle img {
+    max-width: 200px;
   }
 
   .home .sustentable a {

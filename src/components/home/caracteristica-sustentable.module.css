@@ -1,5 +1,6 @@
 .caracteristica {
-  background: rgb(255, 255, 255, 0.8);
+  background: transparent;
+  border: solid 2px rgb(255, 255, 255);
   border-radius: 16px;
   padding: 1rem 0.5rem;
   max-width: 350px;
@@ -13,11 +14,13 @@
 .caracteristica h3 {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
+  color: white;
 }
 
 .caracteristica p {
   font-size: 1rem;
   margin-bottom: 0;
+  color: white;
 }
 /* MEDIA QUERIES */
 @media (min-width: 576px) {
@@ -26,7 +29,15 @@
 @media (min-width: 768px) {
   .caracteristica {
     max-width: 205px;
+    min-height: 175px;
     margin: 0;
+  }
+
+  .caracteristica h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 58px;
   }
 }
 
@@ -59,6 +70,7 @@
   .caracteristica {
     max-width: 290px;
     margin-left: 3rem;
+    min-height: 200px;
   }
 
   .caracteristica h3 {

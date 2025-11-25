@@ -1,15 +1,13 @@
 import styles from './caracteristica-sustentable.module.css'
 
-const CaracteristicaSustentable = () => {
+const CaracteristicaSustentable = ({ title, description }) => {
   return (
     <div data-aos='fade-up' className={styles.caracteristica}>
-      <h3 className='transition latoBoldItalic'>
-        Menor impacto <br />
-        ambiental
-      </h3>
-      <p className='transition'>
-        Materiales reciclables y de bajo consumo energético.
-      </p>
+      <h3
+        className='transition latoBoldItalic'
+        dangerouslySetInnerHTML={{ __html: title }}
+      />
+      <p className='transition'>{description}</p>
     </div>
   )
 }
