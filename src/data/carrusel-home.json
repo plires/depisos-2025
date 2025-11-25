@@ -32,36 +32,6 @@
     },
     {
       "id": 4,
-      "title": "CIELORRASO",
-      "subtitle": "PVC sustentable",
-      "description": "Ligero, duradero y estético: <br />el cielorraso que renueva tus espacios.",
-      "img_desktop_src": "slide-cielorraso-desktop.webp",
-      "img_mobile_src": "slide-cielorraso-mobile.webp",
-      "img_alt": "imagen carrusel cielorraso",
-      "link": "/productos/cielorraso/printer"
-    },
-    {
-      "id": 5,
-      "title": "FLAT PANEL",
-      "subtitle": "WPC + Bamboo",
-      "description": "Textura, profundidad y estilo en cada tramo.",
-      "img_desktop_src": "slide-flat-panel-desktop.webp",
-      "img_mobile_src": "slide-flat-panel-mobile.webp",
-      "img_alt": "imagen carrusel flat-panel",
-      "link": "/productos/flat-panel"
-    },
-    {
-      "id": 6,
-      "title": "VINYL PANEL",
-      "subtitle": "PVC sustentable",
-      "description": "Versatilidad y estilo en cada panel: <br />rediseñá tus interiores con facilidad.",
-      "img_desktop_src": "slide-vinyl-panel-desktop.webp",
-      "img_mobile_src": "slide-vinyl-panel-mobile.webp",
-      "img_alt": "imagen carrusel vinyl-panel",
-      "link": "/productos/vinyl-panel/printer"
-    },
-    {
-      "id": 7,
       "title": "SIDING",
       "subtitle": "WPC sustentable",
       "description": "Protegé tu fachada con estilo: <br />revestimientos que resisten y decoran.",
@@ -71,17 +41,37 @@
       "link": "/productos/siding"
     },
     {
-      "id": 8,
-      "title": "PISOS MELAMÍNICOS",
-      "subtitle": "A prueba de agua",
-      "description": "Diseño que se luce, resistencia que perdura: pisos elegantes y preparados para todo.",
-      "img_desktop_src": "slide-pisos-melaminicos-desktop.webp",
-      "img_mobile_src": "slide-pisos-melaminicos-mobile.webp",
-      "img_alt": "imagen carrusel pisos melaminicos",
-      "link": "/productos/pisos-waterproof/melaminicos"
+      "id": 5,
+      "title": "CIELORRASO",
+      "subtitle": "PVC sustentable",
+      "description": "Ligero, duradero y estético: <br />el cielorraso que renueva tus espacios.",
+      "img_desktop_src": "slide-cielorraso-desktop.webp",
+      "img_mobile_src": "slide-cielorraso-mobile.webp",
+      "img_alt": "imagen carrusel cielorraso",
+      "link": "/productos/cielorraso/printer"
     },
     {
-      "id": 9,
+      "id": 6,
+      "title": "FLAT PANEL",
+      "subtitle": "WPC + Bamboo",
+      "description": "Textura, profundidad y estilo en cada tramo.",
+      "img_desktop_src": "slide-flat-panel-desktop.webp",
+      "img_mobile_src": "slide-flat-panel-mobile.webp",
+      "img_alt": "imagen carrusel flat-panel",
+      "link": "/productos/flat-panel"
+    },
+    {
+      "id": 7,
+      "title": "VINYL PANEL",
+      "subtitle": "PVC sustentable",
+      "description": "Versatilidad y estilo en cada panel: <br />rediseñá tus interiores con facilidad.",
+      "img_desktop_src": "slide-vinyl-panel-desktop.webp",
+      "img_mobile_src": "slide-vinyl-panel-mobile.webp",
+      "img_alt": "imagen carrusel vinyl-panel",
+      "link": "/productos/vinyl-panel/printer"
+    },
+    {
+      "id": 8,
       "title": "PISOS SPC",
       "subtitle": "A prueba de agua",
       "description": "Elegí sin miedo al agua: pisos resistentes, elegantes y 100% funcionales.",
@@ -89,6 +79,16 @@
       "img_mobile_src": "slide-pisos-spc-mobile.webp",
       "img_alt": "imagen carrusel pisos spc",
       "link": "/productos/pisos-waterproof/spc"
+    },
+    {
+      "id": 9,
+      "title": "PISOS MELAMÍNICOS",
+      "subtitle": "A prueba de agua",
+      "description": "Diseño que se luce, resistencia que perdura: pisos elegantes y preparados para todo.",
+      "img_desktop_src": "slide-pisos-melaminicos-desktop.webp",
+      "img_mobile_src": "slide-pisos-melaminicos-mobile.webp",
+      "img_alt": "imagen carrusel pisos melaminicos",
+      "link": "/productos/pisos-waterproof/melaminicos"
     }
   ]
 }

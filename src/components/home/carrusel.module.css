@@ -2,6 +2,12 @@
   margin-bottom: 30px;
 }
 
+.contentProduct img {
+  height: 630px;
+  object-fit: cover;
+  width: 100%;
+}
+
 .contentProduct {
   position: relative;
 }
@@ -115,6 +121,12 @@
 }
 
 @media (min-width: 1400px) {
+  .contentProduct img {
+    height: calc(100vmin - 80px);
+    object-fit: cover;
+    width: 100vw;
+  }
+
   .data h2 {
     font-size: 4rem;
   }
