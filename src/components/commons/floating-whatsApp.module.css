@@ -1,0 +1,111 @@
+.floatingWhatsapp {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  text-decoration: none;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.floatingWhatsapp:hover {
+  transform: scale(1.1) translateY(-4px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+}
+
+.floatingWhatsapp:active {
+  transform: scale(0.95);
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.floatingWhatsapp:hover .icon {
+  transform: rotate(15deg);
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación de pulso sutil */
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6);
+  }
+}
+
+.floatingWhatsapp {
+  animation:
+    fadeInUp 0.5s ease-out,
+    pulse 2s ease-in-out infinite;
+}
+
+/* Responsive - Tablets */
+@media (max-width: 768px) {
+  .floatingWhatsapp {
+    bottom: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 480px) {
+  .floatingWhatsapp {
+    bottom: 16px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* Para dispositivos con hover capability reducida (touch) */
+@media (hover: none) {
+  .floatingWhatsapp:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Asegurar visibilidad sobre otros elementos */
+@media print {
+  .floatingWhatsapp {
+    display: none;
+  }
+}

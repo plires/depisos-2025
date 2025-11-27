@@ -14,6 +14,7 @@ import Profesionales from '@/pages/Profesionales.jsx'
 import Sustentabilidad from '@/pages/Sustentabilidad.jsx'
 import Nosotros from '@/pages/Nosotros.jsx'
 import Contacto from '@/pages/Contacto.jsx'
+import FloatingWhatsApp from '@/components//commons/FloatingWhatsApp.jsx'
 import NotFound from '@/pages/NotFound.jsx'
 
 import { AppProvider } from '@/context/app'
@@ -88,6 +89,8 @@ function App() {
             <Route path='/contacto' element={<Contacto />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
+
+          <FloatingWhatsApp />
 
           {/* CuratorFeed siempre montado, visible solo en Home */}
           <CuratorFeedContainer />
