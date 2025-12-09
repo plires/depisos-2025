@@ -100,14 +100,6 @@
       "extra_class": "deckDual"
     }
   ],
-  "accessories": [
-    {
-      "id": 1,
-      "img_src": "deck-dual-accesorios.webp",
-      "description": "Clip metálico de encastre para Deck Dual. Facilita la instalación y oculta los tornillos para un acabado prolijo.",
-      "extra_class": "deckDual"
-    }
-  ],
   "technicalSheet": {
     "extra_class": "deckDual",
     "data": {
