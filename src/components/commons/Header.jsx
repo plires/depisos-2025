@@ -68,7 +68,7 @@ const Header = () => {
               />
             </Link>
             <nav className='transition' ref={navElement}>
-              <NavMenu />
+              <NavMenu closeNavMobile={closeNavMobile} />
             </nav>
             <span onClick={() => changeIconMobile()}>{navMobile}</span>
           </div>

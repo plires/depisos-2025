@@ -10,7 +10,7 @@ import '@szhsin/react-menu/dist/index.css'
 import '@szhsin/react-menu/dist/transitions/zoom.css'
 import ChevronRight from '@/components/commons/ChevronRight'
 
-const NavMenu = () => {
+const NavMenu = ({ closeNavMobile }) => {
   return (
     <>
       <Menu
@@ -31,25 +31,41 @@ const NavMenu = () => {
       >
         <SubMenu label='Línea wpc'>
           <MenuItem>
-            <NavLink className='transition' to={'productos/wall-panel'}>
+            <NavLink
+              onClick={() => closeNavMobile()}
+              className='transition'
+              to={'productos/wall-panel'}
+            >
               Wall Panel
             </NavLink>
           </MenuItem>
           <MenuDivider />
           <MenuItem>
-            <NavLink className='transition' to={'productos/siding'}>
+            <NavLink
+              onClick={() => closeNavMobile()}
+              className='transition'
+              to={'productos/siding'}
+            >
               Siding
             </NavLink>
           </MenuItem>
           <MenuDivider />
           <MenuItem>
-            <NavLink className='transition' to={'productos/perfiles'}>
+            <NavLink
+              onClick={() => closeNavMobile()}
+              className='transition'
+              to={'productos/perfiles'}
+            >
               Perfiles
             </NavLink>
           </MenuItem>
           <MenuDivider />
           <MenuItem>
-            <NavLink className='transition' to={'productos/deck-dual'}>
+            <NavLink
+              onClick={() => closeNavMobile()}
+              className='transition'
+              to={'productos/deck-dual'}
+            >
               Deck Dual
             </NavLink>
           </MenuItem>
@@ -58,7 +74,11 @@ const NavMenu = () => {
         <MenuDivider />
 
         <MenuItem>
-          <NavLink className='transition' to={'productos/flat-panel'}>
+          <NavLink
+            onClick={() => closeNavMobile()}
+            className='transition'
+            to={'productos/flat-panel'}
+          >
             Flat Panel
           </NavLink>
         </MenuItem>
@@ -68,6 +88,7 @@ const NavMenu = () => {
         <SubMenu label='Cielorraso'>
           <MenuItem>
             <NavLink
+              onClick={() => closeNavMobile()}
               className='transition'
               to={'productos/cielorraso/foliados'}
             >
@@ -76,7 +97,11 @@ const NavMenu = () => {
           </MenuItem>
           <MenuDivider />
           <MenuItem>
-            <NavLink className='transition' to={'productos/cielorraso/printer'}>
+            <NavLink
+              onClick={() => closeNavMobile()}
+              className='transition'
+              to={'productos/cielorraso/printer'}
+            >
               Printer
             </NavLink>
           </MenuItem>
@@ -86,13 +111,18 @@ const NavMenu = () => {
 
         <SubMenu label='Vinyl Panel'>
           <MenuItem>
-            <NavLink className='transition' to={'productos/vinyl-panel/plenos'}>
+            <NavLink
+              onClick={() => closeNavMobile()}
+              className='transition'
+              to={'productos/vinyl-panel/plenos'}
+            >
               Plenos
             </NavLink>
           </MenuItem>
           <MenuDivider />
           <MenuItem>
             <NavLink
+              onClick={() => closeNavMobile()}
               className='transition'
               to={'productos/vinyl-panel/foliados'}
             >
@@ -102,6 +132,7 @@ const NavMenu = () => {
           <MenuDivider />
           <MenuItem>
             <NavLink
+              onClick={() => closeNavMobile()}
               className='transition'
               to={'productos/vinyl-panel/printer'}
             >
@@ -115,6 +146,7 @@ const NavMenu = () => {
         <SubMenu label='PISOS WATERPROOF'>
           <MenuItem>
             <NavLink
+              onClick={() => closeNavMobile()}
               className='transition'
               to={'productos/pisos-waterproof/melaminicos'}
             >
@@ -124,6 +156,7 @@ const NavMenu = () => {
           <MenuDivider />
           <MenuItem>
             <NavLink
+              onClick={() => closeNavMobile()}
               className='transition'
               to={'productos/pisos-waterproof/spc'}
             >
@@ -135,27 +168,25 @@ const NavMenu = () => {
       <Menu
         menuButton={
           <button type='button' className='btn'>
-            <NavLink className='transition' to={'/nosotros'}>
+            <NavLink
+              onClick={() => closeNavMobile()}
+              className='transition'
+              to={'/nosotros'}
+            >
               Nosotros
             </NavLink>
           </button>
         }
         transition
       ></Menu>
-      {/* <Menu
-        menuButton={
-          <button type='button' className='btn'>
-            <NavLink className='transition' to={'/blog'}>
-              Blog
-            </NavLink>
-          </button>
-        }
-        transition
-      ></Menu> */}
       <Menu
         menuButton={
           <button type='button' className='btn'>
-            <NavLink className='transition' to={'/profesionales'}>
+            <NavLink
+              onClick={() => closeNavMobile()}
+              className='transition'
+              to={'/profesionales'}
+            >
               Profesionales
             </NavLink>
           </button>
@@ -165,7 +196,11 @@ const NavMenu = () => {
       <Menu
         menuButton={
           <button type='button' className='btn'>
-            <NavLink className='transition' to={'/sustentabilidad'}>
+            <NavLink
+              onClick={() => closeNavMobile()}
+              className='transition'
+              to={'/sustentabilidad'}
+            >
               Sustentabilidad
             </NavLink>
           </button>
@@ -175,7 +210,11 @@ const NavMenu = () => {
       <Menu
         menuButton={
           <button type='button' className='btn'>
-            <NavLink className='transition' to={'/contacto'}>
+            <NavLink
+              onClick={() => closeNavMobile()}
+              className='transition'
+              to={'/contacto'}
+            >
               Contacto
             </NavLink>
           </button>
