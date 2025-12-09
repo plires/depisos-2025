@@ -4,8 +4,8 @@ import NavMenu from '@/components/commons/NavMenu.jsx'
 
 import logoLarge from '@/assets/img/logo-large.svg'
 import logoSmall from '@/assets/img/logo-small.svg'
-import IconHumberguer from '@/components/commons/IconHumberguer'
-import CloseHumberguer from '@/components/commons/CloseHumberguer'
+import { RxHamburgerMenu } from 'react-icons/rx'
+import { IoMdClose } from 'react-icons/io'
 
 import '@/components/commons/header.css'
 
@@ -14,24 +14,15 @@ const Header = () => {
   const navElement = useRef()
 
   const [isNavMobileOpen, setIsNavMobileOpen] = useState(false)
-  const [navMobile, setNavMobile] = useState(IconHumberguer)
   const [logo, setLogo] = useState(logoLarge)
 
-  const changeIconMobile = () => {
-    if (isNavMobileOpen) {
-      setNavMobile(IconHumberguer)
-      setIsNavMobileOpen(false)
-      navElement.current.classList.remove('open')
-    } else {
-      setNavMobile(CloseHumberguer)
-      setIsNavMobileOpen(true)
-      navElement.current.classList.add('open')
-    }
+  const toggleNavMobile = () => {
+    setIsNavMobileOpen(!isNavMobileOpen)
+    navElement.current.classList.toggle('open')
   }
 
   const closeNavMobile = () => {
     setIsNavMobileOpen(false)
-    setNavMobile(IconHumberguer)
     navElement.current.classList.remove('open')
   }
 
@@ -60,7 +51,7 @@ const Header = () => {
       <div className='container h-100'>
         <div className='row h-100'>
           <div className='col-md-12 contentHeader'>
-            <Link to='/' onClick={() => closeNavMobile()}>
+            <Link to='/' onClick={closeNavMobile}>
               <img
                 className='logo transition img-fluid'
                 src={logo}
@@ -70,7 +61,9 @@ const Header = () => {
             <nav className='transition' ref={navElement}>
               <NavMenu closeNavMobile={closeNavMobile} />
             </nav>
-            <span onClick={() => changeIconMobile()}>{navMobile}</span>
+            <span onClick={toggleNavMobile}>
+              {isNavMobileOpen ? <IoMdClose /> : <RxHamburgerMenu />}
+            </span>
           </div>
         </div>
       </div>

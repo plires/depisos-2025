@@ -16,13 +16,13 @@ header .contentHeader {
   align-items: center;
 }
 
-header .hamburguer {
+header .contentHeader svg {
   color: var(--primary-color);
   font-size: 2rem;
   cursor: pointer;
 }
 
-header .hamburguer:hover {
+header .contentHeader svg:hover {
   opacity: 0.6;
 }
 
@@ -93,7 +93,7 @@ header nav button:hover a {
 }
 
 @media (min-width: 992px) {
-  header .hamburguer {
+  header .contentHeader svg {
     display: none;
   }
 
