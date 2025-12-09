@@ -143,7 +143,7 @@ const NavMenu = ({ closeNavMobile }) => {
 
         <MenuDivider />
 
-        <SubMenu label='PISOS WATERPROOF'>
+        <SubMenu label='Pisos Waterproof'>
           <MenuItem>
             <NavLink
               onClick={() => closeNavMobile()}
