@@ -29,25 +29,25 @@ const Contacto = () => {
             <p>
               <span>
                 <CiLocationOn />
-              </span>{' '}
+              </span>
               Dirección: Calle 56 n°4575, San Martín, Buenos Aires, Argentina.
             </p>
             <p>
               <span>
                 <IoIosPhonePortrait />
-              </span>{' '}
+              </span>
               Teléfono: (+54) 11 6379 0009
             </p>
             <p>
               <span>
                 <MdOutlineWatchLater />
-              </span>{' '}
-              Horarios: Lunes a Viernes 8:00 - 17:00 hrs. Sábado 8:30 13:00 hrs.
+              </span>
+              Horarios: Lunes a Viernes 8:00 - 17:00 hs.
             </p>
             <p>
               <span>
                 <HiOutlineMail />
-              </span>{' '}
+              </span>
               Email: info@depisos.com
             </p>
           </div>
