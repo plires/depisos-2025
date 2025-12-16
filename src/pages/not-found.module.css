@@ -12,12 +12,12 @@
 }
 
 .btnNotFound {
-  background: var(--secondary-color) !important;
+  background: var(--primary-color) !important;
   color: white !important;
 }
 
 .btnNotFound:hover {
-  background: var(--primary-color) !important;
+  background: var(--third-color) !important;
 }
 /* MEDIA QUERIES */
 @media (min-width: 576px) {
