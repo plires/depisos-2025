@@ -28,7 +28,8 @@ const Profesionales = () => {
           description='Trabajamos junto a Nordeco, nuestro instalador oficial, para garantizar resultados impecables en cada proyecto. Terminaciones prolijas, montaje seguro y la tranquilidad de saber que tu inversión está en manos expertas.
             '
           textBtn='Necesito instalación'
-          linkBtn='#'
+          typeLink='external'
+          linkBtn='https://wa.me/5491153117118?text=Hola%20quiero%20más%20informaci%C3%B3n%20sobre%20instaladores'
         />
         <ArticleDescription
           dir='right'
@@ -38,8 +39,9 @@ const Profesionales = () => {
           description='Ponemos a tu disposición decoradores y 
             arquitectos que te acompañarán en cada etapa de tu proyecto. Te ayudamos a elegir materiales, colores y diseños que se adapten a tu estilo y necesidad, cuidando 
             cada detalle.'
+          typeLink='external'
+          linkBtn='https://wa.me/5491131861604?text=Hola%20necesito%20más%20asesoramiento'
           textBtn='Necesito asesoramiento'
-          linkBtn='#'
         />
         <ArticleDescription
           dir='left'
@@ -47,8 +49,9 @@ const Profesionales = () => {
           altImage='muestras de materiales para profesionales depisos'
           title='Programa de beneficios para aliados'
           description='Si sos arquitecto, decorador o constructor, sumate a nuestro Programa Aliados y obtené beneficios exclusivos para vos y tus clientes. Más ventajas, más oportunidades, más diseño.'
+          typeLink='external'
+          linkBtn='https://wa.me/5491131861604?text=Hola%20quiero%20ser%20aliado%20de%20depisos...'
           textBtn='Quiero ser aliado'
-          linkBtn='#'
         />
       </section>
     </main>

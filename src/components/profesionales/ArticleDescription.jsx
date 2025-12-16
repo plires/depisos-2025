@@ -8,9 +8,15 @@ const ArticleDescription = ({
   altImage,
   title,
   description,
+  typeLink = 'internal',
   textBtn,
   linkBtn,
 }) => {
+  const linkProps =
+    typeLink === 'external'
+      ? { href: linkBtn, rel: 'noopener noreferrer' }
+      : { to: linkBtn }
+
   return dir === 'left' ? (
     <div
       className={`articulos row contentArticle ${styles.contentArticle} ${styles.left}`}
@@ -30,7 +36,11 @@ const ArticleDescription = ({
             data-aos='fade-up'
             dangerouslySetInnerHTML={{ __html: description }}
           />
-          <Button
+          <Button data-aos='fade-up' {...linkProps} variant='primary' size='md'>
+            {textBtn}
+          </Button>
+
+          {/* <Button
             data-aos='fade-up'
             target='_blank'
             rel='noopener noreferrer'
@@ -39,7 +49,7 @@ const ArticleDescription = ({
             size='md'
           >
             {textBtn}
-          </Button>
+          </Button> */}
         </div>
       </div>
     </div>
