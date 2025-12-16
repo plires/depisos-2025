@@ -25,7 +25,7 @@ import '@/assets/css/app.css'
 
 function CuratorFeedContainer() {
   const location = useLocation()
-  const isHomePage = location.pathname === '/' || location.pathname === '/dev/'
+  const isHomePage = location.pathname === '/'
 
   return (
     <div style={{ display: isHomePage ? 'block' : 'none' }}>
@@ -51,7 +51,7 @@ function App() {
   return (
     <>
       <AppProvider>
-        <Router basename='/dev/'>
+        <Router basename='/'>
           <ScrollToTop />
           <ToastContainer />
           <Header />
