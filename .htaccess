@@ -1,7 +1,4 @@
-
-
 # php -- BEGIN cPanel-generated handler, do not edit
-# Set the “ea-php81” package as the default “PHP” programming language.
 <IfModule mime_module>
   AddHandler application/x-httpd-ea-php81___lsphp .php .php8 .phtml
 </IfModule>
@@ -9,5 +6,25 @@
 
 Options -MultiViews
 RewriteEngine On
+
+# Que Apache pueda servir index.php o index.html cuando entran a una carpeta
+DirectoryIndex index.php index.html
+
+# 1) /landings/ se sirve como "sitio aparte":
+#    - si existe archivo/carpeta, se sirve normal
+#    - si NO existe, devolvemos 404 real (sin caer a la SPA)
+RewriteCond %{REQUEST_URI} ^/landings/ [NC]
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.html [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ - [R=404,L]
+
+# 2) No reescribir assets de la SPA (evita el MIME type text/html en JS/CSS)
+RewriteRule ^assets/ - [L,NC]
+
+# (opcional pero recomendable) tampoco reescribir otros estáticos comunes
+RewriteRule ^(favicon\.ico|robots\.txt|sitemap\.xml)$ - [L,NC]
+
+# 3) SPA fallback para React Router (solo si NO es archivo/carpeta real)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
