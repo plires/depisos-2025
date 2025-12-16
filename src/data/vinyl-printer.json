@@ -4,7 +4,7 @@
       "id": 1,
       "title": "VINYL PANEL",
       "subtitle": "Línea Printer - Nativa",
-      "description": "Un revestimiento práctico y elegante que aporta un acabado moderno a cualquier espacio. Ideal para ambientes residenciales o comerciales interiores. Apto para muro y techo, también combinable con cielorraso.",
+      "description": "Un revestimiento práctico y elegante que aporta un acabado moderno a cualquier espacio. Ideal para ambientes residenciales o comerciales interiores. Con diseños desarrollados con tecnologia de impresion digital. Apto para muro y techo, también combinable con cielorraso.",
       "img_header_background_src": "vinyl-panel-printer-background-header.webp",
       "img_header_detail_src": "vinyl-panel-printer-detalle-header.webp",
       "extra_class": "vinylPrinter"
@@ -117,13 +117,12 @@
     "data": {
       "Accesorios": "Perfiles H, J y Soleraplast",
       "Uso": "Revestimiento de muro y techos.",
-      "Material": "PVC sustentable",
+      "Material": "PVC con impresion digital",
       "Ancho, Alto y Espesor": "220 x 2900 x 18 mm.",
       "Formato de venta": "Paquete con 4 tiras.",
-      "M2 por tabla": "2,32 m2",
+      "M2 por paquete": "2,32 m2",
       "Tipo de espacio": "interior",
-      "Colores": "Nogal, Legno, Cerejeira, Tauarí, Carvalho",
-      "Garantía": "X años"
+      "Colores": "Nogal, Legno, Cerejeira, Tauarí, Carvalho"
     },
     "ventajas": [
       "Resistente a la humedad",

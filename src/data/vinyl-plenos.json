@@ -4,7 +4,7 @@
       "id": 1,
       "title": "VINYL PANEL",
       "subtitle": "Línea Plenos",
-      "description": "Nuestra línea más minimalista en una gran variedad de colores. Tonos lisos con textura estriada para darle un toque a cualquier espacio. Ya sea en pared o techo.",
+      "description": "Nuestra línea más minimalista en una gran variedad de colores. Tonos plenos con formato acanalado para darle un toque a cualquier espacio. Ya sea en pared o techo.",
       "img_header_background_src": "vinyl-panel-plenos-background-header.webp",
       "img_header_detail_src": "vinyl-panel-plenos-detalle-header.webp",
       "extra_class": "vinylPlenos"
@@ -168,10 +168,9 @@
       "Material": "PVC sustentable",
       "Ancho, Alto y Espesor": "220 x 2900 x 18 mm.",
       "Formato de venta": "Paquete con 4 tiras.",
-      "M2 por tabla": "2,32 m2",
+      "M2 por paquete": "2,32 m2",
       "Tipo de espacio": "interior",
-      "Colores": "Almendra, Arcilla, Avellana, Beige, Blanco, Celeste Pastel, <br />Verde Pastel, Rosa Pastel, Gris Topo, Hueso, Negro, Ocre, Visón",
-      "Garantía": "X años"
+      "Colores": "Almendra, Arcilla, Avellana, Beige, Blanco, Celeste Pastel, <br />Verde Pastel, Rosa Pastel, Gris Topo, Hueso, Negro, Ocre, Visón"
     },
     "ventajas": [
       "Resistente a la humedad",

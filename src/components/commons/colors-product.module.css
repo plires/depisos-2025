@@ -105,10 +105,27 @@
   transition: color 0.3s ease-in-out;
   white-space: nowrap;
   letter-spacing: 0.5px;
+  position: relative;
+  z-index: 10;
+}
+
+.verticalTitle span {
+  transition: color 0.3s ease-in-out;
+  position: absolute;
+  bottom: 12px;
+  left: -40px;
+  background: var(--primary-color);
+  padding: 0.25rem;
+  color: white;
 }
 
 .colorButton:hover .verticalTitle {
   color: var(--third-color);
+}
+
+.colorButton:hover .verticalTitle span {
+  background: white;
+  color: var(--primary-color);
 }
 
 /* ========================================
@@ -196,6 +213,16 @@
   color: var(--primary-color);
   margin: 0;
   text-align: center;
+  position: relative;
+}
+
+.modalImageContainer h3 span {
+  position: absolute;
+  left: calc(50%);
+  transform: translateX(-50%);
+  bottom: -15px;
+  font-size: 0.85rem;
+  color: var(--third-color);
 }
 
 /* ========================================
@@ -206,6 +233,10 @@
 @media (min-width: 320px) {
   .verticalTitle {
     font-size: 1rem;
+  }
+
+  .verticalTitle span {
+    font-size: 0.7rem !important;
   }
 
   .imageContainer {
@@ -299,6 +330,10 @@
     font-size: 1.5rem;
   }
 
+  .verticalTitle span {
+    font-size: 0.85rem !important;
+  }
+
   .imageContainer {
     min-height: 325px;
     height: 325px;
@@ -343,7 +378,7 @@
 
   /* Custom para diferentes productos */
   .flatPanel h4 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   /* Custom para diferentes productos end */
 }

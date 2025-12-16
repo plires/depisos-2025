@@ -97,7 +97,11 @@ const ColorsProduct = ({ product }) => {
                 onClick={() => handleOpenModal(item)}
                 className={styles.colorButton}
               >
-                <h4 className={styles.verticalTitle}>{item.title}</h4>
+                <h4
+                  className={styles.verticalTitle}
+                  dangerouslySetInnerHTML={{ __html: item.title }}
+                />
+
                 <div className={styles.imageContainer}>
                   <img src={getImageURL(item.img_src)} alt={item.title} />
                 </div>
@@ -131,7 +135,7 @@ const ColorsProduct = ({ product }) => {
         <Modal isOpen={!!selectedProduct} onClose={handleCloseModal}>
           {selectedProduct && (
             <div className={styles.modalImageContainer}>
-              <h3>{selectedProduct.title}</h3>
+              <h3 dangerouslySetInnerHTML={{ __html: selectedProduct.title }} />
               <img
                 src={getImageURL(selectedProduct.img_src)}
                 alt={selectedProduct.title}

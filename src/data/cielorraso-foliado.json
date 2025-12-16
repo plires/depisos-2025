@@ -13,37 +13,37 @@
   "colores": [
     {
       "id": 1,
-      "title": "Nogal",
+      "title": "Nogal <span>Cód: 9030P253</span>",
       "img_src": "cielorraso-foliado-nogal.webp",
       "extra_class": "cielorrasoFoliado"
     },
     {
       "id": 2,
-      "title": "Nogal Habano",
+      "title": "Nogal Habano <span>Cód: 9030P265</span>",
       "img_src": "cielorraso-foliado-nogal-habano.webp",
       "extra_class": "cielorrasoFoliado"
     },
     {
       "id": 3,
-      "title": "Roble Escandinavo",
+      "title": "Roble Escandinavo <span>Cód: 9030P280</span>",
       "img_src": "cielorraso-foliado-roble-escandinavo.webp",
       "extra_class": "cielorrasoFoliado"
     },
     {
       "id": 4,
-      "title": "Roble Español",
+      "title": "Roble Español <span>Cód: 9030P267</span>",
       "img_src": "cielorraso-foliado-roble-espanol.webp",
       "extra_class": "cielorrasoFoliado"
     },
     {
       "id": 5,
-      "title": "Roble Gris",
+      "title": "Roble Gris <span>Cód: 9030P263</span>",
       "img_src": "cielorraso-foliado-roble-gris.webp",
       "extra_class": "cielorrasoFoliado"
     },
     {
       "id": 6,
-      "title": "Roble Siberia",
+      "title": "Roble Siberia <span>Cód: 9030P254</span>",
       "img_src": "cielorraso-foliado-roble-siberia.webp",
       "extra_class": "cielorrasoFoliado"
     }
@@ -121,10 +121,9 @@
       "Material": "PVC + lámina de foliado.",
       "Ancho, Alto y Espesor": "200 x (4000, 5000 o 6000) x 8 mm.",
       "Formato de venta": "Paquete con 10 tiras.",
-      "M2 por tabla": "0,8/1/1,2 m2 (depende de la altura escogida)",
+      "M2 por tabla": "0.8/1/1.2 m2 (dependendiendo del largo)",
       "Tipo de espacio": "interior",
-      "Colores": "Nogal, Nogal Habano, Roble Escandinavo, Roble Español, Roble Gris, Roble Siberia.",
-      "Garantía": "X años"
+      "Colores": "Nogal, Nogal Habano, Roble Escandinavo, Roble Español, Roble Gris, Roble Siberia."
     },
     "ventajas": [
       "Resistente a la humedad",

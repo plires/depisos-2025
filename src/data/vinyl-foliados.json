@@ -13,37 +13,37 @@
   "colores": [
     {
       "id": 1,
-      "title": "Nogal",
+      "title": "Nogal <span>Cód: 9040P253</span>",
       "img_src": "vinyl-panel-foliado-nogal.webp",
       "extra_class": "vinylFoliado"
     },
     {
       "id": 2,
-      "title": "Nogal Habano",
+      "title": "Nogal Habano <span>Cód: 9040P265</span>",
       "img_src": "vinyl-panel-foliado-nogal-habano.webp",
       "extra_class": "vinylFoliado"
     },
     {
       "id": 3,
-      "title": "Roble Español",
+      "title": "Roble Español <span>Cód: 9040P267</span>",
       "img_src": "vinyl-panel-foliado-roble-espanol.webp",
       "extra_class": "vinylFoliado"
     },
     {
       "id": 4,
-      "title": "Roble Siberia",
+      "title": "Roble Siberia <span>Cód: 9040P254</span>",
       "img_src": "vinyl-panel-foliado-roble-siberia.webp",
       "extra_class": "vinylFoliado"
     },
     {
       "id": 5,
-      "title": "Roble Escandinavo",
+      "title": "Roble Escandinavo <span>Cód: 9040P280</span>",
       "img_src": "vinyl-panel-foliado-roble-escandinavo.webp",
       "extra_class": "vinylFoliado"
     },
     {
       "id": 6,
-      "title": "Roble Gris",
+      "title": "Roble Gris <span>Cód: 9040P263</span>",
       "img_src": "vinyl-panel-foliado-roble-gris.webp",
       "extra_class": "vinylFoliado"
     }
@@ -123,13 +123,12 @@
     "data": {
       "Accesorios": "Perfiles H, J y Soleraplast",
       "Uso": "Revestimiento de muro y techos.",
-      "Material": "PVC sustentable",
+      "Material": "PVC con lámina de foliado",
       "Ancho, Alto y Espesor": "220 x 2900 x 18 mm.",
       "Formato de venta": "Paquete con 4 tiras.",
-      "M2 por tabla": "2,32 m2",
+      "M2 por paquete": "2,32 m2",
       "Tipo de espacio": "interior",
-      "Colores": "Nogal, Nogal Habano, Roble Español, Roble Siberia, Roble Escandinavo, Roble Gris.",
-      "Garantía": "X años"
+      "Colores": "Nogal, Nogal Habano, Roble Español, Roble Siberia, Roble Escandinavo, Roble Gris."
     },
     "ventajas": [
       "Resistente a la humedad",
