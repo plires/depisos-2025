@@ -1,5 +1,6 @@
 import HeroSection from '@/components/commons/HeroSection'
 import Cta from '@/components/commons/Cta'
+import Button from '@/components/commons/ButtonApp.jsx'
 
 import heroDesktop from '@/assets/img/header-nosotros-desktop.webp'
 import heroMobile from '@/assets/img/header-nosotros-mobile.webp'
@@ -64,6 +65,16 @@ const Profesionales = () => {
               Detrás de cada elección, hay un equipo de especialistas que
               acompaña cada etapa del proceso.
             </p>
+          </div>
+
+          <div data-aos='fade-up' className='col-md-12 text-center mb-5'>
+            <Button
+              href='https://depisos.com/pdf/catalogo-depisos-2026.pdf'
+              variant='primary'
+              size='md'
+            >
+              Descargar catálogo de productos
+            </Button>
           </div>
         </div>
 

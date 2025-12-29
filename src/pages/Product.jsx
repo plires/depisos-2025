@@ -8,6 +8,7 @@ import ComparacionProduct from '@/components/commons/ComparacionProduct.jsx'
 import AccessoriesProduct from '@/components/commons/AccessoriesProduct.jsx'
 import TechnicalSheetProduct from '@/components/commons/TechnicalSheetProduct.jsx'
 import QuoteForm from '@/components/commons/QuoteForm.jsx'
+import Button from '@/components/commons/ButtonApp.jsx'
 
 import { getProductBySlug } from '@/data/products'
 import './product.css'
@@ -94,6 +95,15 @@ const Product = () => {
 
       <section className='quoteFormProduct container'>
         <div className='row'>
+          <div data-aos='fade-up' className='col-md-12 text-center mb-5'>
+            <Button
+              href='https://depisos.com/pdf/catalogo-depisos-2026.pdf'
+              variant='primary'
+              size='md'
+            >
+              Descargar catálogo de productos
+            </Button>
+          </div>
           <div className='col-md-12 col-lg-8 offset-lg-2'>
             <QuoteForm
               recaptchaSiteKey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
