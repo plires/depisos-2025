@@ -42,6 +42,12 @@
           "title": "Legno",
           "img_src": "cielorraso-printer-nativa-legno.webp",
           "extra_class": "cielorrasoPrinter"
+        },
+        {
+          "id": 6,
+          "title": "Grey",
+          "img_src": "cielorraso-printer-nativa-grey.webp",
+          "extra_class": "cielorrasoPrinter"
         }
       ]
     },
