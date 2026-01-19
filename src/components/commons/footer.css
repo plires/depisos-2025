@@ -19,7 +19,8 @@ footer .data {
   margin-bottom: 2rem;
 }
 
-footer .data p {
+footer .data p,
+footer a {
   color: white;
   font-weight: 300;
   font-size: 14px;

@@ -14,9 +14,20 @@
   margin-bottom: 2rem;
 }
 
-.contacto .contentData p {
+.contacto .contentData p,
+.contacto .contentData a {
   margin-right: 3px;
   font-size: 0.85rem;
+}
+
+.contacto .contentData a {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: grey;
+}
+
+.contacto .contentData a:hover {
+  color: green;
 }
 
 .contacto .contentData p:last-child {

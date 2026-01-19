@@ -6,6 +6,7 @@ import { CiLocationOn } from 'react-icons/ci'
 import { IoIosPhonePortrait } from 'react-icons/io'
 import { MdOutlineWatchLater } from 'react-icons/md'
 import { HiOutlineMail } from 'react-icons/hi'
+import { FaWhatsapp } from 'react-icons/fa'
 
 import heroDesktop from '@/assets/img/header-contacto-desktop.webp'
 import heroMobile from '@/assets/img/header-contacto-mobile.webp'
@@ -50,6 +51,30 @@ const Contacto = () => {
               </span>
               Email: info@depisos.com
             </p>
+            <hr />
+            <a
+              target='_blank'
+              className='transition'
+              rel='noreferrer'
+              href='https://wa.me/5491135800225?text=Hola%20quiero%20informacion%20sobre%20venta%20mayorista...'
+            >
+              <span>
+                <FaWhatsapp />
+              </span>
+              Whatsapp Venta Mayorista: 11 3580‑0225
+            </a>
+            <br />
+            <a
+              target='_blank'
+              className='transition'
+              rel='noreferrer'
+              href='https://wa.me/5491141711995?text=Hola%20quiero%20informacion%20sobre%20venta%20minorista...'
+            >
+              <span>
+                <FaWhatsapp />
+              </span>
+              Whatsapp Venta Minorista: 11 4171‑1995
+            </a>
           </div>
           <div className='col-md-8 col-lg-7 offset-lg-1 contentForm'>
             <QuoteForm
