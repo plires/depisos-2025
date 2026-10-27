@@ -59,7 +59,7 @@ if (count($history) >= $maxReq) {
 }
 
 // ==== reCAPTCHA v3 ====
-$recaptchaSecret = $_ENV['VITE_RECAPTCHA_SECRET_KEY'];
+$recaptchaSecret = $_ENV['RECAPTCHA_SECRET_KEY'] ?? '';
 $token = $data['recaptchaToken'] ?? '';
 if ($recaptchaSecret) {
   $ch = curl_init('https://www.google.com/recaptcha/api/siteverify');
