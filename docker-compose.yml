@@ -1,0 +1,53 @@
+# Local development stack for depisos.
+# DB_NAME / DB_USER / DB_PASSWORD are read from .env so MySQL matches what the PHP app uses.
+# The React frontend runs on the host with `npm run dev` (Vite, port 5173).
+name: depisos
+
+services:
+  php:
+    build:
+      context: ./docker/php
+      args:
+        PHP_VERSION: ${PHP_VERSION:-8.4}
+    image: depisos-php:${PHP_VERSION:-8.4}
+    ports:
+      - '${APP_PORT:-8080}:80'
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      mysql:
+        condition: service_healthy
+      mailpit:
+        condition: service_started
+    restart: unless-stopped
+
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root}
+      MYSQL_DATABASE: ${DB_NAME:-depisos}
+      MYSQL_USER: ${DB_USER:-depisos}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-depisos}
+    command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_general_ci']
+    ports:
+      - '${FORWARD_DB_PORT:-3306}:3306'
+    volumes:
+      - mysql-data:/var/lib/mysql
+      # Runs only on first start (empty volume)
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ['CMD-SHELL', 'mysqladmin ping -h 127.0.0.1 -uroot -p"$$MYSQL_ROOT_PASSWORD" --silent']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  mailpit:
+    image: axllent/mailpit:latest
+    ports:
+      - '${FORWARD_MAILPIT_UI_PORT:-8025}:8025'
+      - '${FORWARD_MAILPIT_SMTP_PORT:-1025}:1025'
+    restart: unless-stopped
+
+volumes:
+  mysql-data:
