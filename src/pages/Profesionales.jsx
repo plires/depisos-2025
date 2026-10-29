@@ -29,7 +29,7 @@ const Profesionales = () => {
             '
           textBtn='Necesito instalación'
           typeLink='external'
-          linkBtn='https://wa.me/5491153117118?text=Hola%20quiero%20más%20informaci%C3%B3n%20sobre%20instaladores'
+          linkBtn='https://wa.me/5491141711995?text=Hola%20quiero%20más%20informaci%C3%B3n%20sobre%20instaladores'
         />
         <ArticleDescription
           dir='right'
@@ -40,7 +40,7 @@ const Profesionales = () => {
             arquitectos que te acompañarán en cada etapa de tu proyecto. Te ayudamos a elegir materiales, colores y diseños que se adapten a tu estilo y necesidad, cuidando 
             cada detalle.'
           typeLink='external'
-          linkBtn='https://wa.me/5491131861604?text=Hola%20necesito%20más%20asesoramiento'
+          linkBtn='https://wa.me/5491141711995?text=Hola%20necesito%20más%20asesoramiento'
           textBtn='Necesito asesoramiento'
         />
         <ArticleDescription
@@ -50,7 +50,7 @@ const Profesionales = () => {
           title='Programa de beneficios para aliados'
           description='Si sos arquitecto, decorador o constructor, sumate a nuestro Programa Aliados y obtené beneficios exclusivos para vos y tus clientes. Más ventajas, más oportunidades, más diseño.'
           typeLink='external'
-          linkBtn='https://wa.me/5491131861604?text=Hola%20quiero%20ser%20aliado%20de%20depisos...'
+          linkBtn='https://wa.me/5491141711995?text=Hola%20quiero%20ser%20aliado%20de%20depisos...'
           textBtn='Quiero ser aliado'
         />
       </section>

@@ -84,7 +84,7 @@ const Profesionales = () => {
             title='Nordeco Instaladores oficiales'
             img_src={instaladores}
             typeLink='external'
-            link='https://wa.me/5491153117118?text=Hola%20quiero%20más%20informaci%C3%B3n%20sobre%20instaladores'
+            link='https://wa.me/5491141711995?text=Hola%20quiero%20más%20informaci%C3%B3n%20sobre%20instaladores'
             textLink='Necesito instalación'
           />
           <Cta
@@ -92,7 +92,7 @@ const Profesionales = () => {
             title='Asesoramiento profesional'
             img_src={asesoramiento}
             typeLink='external'
-            link='https://wa.me/5491131861604?text=Hola%20necesito%20más%20asesoramiento'
+            link='https://wa.me/5491141711995?text=Hola%20necesito%20más%20asesoramiento'
             textLink='Necesito asesoramiento'
           />
           <Cta
@@ -100,7 +100,7 @@ const Profesionales = () => {
             title='Programa de beneficios para aliados'
             img_src={aliado}
             typeLink='external'
-            link='https://wa.me/5491131861604?text=Hola%20quiero%20ser%20aliado%20de%20depisos...'
+            link='https://wa.me/5491141711995?text=Hola%20quiero%20ser%20aliado%20de%20depisos...'
             textLink='Quiero ser aliado'
           />
         </div>
