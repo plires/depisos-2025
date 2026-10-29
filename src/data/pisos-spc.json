@@ -4,7 +4,7 @@
       "id": 1,
       "title": "pisos spc",
       "subtitle": "a prueba de agua",
-      "description": "Pisos de SPC (Stone Plastic Composite) con sistema click. Su núcleo rígido de piedra y polímeros los hace 100%  mpermeables, con alta resistencia al tráfico. Incluyen manta para una instalación rápida y eficiente.",
+      "description": "Pisos de SPC (Stone Plastic Composite) con sistema click. Su núcleo rígido de piedra y polímeros los hace 100% impermeables, con alta resistencia al tráfico.",
       "img_header_background_src": "pisos-spc-background-header.webp",
       "img_header_detail_src": "pisos-spc-detalle-header.webp",
       "extra_class": "pisosSPC"
@@ -105,11 +105,11 @@
     "data": {
       "Accesorios": "Zócalos rigidos Top Line",
       "Uso": "Revestimiento para pisos",
-      "Material": "Vinílico a prueba de agua con manta incluida.",
+      "Material": "Vinílico a prueba de agua.",
       "Ancho, Alto y Espesor": "228 x 1524 x 45 mm.",
       "Formato de venta": "8 unidades por caja",
       "M2 por tabla": "2,78 m2 por caja.",
-      "Tipo de espacio": "Interior",
+      "Tipo de espacio": "Interior.",
       "Colores": "Autumn, Golden Oak, Sandalwood, Silver, Spring, Winter."
     },
     "ventajas": [
