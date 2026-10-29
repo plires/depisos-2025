@@ -44,3 +44,7 @@ firmas
 # local tooling
 .atl/
 .claude/
+
+# tracked assets (override the img/pdf rules above)
+!src/assets/img/
+!src/assets/pdf/
