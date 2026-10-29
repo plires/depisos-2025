@@ -13,15 +13,10 @@ const Footer = () => {
           </div>
           <div className='col-md-4 data'>
             <p>
-              Showroom San Martín
-              <br />
-              Calle: 56 4575 - San Martin
-              <br />
               Email: info@depisos.com
               <br />
               Horarios: Lu - Vie / 8:00 - 17:00 Hs.
             </p>
-            <p>Teléfono: 11 6379-0009</p>
             <a
               target='_blank'
               className='transition'
