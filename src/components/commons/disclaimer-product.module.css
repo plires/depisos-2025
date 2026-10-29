@@ -1,0 +1,41 @@
+.box {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1rem;
+  color: var(--color-text);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.box p {
+  margin-bottom: 0.375rem;
+}
+
+.box p:last-child {
+  margin-bottom: 0;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 992px) {
+  .box {
+    font-size: 0.8125rem;
+  }
+
+  .title {
+    font-size: 0.8125rem;
+  }
+}

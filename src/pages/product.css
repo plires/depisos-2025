@@ -5,6 +5,7 @@
 .product .comparacionProduct,
 .product .accessoriesProduct,
 .product .technicalSheetProduct,
+.product .disclaimerProduct,
 .product .quoteFormProduct {
   margin-bottom: 30px;
 }
@@ -28,6 +29,7 @@
   .product .comparacionProduct,
   .product .accessoriesProduct,
   .product .technicalSheetProduct,
+  .product .disclaimerProduct,
   .product .quoteFormProduct {
     margin-bottom: 60px;
   }

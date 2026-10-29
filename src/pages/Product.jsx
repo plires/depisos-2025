@@ -7,6 +7,7 @@ import MedidasProduct from '@/components/commons/MedidasProduct.jsx'
 import ComparacionProduct from '@/components/commons/ComparacionProduct.jsx'
 import AccessoriesProduct from '@/components/commons/AccessoriesProduct.jsx'
 import TechnicalSheetProduct from '@/components/commons/TechnicalSheetProduct.jsx'
+import DisclaimerProduct from '@/components/commons/DisclaimerProduct.jsx'
 import QuoteForm from '@/components/commons/QuoteForm.jsx'
 import Button from '@/components/commons/ButtonApp.jsx'
 
@@ -92,6 +93,8 @@ const Product = () => {
         data={product.technicalSheet.data}
         ventajas={product.technicalSheet.ventajas}
       />
+
+      <DisclaimerProduct />
 
       <section className='quoteFormProduct container'>
         <div className='row'>
