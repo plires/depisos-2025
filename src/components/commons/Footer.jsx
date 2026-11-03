@@ -12,11 +12,10 @@ const Footer = () => {
             <img className='img-fluid' src={Logo} alt='logo depisos footer' />
           </div>
           <div className='col-md-4 data'>
-            <p>
+            <a href='mailto:info@depisos.com' target='_blank' rel='noreferrer'>
               Email: info@depisos.com
-              <br />
-              Horarios: Lu - Vie / 8:00 - 17:00 Hs.
-            </p>
+            </a>
+            <p>Horarios: Lu - Vie / 8:00 - 17:00 Hs.</p>
             <a
               target='_blank'
               className='transition'
